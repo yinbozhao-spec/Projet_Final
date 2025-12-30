@@ -1,0 +1,903 @@
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://tag-manager.frontiersin.org/gtm.js?id=' + i + dl + '&gtm_auth=_ZHCAU7yA6V3fENCBylzQg&gtm_preview=env-2&gtm_cookies_win=x';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJ6NGCC');
+    </script>
+
+    <script>
+            dataLayer.push({
+                'app_id': '1'
+            });
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"598a124f17","applicationID":"5465617","transactionName":"MQcDMkECCkNSW0YMWghNLDBwTCVCR1FRCVAVIQ4IRxELXF9dQEpzEw4NMlYbEA==","queueTime":0,"applicationTime":1017,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"598a124f17",applicationID:"5465617",browserID:"5465640"};;/*! For license information please see nr-loader-rum-1.306.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let o in a)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>o,mw:()=>s,sb:()=>d});var n=r(863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===o?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&o?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(741);var a=r(555);r(860).K7.genericEvents;const o="experimental.resources",s="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(614),u=r(944),l=r(122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(s)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(o)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(154),m=r(324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var S=r(836),k=r(241);const R={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A=e=>(0,l.a)(e,R),T=new Set;function E(e,t={},r,o){let{init:s,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();s=e.init,c=e.info,d=e.loader_config}e.init=g(s||{}),e.loader_config=A(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B),e.runSoftNavOverSpa&&=!0===f.soft_navigations.enabled&&f.feature_flags.includes("soft_nav")),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=S.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>s,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>S,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>o,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",o="addRelease",s="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",S="measure",k="consent"},289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,Qr:()=>c,sB:()=>s});var n=r(878),i=r(389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(a())return e();const r=(0,i.J)(e),o=setInterval(()=>{a()&&(clearInterval(o),r())},500);(0,n.sp)("load",r,t)}function s(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.306.0",i="PROD",a="CDN"},374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>u,Zm:()=>s,bQ:()=>d,dV:()=>c,pV:()=>l});var n=r(154),i=r(863),a=r(910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function s(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function c(){let e=s();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function d(e,t){let r=s();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){s()[e]=t}function l(){return function(){let e=s();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=s();const t=e.init||{};e.init={...t}}(),c(),function(){let e=s();const t=e.loader_config||{};e.loader_config={...t}}(),s()}},389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},555:(e,t,r)=>{"use strict";r.d(t,{D:()=>s,f:()=>o});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const s=e=>(0,i.a)(e,a)},566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>o});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s<e;s++)o.push(a(r,i++).toString(16));return o.join("")}},606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(908);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.d,i,e,t,r)}function o(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(566).bz)()},614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>o,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,o=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(241),i=r(836),a=r(606),o=r(860),s=r(646);const c={};function d(e,t){const r={staged:!1,priority:o.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const o=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!o.aborted&&o.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=o.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0]?.context()instanceof s.y&&t[0].on(e,t[1])})})}}o.isolatedBacklog||delete c[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>s,No:()=>i,qh:()=>o});var n=r(860);const i=16e3,a=1e6,o="SESSION_ERROR",s={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>o});var n=r(241);const i=new Set,a={};function o(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e){return this.#e(i.Dl,e)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},836:(e,t,r)=>{"use strict";r.d(t,{P:()=>s,ee:()=>c});var n=r(384),i=r(990),a=r(646),o=r(607);const s="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var s=g(n);m(e).forEach(e=>{e.apply(s,r)});var d=v()[o[e]];d&&d.push([f,e,r,s]);return s},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,s,()=>new a.y(s)):new a.y(s)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>s,df:()=>a,qY:()=>n,v4:()=>o});const n="events",i="jserrors",a="browser/blobs",o="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:s,[c.genericEvents]:"ins"}},863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>o,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.306.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.306.0.PROD:",i.l=(r,n,a,o)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){s=l;break}}if(!s){c=!0;var f={296:"sha512-XHJAyYwsxAD4jnOFenBf2aq49/pv28jKOJKs7YGQhagYYI2Zk8nHflZPdd7WiilkmEkgIZQEFX4f1AJMoyzKwA=="};(s=document.createElement("script")).charset="utf-8",i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[o]&&(s.integrity=f[o])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed: ("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,n[1](s)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[o,s,c]=r,d=0;if(o.some(t=>0!==e[t])){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);d<o.length;d++)a=o[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.306.0.PROD"]=self["webpackChunk:NRBA-1.306.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(374);var e=i(566),t=i(741);class r extends t.W{agentIdentifier=(0,e.LA)(16)}var n=i(860);const a=Object.values(n.K7);var o=i(163);var s=i(908),c=i(863),d=i(261),u=i(241),l=i(944),f=i(701),g=i(969);function p(e,t,i,a){const o=a||i;!o||o[e]&&o[e]!==r.prototype[e]||(o[e]=function(){(0,s.p)(g.xV,["API/"+e+"/called"],void 0,n.K7.metrics,i.ee),(0,u.W)({agentIdentifier:i.agentIdentifier,drained:!!f.B?.[i.agentIdentifier],type:"data",name:"api",feature:d.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,l.R)(23,e)}})}function m(e,t,r,n,i){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(i||null===r)&&(0,s.p)(d.Pl+n,[(0,c.t)(),t,r],void 0,"session",e.ee)}var h=i(687),v=i(234),b=i(289),y=i(154),_=i(384);const w=e=>y.RI&&!0===e?.privacy.cookies_enabled;function x(e){return!!(0,_.dV)().o.MO&&w(e)&&!0===e?.session_trace.enabled}var S=i(389),k=i(699);class R extends v.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,S.J)(()=>{(0,h.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,h.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(w(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,305));n=t(e)}}catch(e){(0,l.R)(20,e),this.ee.emit("internal-error",[e]),(0,s.p)(k.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,h.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,l.R)(34,e),this.abortHandler?.(),(0,h.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};y.RI?(0,b.GG)(()=>n(),!0):n()}#t(e,t,r){if(this.blocked)return!1;switch(e){case n.K7.sessionReplay:return x(r)&&!!t;case n.K7.sessionTrace:return!!t;default:return!0}}}var A=i(630),T=i(614);class E extends R{static featureName=A.T;constructor(e){var t;super(e,A.T),this.setupInspectionEvents(e.agentIdentifier),t=e,p(d.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(d.Pl+d.Fw,[(0,c.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,u.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,b.sB)(e=>{t(e,"DOMContentLoaded")}),(0,b.GG)(e=>{t(e,"load")}),(0,b.Qr)(e=>{t(e,"navigate")}),this.ee.on(T.tS.UPDATE,(t,r)=>{(0,u.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}var N=i(843),I=i(782);class j extends R{static featureName=I.T;constructor(e){super(e,I.T),y.RI&&((0,N.u)(()=>(0,s.p)("docHidden",[(0,c.t)()],void 0,I.T,this.ee),!0),(0,N.G)(()=>(0,s.p)("winPagehide",[(0,c.t)()],void 0,I.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,117))))}}class P extends R{static featureName=g.TZ;constructor(e){super(e,g.TZ),y.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,s.p)(g.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,623)))}}new class extends r{constructor(e){var t;(super(),y.gm)?(this.features={},(0,_.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(E),this.runSoftNavOverSpa=[...this.desiredFeatures].some(e=>e.featureName===n.K7.softNav),(0,o.j)(this,e,e.loaderType||"agent"),t=this,p(d.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return m(t,e,r,d.cD,n);(0,l.R)(40,typeof r)}else(0,l.R)(39,typeof e)},t),function(e){p(d.Dl,function(t){if("string"==typeof t||null===t)return m(e,"enduser.id",t,d.Dl,!0);(0,l.R)(41,typeof t)},e)}(this),function(e){p(d.nb,function(t){if("string"==typeof t||null===t)return m(e,"application.version",t,d.nb,!1);(0,l.R)(42,typeof t)},e)}(this),function(e){p(d.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){p(d.Pv,function(t=!0){if("boolean"==typeof t){if((0,s.p)(d.Pl+d.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,l.R)(65,typeof t)},e)}(this),this.run()):(0,l.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return a.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),t=[...this.desiredFeatures];t.sort((e,t)=>n.P3[e.featureName]-n.P3[t.featureName]),t.forEach(t=>{if(!e[t.featureName]&&t.featureName!==n.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&t.featureName===n.K7.spa)return;if(!this.runSoftNavOverSpa&&t.featureName===n.K7.softNav)return;const r=function(e){switch(e){case n.K7.ajax:return[n.K7.jserrors];case n.K7.sessionTrace:return[n.K7.ajax,n.K7.pageViewEvent];case n.K7.sessionReplay:return[n.K7.sessionTrace];case n.K7.pageViewTiming:return[n.K7.pageViewEvent];default:return[]}}(t.featureName).filter(e=>!(e in this.features));r.length>0&&(0,l.R)(36,{targetFeature:t.featureName,missingDependencies:r}),this.features[t.featureName]=new t(this)})}catch(e){(0,l.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,_.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}({features:[E,j,P],loaderType:"lite"})})()})();</script>
+    <title>世界上有“鬼”吗? &#183; Frontiers for Young Minds</title>
+    <meta name="description" content="你有喜欢的恐怖故事吗? 在黑暗阴森的地方，主人公看到或听到了某些可怕的东西。恐怖故事之所以恐怖，是因为人们仿佛在黑暗中感受到一些奇怪的东西，尤其是如果他们一开始就带着害怕的情绪。那么，究竟是什么原因让我们以为有诡异东西存在? 这些恐怖的背后或许隐藏着科学解释。科学家们发现，我们认为是“鬼魂”的东西，事实上可能只是我们的大脑在作怪! 这是大脑非常正常的现象，它在面对恐惧时，试图解释周遭环境的方式出了些小差错。本文将探讨我们的大脑如何处理恐惧，以及为什么我们会感觉到莫须有的“鬼”。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+    
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Frontiers for Young Minds"/>
+    <meta property="og:url" content="https://kids.frontiersin.org/zh/articles/10.3389/frym.2022.790073-zh"/>
+    <meta property="og:title" content="世界上有“鬼”吗?"/>
+    <meta property="og:description" content="你有喜欢的恐怖故事吗? 在黑暗阴森的地方，主人公看到或听到了某些可怕的东西。恐怖故事之所以恐怖，是因为人们仿佛在黑暗中感受到一些奇怪的东西，尤其是如果他们一开始就带着害怕的情绪。那么，究竟是什么原因让我们以为有诡异东西存在? 这些恐怖的背后或许隐藏着科学解释。科学家们发现，我们认为是“鬼魂”的东西，事实上可能只是我们的大脑在作怪! 这是大脑非常正常的现象，它在面对恐惧时，试图解释周遭环境的方式出了些小差错。本文将探讨我们的大脑如何处理恐惧，以及为什么我们会感觉到莫须有的“鬼”。"/>
+    <meta property="og:image" content="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/main.jpg"/>
+
+    <meta property="fb:admins" content="607820645"/>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@FrontYoungMinds">
+    <meta name="twitter:domain" content="kids.frontiersin.org">
+    <meta name="twitter:url" content="https://kids.frontiersin.org/zh/articles/10.3389/frym.2022.790073-zh">
+    <meta name="twitter:title" content="世界上有“鬼”吗?"/>
+    <meta name="twitter:description" content="你有喜欢的恐怖故事吗? 在黑暗阴森的地方，主人公看到或听到了某些可怕的东西。恐怖故事之所以恐怖，是因为人们仿佛在黑暗中感受到一些奇怪的东西，尤其是如果他们一开始就带着害怕的情绪。那么，究竟是什么原因让我们以为有诡异东西存在? 这些恐怖的背后或许隐藏着科学解释。科学家们发现，我们认为是“鬼魂”的东西，事实上可能只是我们的大脑在作怪! 这是大脑非常正常的现象，它在面对恐惧时，试图解释周遭环境的方式出了些小差错。本文将探讨我们的大脑如何处理恐惧，以及为什么我们会感觉到莫须有的“鬼”。">
+    <meta name="twitter:image" content="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/main.jpg">
+
+    
+
+
+
+    <link href="https://9d0dd7a648345f19af83-877d2ecaf11b88d5e17327c758e17ef6.ssl.cf2.rackcdn.com/museo-sans-1.0.1/css/museo-sans.css" rel="stylesheet">
+
+    <link href="/css?v=AxJH-3M9DocnXwy4W-2xQE2kvdTgVHLOfyrnqzO2dtg1" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="canonical" href="https://kids.frontiersin.org/zh/articles/10.3389/frym.2022.790073-zh">
+    </head>
+
+<body  class="no-animation zh">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://tag-manager.frontiersin.org/ns.html?id=GTM-NJ6NGCC&gtm_auth=_ZHCAU7yA6V3fENCBylzQg&gtm_preview=env-2&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    
+
+
+
+    <div id="waypoint" class="waypoint"></div>
+    <div id="header-container" class="header-container">
+        <header class="header" id="header">
+            <a class="header-branding" href="/zh" data-event="menu-home">
+                <h1 class="sr-only">Frontiers for Young Minds</h1>
+                <div class="header-logo-container">
+                    <div class="logo">Frontiers for <span>Young Minds</span></div>
+                </div>
+            </a>
+            <a id="hamburger" class="header-hamburger" href="#">菜单</a>
+            <nav id="header-navigation" class="header-navigation fade">
+                <h2 class="sr-only">Main navigation</h2>
+                <ul class="header-menu">
+                        <li class="header-menu-item header-menu-language-mobile">
+                            <select id="language-select" autocomplete="off">
+                                    <option value="en" >English</option>
+                                    <option value="zh" selected=&quot;selected&quot;>中文</option>
+                            </select>
+                            <a lang="en" href="#" tabindex="-1">
+                                <i class="icon icon-language"></i>
+                                zh
+                            </a>
+                        </li>
+                    <li class="header-menu-item active">
+                        <a href="/zh/articles" data-event="menu-articles">
+                            文章
+                        </a>
+                    </li>
+                    <li class="header-menu-item ">
+                        <a href="#" data-dropdown>
+                            参与进来
+                        </a>
+                        <ul class="header-submenu fade">
+                            <li class="header-submenu-item ">
+                                <a href="/zh/participate/authors" data-event="menu-authors">
+                                    作者指南
+                                </a>
+                            </li>
+                            <li class="header-submenu-item ">
+                                <a href="/zh/participate/young-minds" data-event="menu-young-minds">
+                                    少年审稿人
+                                </a>
+                            </li>
+                            <li class="header-submenu-item  ">
+                                <a href="/zh/participate/editors-and-mentors" data-event="menu-editors-and-mentors">
+                                    编辑&amp;科学导师
+                                </a>
+                            </li>
+                            <li class="header-submenu-item  ">
+                                <a href="/zh/participate/teachers-and-parents" data-event="menu-teachers-and-parents">
+                                    教师&amp;家长
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item ">
+                        <a href="#" data-dropdown>
+                            栏目
+                        </a>
+                        <ul class="header-submenu fade">
+                            
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/earth-sciences" data-event="menu-specialty" data-event-param="earth-sciences">
+        地球科学</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/engineering-and-technology" data-event="menu-specialty" data-event-param="engineering-and-technology">
+        工程与技术</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/chemistry-and-materials" data-event="menu-specialty" data-event-param="chemistry-and-materials">
+        化学与材料</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/human-health" data-event="menu-specialty" data-event-param="human-health">
+        人体健康</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/neuroscience-and-psychology" data-event="menu-specialty" data-event-param="neuroscience-and-psychology">
+        神经科学与心理学</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/biodiversity" data-event="menu-specialty" data-event-param="biodiversity">
+        生物多样性</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/mathematics-and-economics" data-event="menu-specialty" data-event-param="mathematics-and-economics">
+        数学与经济</a>
+</li>
+
+<li class="header-submenu-item ">
+    <a href="/zh/sections/astronomy-and-physics" data-event="menu-specialty" data-event-param="astronomy-and-physics">
+        天文与物理</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item ">
+                        <a href="#" data-dropdown>
+                            关于我们
+                        </a>
+                        <ul class="header-submenu fade">
+                            <li class="header-submenu-item ">
+                                <a href="/zh/about/journal" data-event="menu-journal">
+                                    关于本刊
+                                </a>
+                            </li>
+                            <li class="header-submenu-item ">
+                                <a href="/zh/about/sponsors" data-event="menu-sponsors">
+                                    赞助方
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                        <li class="header-menu-item header-menu-language">
+                            <a lang="en" href="#" data-dropdown>
+                                <i class="icon icon-language"></i>zh
+                            </a>
+                            <ul class="header-submenu fade">
+                                
+
+
+
+<li class="header-submenu-item">
+    <a id="language-en" href="/en/articles/10.3389/frym.2022.790073" data-event="language" data-event-param="en">English</a>
+</li>
+
+
+
+<li class="header-submenu-item">
+    <a id="language-zh" href="/zh/articles/10.3389/frym.2022.790073-zh" data-event="language" data-event-param="zh">中文</a>
+</li>
+                            </ul>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+
+    
+
+
+
+
+
+<main class="spacing-top">
+    
+
+
+
+<article>
+    <div class="fulltext">
+            <div id="fabs-container" class="fabs-container">
+                <ul>
+                        <li>
+                            <a href="/zh/articles/10.3389/frym.2022.790073-zh/pdf" class="fab download articlepagedownload" data-event="fulltext-pdf" data-language="zh" data-filename="frym-10-790073-zh.pdf" data-fileurl="https://kids.frontiersin.org/zh/articles/10.3389/frym.2022.790073-zh/pdf" id="pdfdownload">
+                                <i class="icon icon-download"></i>
+                                <div class="fab-tooltip fade">
+                                    下载PDF
+                                </div>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        <div class="size size-large">
+            <div class="fulltext-badges-container">
+                <span class="fulltext-badge">核心概念</span>
+                <a href="/zh/articles/neuroscience-and-psychology" data-event="fulltext-specialty">
+                    <span class="fulltext-badge" style="background-color: #31C7D1">神经科学与心理学</span>
+                </a>
+                <span class="fulltext-date">发表时间 2023年08月04日</span>
+            </div>
+
+            <h1 class="heading fulltext-heading">世界上有“鬼”吗?</h1>
+
+            <aside>
+                <h2 class="sr-only">Authors and reviewers</h2>
+                <div class="fulltext-metadata" data-test-id="display-authors-container">
+                    <h3 class="heading fulltext-metadata-heading">作者</h3>
+                    
+
+
+
+<a class="fulltext-person" href="#" data-modal-open="1867ab85-c65a-445d-91d5-593fcaa50f23" 
+   data-event="fulltext-author" data-test-id="button-author-1506276">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/auth-arianna-thoksakis.jpg" alt="Arianna Thoksakis">
+    </div>
+    <span class="fulltext-person-name">Arianna Thoksakis</span>
+</a>
+
+<div class="modal" id="1867ab85-c65a-445d-91d5-593fcaa50f23" data-modal data-test-id="display-author-modal-1506276">
+    <div class="modal-container">
+        <div class="modal-box fade">
+            <a class="modal-close" href="#" data-modal-close>
+                <i class="icon icon-cross"></i>
+            </a>
+            <div class="modal-content">
+                <div class="person">
+                        <a class="person-link" href="https://loop.frontiersin.org/people/1506276" target="_blank" data-test-id="button-author-profile">
+                            
+
+<div class="image-container">
+    <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/auth-arianna-thoksakis.jpg" alt="Arianna Thoksakis">
+</div>
+<div class="person-info">
+    <h4 class="heading">Arianna Thoksakis</h4>
+</div>
+
+                        </a>
+                    <p class="person-bio">
+                        Arianna Thoksakis 是新墨西哥州立大学的研究生。她的研究基于认知神经科学和心理学，探索我们感知世界的方式如何影响我们的行为方式。在空闲时间，Arianna 喜欢读书、讲恐怖故事，了解民间传说和神话，和她的两只猫 Sandy 和 Psyche 玩耍。*<a href="mailto:athoksakis@gmail.com">athoksakis@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a class="fulltext-person" href="#" data-modal-open="30e1078c-292e-44f8-b1f2-7b322dde645a" 
+   data-event="fulltext-author" data-test-id="button-author-1119062">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/auth-megan-papesh.jpg" alt="Megan H. Papesh">
+    </div>
+    <span class="fulltext-person-name">Megan H. Papesh</span>
+</a>
+
+<div class="modal" id="30e1078c-292e-44f8-b1f2-7b322dde645a" data-modal data-test-id="display-author-modal-1119062">
+    <div class="modal-container">
+        <div class="modal-box fade">
+            <a class="modal-close" href="#" data-modal-close>
+                <i class="icon icon-cross"></i>
+            </a>
+            <div class="modal-content">
+                <div class="person">
+                        <a class="person-link" href="https://loop.frontiersin.org/people/1119062" target="_blank" data-test-id="button-author-profile">
+                            
+
+<div class="image-container">
+    <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/auth-megan-papesh.jpg" alt="Megan H. Papesh">
+</div>
+<div class="person-info">
+    <h4 class="heading">Megan H. Papesh</h4>
+</div>
+
+                        </a>
+                    <p class="person-bio">
+                        Megan H. Papesh 在路易斯安那州立大学开始了她的心理学职业生涯，目前是新墨西哥州立大学的助理教授。她的实验室在许多领域研究大脑和行为，包括人类记忆、面孔知觉、视觉搜索和注意力。她曾多次获得教学和研究奖奖项，包括心理科学协会颁发的新星奖。她很宠爱她的狗，也会在空闲时间里去远足或骑行。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="fulltext-metadata">
+                    <h3 class="heading fulltext-metadata-heading alternative">少年审稿人</h3>
+                    
+
+
+
+<a class="fulltext-person" href="#" data-modal-open="herjvlvziw" data-event="fulltext-kid-reviewer">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/re-liceo-statale-agnesi.jpg" alt="Liceo Statale M.G. Agnesi">
+    </div>
+    <span class="fulltext-person-name" dir="ltr">Liceo Statale M.G. Agnesi</span>
+</a>
+
+<div class="modal" id="herjvlvziw" data-modal>
+    <div class="modal-container">
+        <div class="modal-box fade">
+            <a class="modal-close" href="#" data-modal-close>
+                <i class="icon icon-cross"></i>
+            </a>
+            <div class="modal-content">
+                <div class="person alternative">
+                    <div class="image-container">
+                        <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/re-liceo-statale-agnesi.jpg" alt="Liceo Statale M.G. Agnesi">
+                    </div>
+                    <div class="person-info">
+                        <h4 class="heading" dir="ltr">Liceo Statale M.G. Agnesi</h4>
+                            <div class="person-age">年龄 14–15</div>
+                    </div>
+                    <p class="person-bio">
+                        我们是 24 名学生。我们是朋友，对学习很感兴趣，也很兴奋拥有新的体验。我们都很聪明、很酷、有趣并且忠诚。我们彼此支持，总是为需要安慰或情绪低落的人加油打气。我们来自不同的城镇，但很快就成了好朋友。我们每个人都不同，没有相同的兴趣、技能和性格，但就是这种多样性让我们与众不同。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a class="fulltext-person" href="#" data-modal-open="sponjidwyr" data-event="fulltext-kid-reviewer">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/re-mrittika.jpg" alt="Mrittika">
+    </div>
+    <span class="fulltext-person-name" dir="ltr">Mrittika</span>
+</a>
+
+<div class="modal" id="sponjidwyr" data-modal>
+    <div class="modal-container">
+        <div class="modal-box fade">
+            <a class="modal-close" href="#" data-modal-close>
+                <i class="icon icon-cross"></i>
+            </a>
+            <div class="modal-content">
+                <div class="person alternative">
+                    <div class="image-container">
+                        <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/re-mrittika.jpg" alt="Mrittika">
+                    </div>
+                    <div class="person-info">
+                        <h4 class="heading" dir="ltr">Mrittika</h4>
+                            <div class="person-age">年龄 15</div>
+                    </div>
+                    <p class="person-bio">
+                        Mrittika 喜欢与朋友和家人一起出去玩。她的兴趣包括：中提琴、舞蹈、唱歌、阅读和书法。数学、社会研究和音乐是她最喜欢的科目。她也喜欢排球、空手道和跑步。Mrittika 最喜欢的成就是她成为了年鉴编辑团队中的高级编辑，并担任学校戏剧部的宣传工作者。她获得了中学年度最佳外语学生奖，并且进入了全国计算机科学竞赛的决赛。Mrittika 立志成为更开放和知识渊博的人。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="size size-large">
+            <div class="image-container fulltext-image-container">
+                <img class="image" src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/main.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="size size-small fulltext-content">
+            
+<!-- Full Text -->
+<!-- ## ARTICLE TITLE -->
+<!-- ## ARTICLE ILLUSTRATION -->
+
+<!-- ## ARTICLE BODY TEXT -->
+<div class="abstract" style="background:#f1f1f1; padding:7px 20px 7px 20px; margin:1em 0 10px 0">
+<h4>摘要</h4>
+<p>你有喜欢的恐怖故事吗? 在黑暗阴森的地方，主人公看到或听到了某些可怕的东西。恐怖故事之所以恐怖，是因为人们仿佛在黑暗中感受到一些奇怪的东西，尤其是如果他们一开始就带着害怕的情绪。那么，究竟是什么原因让我们以为有诡异东西存在? 这些恐怖的背后或许隐藏着科学解释。科学家们发现，我们认为是&#x0201C;鬼魂&#x0201D;的东西，事实上可能只是我们的大脑在作怪! 这些再正常不过的现象，可能是因为大脑在面对恐惧时，试图解释周遭环境的方式出了些小差错。本文将探讨我们的大脑如何处理恐惧，以及为什么我们会感觉到莫须有的&#x0201C;鬼&#x0201D;。</p>
+</div>
+<h2 class="font-size-4">世界上真的有&#x0201C;鬼&#x0201D;吗?</h2>
+<p>想象这样一个场景：在一个小镇上，矗立着一座被杂草和枯树包围的废弃大房子，即使在阳光明媚的日子里，这间房子也总是被阴森包围。镇上的人们对此都感到害怕，多年来它一直空荡荡地被遗弃在那里。直到有一天，一名高中生搬到了这个地方，好奇地向镇上的人打听那座被遗弃的老房子。有的人告诉他，这间屋子的第一个主人有着悲惨的结局，所以她的&#x0201C;鬼魂&#x0201D;会经常出没于此，他们还描述了潜伏在附近的&#x0201C;鬼魂&#x0201D;&#x02014;&#x02014;一位瘦弱的、穿着白色破旧长睡衣的老妇人，她会恐吓任何造访此屋的人。起初，这个夜晚对男孩儿来说再平常不过，而他睡着后却在可怕的噩梦中辗转反侧。突然，一阵关门声将他惊醒，他发现自己浑身是汗，在黑暗中挣扎着想要看清楚周遭，当他视野清晰后，忽然看到房间里打开的壁橱里仿佛有一位瘦削的老妇人正朝着他微笑。</p>
+<p>那是老妇人的&#x0201C;魂魄&#x0201D;吗? 研究人员发现，罪魁祸首是人类的<span id="KC1a"><a href="#KC1" title="个体将来自感觉器官的信息转化为有意义对象的心理过程。"><strong>知觉</strong></a></span>错误。也就是说，我们的大脑会误判信息! 当人们预期会见到&#x0201C;鬼&#x0201D; 或者已经惴惴不安时，这类感知错误有可能已经发生了。恐惧是一种强大的情绪，它可以改变一切我们所见所闻所感到的信息。</p>
+<h2 class="font-size-4">恐惧是如何改变我们所见所闻的?</h2>
+<p>当我们感到害怕时，我们会被周围释放的危险信号影响继而产生负面情绪。例如，你可能体会过这类恐惧，在半夜醒来后被黑暗与阴影包围，这是一种自发产生的反应。当我们很难感知周遭发生的信息时，我们自然会对黑暗的空间感到恐惧。这些反应可以追溯到史前时代，在黑暗中，人类更有可能因为无法亲眼见到掠食者而被攻击，恐惧的反应帮助我们对周围环境产生<span id="KC2a"><a href="#KC2" title="为避免危险而保持警觉的状态，比如考试焦虑或害怕同医生沟通。"><strong>警觉</strong></a></span>，以此来保护我们免受伤害。</p>
+<p>如果恐惧能够使我们对周围环境变得更加警觉，那么它也会让我们更清楚的感知周围发生的事情，不是吗? 不幸的是，事实并没有想象的那么简单：恐惧中断了大脑的思维过程，这可能会导致非理性的思维模式，而导致我们对周围的环境妄下判断。当我们感到害怕时，一些重要的脑区会变得十分活跃，包括前额叶皮层、杏仁核、下丘脑以及中脑导水管周围灰质区域 （见<a href="#figure-1">图 1</a>）。</p>
+<figure id="figure-1">
+<div class="figure-container">
+<img src="" class="img-responsive fit-img lazy-loaded-image lazy" alt="图 1 - (A) 前额叶皮层，位于大脑前端的一个区域，负责赋予事件以意义。" data-src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/figure-1.jpg">
+</div>
+<figcaption class="font-size-10">
+<ul>
+<li class="figure-title">图 1 - <strong>(A)</strong> 前额叶皮层，位于大脑前端的一个区域，负责赋予事件以意义。</li>
+<li class="figure-description"><strong>(B)</strong> 杏仁核，大脑内两个杏仁状的区域，使你保持警惕。<strong>(C)</strong> 下丘脑，大脑中间 的一个小区域，控制惊恐反应以及能量和压力水平。<strong>(D)</strong> 中脑导水管周围灰质区域，大脑内部的一个区域，控制我们对恐惧做出的反应 (图片来源： <a target="_blank" href="https://BrainFacts.org">BrainFacts.org</a>)。</li>
+</ul>
+</figcaption>
+</figure>
+<h2 class="font-size-4">为什么有的人声称见过&#x0201C;鬼&#x0201D;?</h2>
+
+<p>大脑会不断地从我们周围的世界接收信息，不过，并非所有的信号都是重要的，大脑会帮助我们过滤掉多余的刺激，而只关注重要的信号。例如，你的大脑此刻可能正在过滤&#x0201C;皮肤对衣服的感觉&#x0201D;这一无关紧要的信息，使你能够专注于你当下正在阅读的内容。</p>
+<p>通常来说，大脑能够相当准确地选择重要信息并赋予其意义。然而，有时候大脑也会在应该赋予信息何种意义、以及如何赋予其意义方面&#x0201C;犯错误&#x0201D;。当我们的大脑听到或看到并不真实存在的事物时，就会发生这种情况。所谓&#x0201C;虚假模式&#x0201D;，一个很好的例子就是，看一朵云觉着它像一张脸，这就是所谓的<span id="KC3a"><a href="#KC3" title="在根本不存在的地方寻找意义，比如在云朵里或消防栓上&#x0201C;看到&#x0201D;人脸。"><strong>妄想症</strong></a></span> （见<a href="#figure-2">图 2</a>）。</p>
+<figure id="figure-2">
+<div class="figure-container">
+<img src="" class="img-responsive fit-img lazy-loaded-image lazy" alt="图 2 - 你有没有抬头看到过有趣形状的云朵，比如人脸或动物? 在根本不存在的地方看到某些有意义的图案，叫做妄想症。" data-src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/figure-2.jpg">
+</div>
+<figcaption class="font-size-10">
+<ul>
+<li class="figure-title">图 2 - 你有没有抬头看到过有趣形状的云朵，比如人脸或动物? 在根本不存在的地方看到某些有意义的图案，叫做妄想症。</li>
+<li class="figure-description">人们曾在云中看到动物，在汽车上看到人脸，甚至在风景中看出了吐司的形状。你在这朵云里看到了什么?</li>
+</ul>
+</figcaption>
+</figure>
+
+<p>在最近的一项研究中，研究人员向志愿者提出了关于他们与&#x0201C;世界上是否有鬼存在&#x0201D;的相关问题 [<span id="ref1a"><a href="#ref1">1</a></span>]，而后向他们展示电视雪花故障图画面 （见<a href="#figure-3">图 3</a>）。这些画面中，一类藏着容易识别的人脸，一类很难找到人脸，一类则没有人脸。那些声称自己曾有&#x0201C;见鬼&#x0201D;经历的志愿者能够更快地在图像中识别出人脸，同样，他们也更有可能在没有人脸的图像中找到人脸。换句话说，个体对周围世界的信念可以改变自我看待事物的方式。许多号称曾经见过&#x0201C;鬼&#x0201D;的人经常在黑暗的地方，在那里他们会认为也许会出现可怕的东西，其实他们根本看不清，所以不得不靠着大脑想象来填补细节上的空白，这或许使他们更有可能看到&#x0201C;奇怪东西&#x0201D;的原因。</p>
+<figure id="figure-3">
+<div class="figure-container">
+<img src="" class="img-responsive fit-img lazy-loaded-image lazy" alt="图 3 - 电视雪花屏由密密麻麻的黑白点、线或方块组成。" data-src="https://www.frontiersin.org/files/Articles/790073/frym-10-790073-HTML/image_m/figure-3.jpg">
+</div>
+<figcaption class="font-size-10">
+<ul>
+<li class="figure-title">图 3 - 电视雪花屏由密密麻麻的黑白点、线或方块组成。</li>
+</ul>
+</figcaption>
+</figure>
+
+<p>这也能够解释为什么仿佛会&#x0201C;听到&#x0201D;鬼的声音。你可能看过猎鬼节目，有人声称记录下了&#x0201C;鬼&#x0201D;说话的声音，并将录音播放给观众听，这些录音中的声音被称为<span id="KC4a"><a href="#KC4" title="电子录音中的随机噪声，如静电、背景噪音，直到有人指出有声音在说话才有可能听到说话。"><strong>超自然电子噪声现象</strong></a></span>（简称 EVP）。EVP 通常是用录音设备录制的，然后，&#x0201C;猎鬼者&#x0201D;通过反复播放录音，试图找到一个像是&#x0201C;鬼&#x0201D;发出来的声音。虽然&#x0201C;猎鬼者&#x0201D;声称 EVP 只有当&#x0201C;鬼&#x0201D; 试图与人类交流时才能听到，但科学家认为，EVP 实际上是由静电或背景噪音引起的，这类模糊的声音营造了一种&#x0201C;幻听&#x0201D;&#x02014;&#x02014; 在无意义的噪音中仿佛听到说话声的幻觉。对大多数人来说，EVP 听起来可能像一堆随机的噪声，直到&#x0201C;猎鬼者&#x0201D; 做出他们的解读。通常情况下，&#x0201C;猎鬼者&#x0201D;会在又一次播放录音前提示观众，这个声音像是在说&#x0201C;出去!&#x0201D;之类的话，转而 EVP 听起来就和&#x0201C;猎鬼者&#x0201D;的解读如出一辙。人类有在模糊的声音中发现意义的天赋，&#x0201C;猎鬼者&#x0201D;通常会听这些录音，期望听到某些声音，而这些全然都是他们的大脑在欺骗他们。EVP 通常由不清晰的声音所构成，当你期望在这些声音中辨别出一些语汇时，你的大脑便开启了欺骗模式，这也是为什么一些宠物主人宣称能听到他们的萌宠说&#x0201C;我爱你&#x0201D;，显然萌宠们根本不会说话 [<span id="ref2a"><a href="#ref2">2</a></span>]。</p>
+<h2 class="font-size-4">为什么有人会感到有&#x0201C;鬼&#x0201D;存在?</h2>
+
+<p>虽然有些人从未见过&#x0201C;鬼&#x0201D;，但他们仍然会说他们感觉到了&#x0201C;鬼&#x0201D;的存在。正如我们有时会&#x0201C;看到&#x0201D;并不存在的东西一样，而有时我们根本看不到就在跟前的东西，这一现象被称为<span id="KC5a"><a href="#KC5" title="指你的大脑专注于其他事物而忽略了眼前的事情。"><strong>非注意盲视</strong></a></span>，几乎每个人都会遇到。当我们专注于一件事情时，因为毫无预期而错过了周遭其他事物，这就是非注意盲视。举个例子，如果你正在看你最喜欢的电视节目，你可能不会注意到你的狗正走进房间并从沙发上顺走了一个毛绒玩具。如果你坚信&#x0201C;鬼&#x0201D; 的存在，你很有可能会怀疑是&#x0201C;鬼&#x0201D;拿走了毛绒玩具 [<span id="ref3a"><a href="#ref3">3</a></span>]，非注意盲视体验甚至会让你幻想有&#x0201C;鬼&#x0201D;与你同在。</p>
+<p>当你的感觉与你认为发生的事情不匹配时，你或许也会感受到有&#x0201C;鬼&#x0201D;存在。最近，一个研究小组在他们的实验室里用一个机器人营造了&#x0201C;鬼出没&#x0201D; 的场景。志愿者被蒙住双眼，要求将手臂向前伸，并用指尖戳碰机器人。当志愿者触摸到机器人时，他们可以随意地移动他们的指头。当志愿者这样执行时，隐藏在他们身后的第二个机器人会复制他们的动作并触碰他们的背部。当隐藏的机器人完美地复制参与者的动作时，志愿者会感觉到他们正在向前伸手，并感受到自己在戳自己的后背；而当隐藏的机器人动作稍慢于参与者的动作时，参与者报告说他们感觉到有另一个人在触摸他们的后背，并且还补充道，这让他们感觉到房间里有一种&#x0201C;无形的力量&#x0201D;存在，不是来自志愿者自身、科学家和机器人&#x02014;&#x02014;这确实有点类似在黑暗的房间里感觉到&#x0201C;鬼&#x0201D;存在的过程 [<span id="ref4a"><a href="#ref4">4</a></span>]。</p>
+<p>&#x0201C;鬼&#x0201D;可能并不像我们的大脑所想的那样可怕，这只是大脑保护我们获得安全感并及时作出反应的方式。不过，归根结底，体验一番惊吓的感觉也是别有一番乐趣。了解了大脑面对恐惧时的反应，希望不会破坏你读下一个鬼故事时所营造的恐怖氛围!</p>
+<h2 class="font-size-4">致谢</h2>
+
+<p>感谢脑与心智毕生发展研究中心、发展人口神经科学研究中心对本文中文翻译的贡献。感谢钟骏涵对本文中文翻译的贡献；感谢陆秋宇对本文进行翻译指导及编辑；感谢左西年、张蕾对本文中文审校的贡献。</p>
+<h3 class="font-size-5">词汇表</h3>
+<p id="KC1"><strong>知觉 (Perception)</strong>: <a href="#KC1a"><strong>&#x02191;</strong></a> 个体将来自感觉器官的信息转化为有意义对象的心理过程。</p>
+<p id="KC2"><strong>警觉 (Vigilant)</strong>: <a href="#KC2a"><strong>&#x02191;</strong></a> 为避免危险而保持警觉的状态，比如考试焦虑或害怕同医生沟通。</p>
+<p id="KC3"><strong>妄想症 (Pareidolia)</strong>: <a href="#KC3a"><strong>&#x02191;</strong></a> 在根本不存在的地方寻找意义，比如在云朵里或消防栓上&#x0201C;看到&#x0201D;人脸。</p>
+<p id="KC4"><strong>超自然电子噪声现象 (Electronic Voice Phenomena, EVP)</strong>: <a href="#KC4a"><strong>&#x02191;</strong></a> 电子录音中的随机噪声，如静电、背景噪音，直到有人指出有声音在说话才有可能听到说话。</p>
+<p id="KC5"><strong>非注意盲视 (Inattentional Blindness)</strong>: <a href="#KC5a"><strong>&#x02191;</strong></a> 指你的大脑专注于其他事物而忽略了眼前的事情。</p>
+<h2 class="font-size-4">利益冲突声明</h2>
+<p>作者声明, 该研究是在没有任何可能被解释为潜在利益冲突的商业或财务关系的情况下进行的。</p>
+<section id="full-text-references" class="font-size-11">
+<hr>
+<h6 class="font-size-8">参考文献</h6>
+<p lang="en" id="ref1">[1] <a href="#ref1a"><strong>&#x02191;</strong></a> Smailes, D., Burdis, E., Gregoriou, C., Fenton, B., and Dudley, R. 2018. Pareidolia-proneness, reality discrimination errors, and visual hallucination-like experiences in a non-clinical sample. <i>Cogn. Neuropsychiatry</i> 25:113&#x02013;25. doi: 10.1080/13546805.2019.1700789</p>
+<p lang="en" id="ref2">[2] <a href="#ref2a"><strong>&#x02191;</strong></a> Nees, M. A., and Phillips, C. 2015. Auditory pareidolia: effects of contextual priming on perceptions of purportedly paranormal and ambiguous auditory stimuli. <i>Appl. Cogn. Psychol.</i> 29:129&#x02013;34. doi: 10.1002/acp.3068</p>
+<p lang="en" id="ref3">[3] <a href="#ref3a"><strong>&#x02191;</strong></a> Richards, A., Hellgren, M. G., and French, C. C. 2014. Inattentional blindness, absorption, working memory capacity, and paranormal belief. <i>Psychol. Conscious. Theory Res. Pract.</i> 1:60&#x02013;9. doi: 10.1037/css0000003</p>
+<p lang="en" id="ref4">[4] <a href="#ref4a"><strong>&#x02191;</strong></a> Blanke, O., Pozeg, P., Hara, M., Heydrich, L., Serino, A., Yamamoto, A., et al. 2014. Neurological and robot-controlled induction of an apparition. <i>Curr. Biol.</i> 24:2681&#x02013;6. doi: 10.1016/j.cub.2014.09.049</p>
+</section>
+
+        </div>
+
+        <div class="size size-small">
+            <aside class="fulltext-aside">
+                <h2 class="sr-only">Article information</h2>
+                <h3 class="heading heading-small-margin">引用格式</h3>
+                <div class="spacing-large">
+                        
+                            Thoksakis A and Papesh MH (2023) 世界上有“鬼”吗?. Front. Young Minds. doi: 10.3389/frym.2022.790073-zh
+                        
+                </div>
+                    <h3 class="heading heading-small-margin">英文版</h3>
+                    <div class="spacing-large"  lang="en">
+                        Thoksakis A and Papesh MH (2022) Why Some People See, Hear, Or Feel “Ghosts”. Front. Young Minds. 10:790073. doi: 10.3389/frym.2022.790073
+                    </div>
+                <h3 class="heading heading-small-margin">编辑</h3>
+                <div class="spacing-large">
+                    <a href="https://loop.frontiersin.org/people/529" target="_blank">David Sheinberg</a>
+                </div>
+                    <h3 class="heading heading-small-margin">科学导师</h3>
+                    <div class="spacing-large">
+
+                            <a href="https://loop.frontiersin.org/people/465310" target="_blank">Mukul Mukherjee ,</a>
+                            <a href="https://loop.frontiersin.org/people/1522447" target="_blank">Alessandro Ulivi </a>
+                    </div>
+
+                <h3 class="heading heading-small-margin">出版日期</h3>
+                <div class="spacing-large">
+                    线上发表时间 2023年08月04日.
+                </div>
+                <div class="spacing-large">
+                        Copyright © 2022 © 2023 Thoksakis and Papesh
+                </div>
+                <div class="spacing-large">
+                    <p>这是一篇在<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License (CC BY)</a>条款下发表的开放获取文章. 根据公认的学术惯例，在注明原作者或许可方，及在标明本刊为原始出处的前提下，允许使用、传播、复制至其他平台。如违反以上条款，则不得使用、传播或复制文章内容。</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+        <aside class="articles-section">
+            <div class="size size-large">
+                <h2 class="heading heading-large">相关文章</h2>
+                <div class="spacing-huge">
+                    <div class="slider">
+                        <div class="articles-container articles-container-slider">
+                            
+
+<article class="article " data-test-id="article-10.3389/frym.2020.00001-zh">
+    <a class="article-link" href="/zh/articles/10.3389/frym.2020.00001-zh" data-event="article-tile" data-test-id="article">
+        <div class="image-container article-image-container">
+<img class="image lazy-loaded-image lazy" alt="" src="" data-src="https://www.frontiersin.org/files/Articles/488428/frym-08-00001-HTML-r1/image_m/main.jpg" />
+        </div>
+        <div class="article-main">
+            <div>
+                <div class="article-info">
+                    <div class="article-date">2025年12月30日</div>
+                    <div class="article-type">核心概念</div>
+                </div>
+                <h1 class="article-heading heading">酗酒和青少年的大脑</h1>
+                <p class="article-abstract">为什么有些青少年会酗酒？ 当他们酗酒时, 大脑会发生什么变化？ 许多人惊讶地发现:大脑会一直发育到 25 岁左右, 在青少年时期尤为脆弱。 在这篇文章中, 我们将讨论大脑是如何成熟的, 以及我们测量大脑和心理功能的一些不同的方法。...</p>
+            </div>
+            <div class="article-persons">
+                <div class="article-authors-container">
+                    <h2 class="heading">作者</h2>
+                    Briana Lees, Louise Mewton, Lexine Stapinski, Maree Teesson
+                </div>
+                <h2 class="heading article-reviewers-heading">少年审稿人</h2>
+                <div class="article-reviewers-container" data-roller>
+                    
+
+<div class="article-reviewer fade active">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/488428/frym-08-00001-HTML-r1/image_m/re-explora-science-center.jpg" alt="Explora Science Center and Children’s Museum">
+    </div>
+    <div class="article-reviewer-info">
+        <div class="article-reviewer-name"  lang="en">Explora Science Center and Children’s Museum</div>
+        <div>年龄 8–14</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
+
+<article class="article " data-test-id="article-10.3389/frym.2020.00016-zh">
+    <a class="article-link" href="/zh/articles/10.3389/frym.2020.00016-zh" data-event="article-tile" data-test-id="article">
+        <div class="image-container article-image-container">
+<img class="image lazy-loaded-image lazy" alt="" src="" data-src="https://www.frontiersin.org/files/Articles/482870/frym-08-00016-HTML/image_m/main.jpg" />
+        </div>
+        <div class="article-main">
+            <div>
+                <div class="article-info">
+                    <div class="article-date">2025年12月30日</div>
+                    <div class="article-type">新发现</div>
+                </div>
+                <h1 class="article-heading heading">脑部刺激有助于我们理解音乐与语言</h1>
+                <p class="article-abstract">语言和音乐是我们相互交流的重要方式。 大声说话和弹吉他可能看起来很不一样, 但你知道它们使用了很多相同的大脑区域吗？ 你知道研究人员已经能够在脑外科手术中研究大脑的语言和音乐功能吗？ 在本文中, 你将了解一种称为皮层电刺激映射 （ESM）...</p>
+            </div>
+            <div class="article-persons">
+                <div class="article-authors-container">
+                    <h2 class="heading">作者</h2>
+                    Maansi Desai, Rachel Sorrells, Matthew K. Leonard, Edward F. Chang, Liberty S. Hamilton
+                </div>
+                <h2 class="heading article-reviewers-heading">少年审稿人</h2>
+                <div class="article-reviewers-container" data-roller>
+                    
+
+<div class="article-reviewer fade active">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/482870/frym-08-00016-HTML/image_m/re-julia.jpg" alt="Julia">
+    </div>
+    <div class="article-reviewer-info">
+        <div class="article-reviewer-name"  lang="en">Julia</div>
+        <div>年龄 13</div>
+    </div>
+</div>
+
+<div class="article-reviewer fade ">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/482870/frym-08-00016-HTML/image_m/re-syb.jpg" alt="Syb">
+    </div>
+    <div class="article-reviewer-info">
+        <div class="article-reviewer-name"  lang="en">Syb</div>
+        <div>年龄 14</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
+
+<article class="article " data-test-id="article-10.3389/frym.2015.00004-zh">
+    <a class="article-link" href="/zh/articles/10.3389/frym.2015.00004-zh" data-event="article-tile" data-test-id="article">
+        <div class="image-container article-image-container">
+<img class="image lazy-loaded-image lazy" alt="" src="" data-src="https://www.frontiersin.org/files/Articles/145286/frym-2015-00004-HTML-r2/image_m/main.jpg" />
+        </div>
+        <div class="article-main">
+            <div>
+                <div class="article-info">
+                    <div class="article-date">2025年12月30日</div>
+                    <div class="article-type">核心概念</div>
+                </div>
+                <h1 class="article-heading heading">时隐时现: 与看不见的物体互动</h1>
+                <p class="article-abstract">某个炎热的一天, 你正在公园里玩, 这时你的父母拿给你一盒冰淇淋, 你会做什么？ 最有可能的是, 你跑向他们, 盯着美味的冰淇淋蛋筒, 然后伸手去拿。虽然这看起来是最自然不过的事情...</p>
+            </div>
+            <div class="article-persons">
+                <div class="article-authors-container">
+                    <h2 class="heading">作者</h2>
+                    Apoorva Rajiv Madipakkam, Karin Ludwig, Marcus Rothkirch, Guido Hesselmann
+                </div>
+                <h2 class="heading article-reviewers-heading">少年审稿人</h2>
+                <div class="article-reviewers-container" data-roller>
+                    
+
+<div class="article-reviewer fade active">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/145286/frym-2015-00004-HTML-r2/image_m/re-daren.jpg" alt="Daren">
+    </div>
+    <div class="article-reviewer-info">
+        <div class="article-reviewer-name"  lang="en">Daren</div>
+        <div>年龄 13</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
+
+<article class="article " data-test-id="article-10.3389/frym.2020.00072-zh">
+    <a class="article-link" href="/zh/articles/10.3389/frym.2020.00072-zh" data-event="article-tile" data-test-id="article">
+        <div class="image-container article-image-container">
+<img class="image lazy-loaded-image lazy" alt="" src="" data-src="https://www.frontiersin.org/files/Articles/508993/frym-08-00072-HTML/image_m/main.jpg" />
+        </div>
+        <div class="article-main">
+            <div>
+                <div class="article-info">
+                    <div class="article-date">2025年03月28日</div>
+                    <div class="article-type">核心概念</div>
+                </div>
+                <h1 class="article-heading heading">磁共振成像的魔法艺术：研究大脑如何阅读</h1>
+                <p class="article-abstract">在《哈利 • 波特》系列书中, 有一种叫做 ”读心术” 的魔法可以用来读取和了解他人的思绪。但是, 魔法总是伴随着巨大的责任, 应该谨慎使用。同样地, 磁共振成像 (MRI) 是一种强大的工具, 让我们能够拍摄身体不同部位的详细图像...</p>
+            </div>
+            <div class="article-persons">
+                <div class="article-authors-container">
+                    <h2 class="heading">作者</h2>
+                    Nora Maria Raschle, R&#233;ka Borb&#225;s, Carolyn King, Nadine Gaab
+                </div>
+                <h2 class="heading article-reviewers-heading">少年审稿人</h2>
+                <div class="article-reviewers-container" data-roller>
+                    
+
+<div class="article-reviewer fade active">
+    <div class="image-container">
+        <img class="image" src="https://www.frontiersin.org/files/Articles/508993/frym-08-00072-HTML/image_m/re-cascadia-elementary.jpg" alt="Cascadia Elementary">
+    </div>
+    <div class="article-reviewer-info">
+        <div class="article-reviewer-name"  lang="en">Cascadia Elementary</div>
+        <div>年龄 8–9</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a href="/zh/articles" class="button button-large">
+                        全部文章
+                    </a>
+                </div>
+            </div>
+        </aside>
+</article>
+
+
+
+    
+
+
+
+</main>
+
+
+
+
+    <div class="toast-container toast-top-right" hidden data-toast-save>
+        <div class="toast" aria-live="polite" style="display: block;">
+            <div class="toast-message edit"></div>
+        </div>
+    </div>
+    <a href="#" id="overlay" class="overlay fade" tabindex="-1"></a>
+
+    
+    <footer id="footer" class="footer">
+    <div class="footer-container">
+        <div class="footer-navigation">
+            <div class="footer-menu">
+                <ul>
+                    <li>
+                        <a href="https://www.frontiersin.org/" target="_blank" data-event="footer-home">Frontiers主页</a>
+                    </li>
+                    <li>
+                        <a href="https://blog.frontiersin.org/category/young-minds/" target="_blank" data-event="footer-blog">博客</a>
+                    </li>
+                        <li>
+                            <a href="mailto:kids.chinese@frontiersin.org" data-event="footer-contact">联系我们</a>
+                        </li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                        <li>
+                            <a href="https://twitter.com/frontyoungminds" target="_blank" data-event="footer-twitter">
+                                <i class="icon icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/FrontiersForYoungMinds" target="_blank" data-event="footer-facebook">
+                                <i class="icon icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/frontiersyoungminds/" target="_blank" data-event="footer-instagram">
+                                <i class="icon icon-instagram"></i>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div  class="footer-copyright">
+            © 2025 Frontiers Media S.A.
+            <span class="footer-copyright-rights">All Rights Reserved</span>
+            <span class="footer-privacy-policy">
+                <a href="https://www.frontiersin.org/legal/privacy-policy" target="_blank">Privacy policy</a>
+                <span>|</span>
+                <a href="https://www.frontiersin.org/legal/terms-and-conditions" target="_blank">Terms and conditions</a>
+            </span>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <script src="/bundles/ibarjs?v=zHL-m4rGm2J13mh4HebqcW3Wkrbh9yJyj9LpG4qDuEs1"></script>
+
+
+    <aside >
+        <h2 class="sr-only">Additional navigation</h2>
+        <section>
+                <frontiers-ibar main-domain='frontiersin.org' is-frontiers="true" tenant-name="Frontiers" loop-url="https://loop.frontiersin.org" class="Ibar__YmMain"></frontiers-ibar>
+        </section>
+    </aside>
+
+    <script src="/vendor?v=DTZpjtXKz-4KyiRbRFN_swDNp7Fj9wHKCNq_8kS4Yj41"></script>
+
+    <script src="/js?v=zP6gGJBfGzY7sGV4nklsKXMFKA6GvM3CZFYAOd2ENqA1"></script>
+
+    <script src="/bundles/multilanguagejs?v=WQzIMYgD1oXr5Eb7DjmDOlp_2Munwis2_Z2l2fxkNvc1"></script>
+
+    <script src="/bundles/lazyloadingjs?v=_4NO4MgN8ZihmWGPwGwNxZ7ZOeYuR2vkXi0mJPuABU01"></script>
+
+
+    
+    
+
+        <script type="text/plain" class="optanon-category-C0002">
+
+            $(document).ready(function () {
+                initializeBasicDetails('view_article')
+            });
+        </script>
+        <script type="text/plain" class="optanon-category-C0001">
+
+            $(document).ready(function () {
+                initializeBasicDetails('article_page_view')
+                initializeArticlePdfDetails('article_page_download')
+            });
+        </script>
+
+        <script type="text/javascript">
+
+            function initializeBasicDetails(eventType) {
+                frontiers.view.articlePageDetails.initialize({
+                    article_title: '世界上有“鬼”吗?',
+                    doi: '10.3389/frym.2022.790073-zh',
+                    article_id: 790073,
+                    section_title: '神经科学与心理学',
+                    section_id: 978,
+                    collection_id: 0,
+                    collection_title: '',
+                    published_date: '2023/8/4 0:00:00',
+                    accepted_date: '2022/9/15 14:01:21',
+                    article_type: '核心概念',
+                    event_type: eventType,
+                    specialty_id: 1637,
+                });
+            }
+
+            function initializeArticlePdfDetails(eventType) {
+                frontiers.view.articlePageDownloadDetails.initialize({
+                    doi: '10.3389/frym.2022.790073-zh',
+                    article_id: 790073,
+                    section_id: 978,
+                    event_type: eventType
+                });
+            }
+
+            let isLazyLoadingEnabled =  true;
+
+            if (isLazyLoadingEnabled) {
+
+                frontiers.view.lazyLoading.initialize({
+
+                    imagecontainer_class: '.fulltext-content',
+                    page_Name: 'article_details'
+                });
+            }
+
+        </script>
+    
+
+
+    <script type="text/javascript">
+
+        //GTM Event and ibar overlap
+        let searchModule = document.querySelector('.Ibar__YmMain');
+        let searchModuleRoot = searchModule && searchModule.shadowRoot;
+
+        let IbarSubmit = searchModuleRoot.querySelector('.Ibar__submit');
+        let ibarAboutClose = searchModuleRoot.querySelector('.Ibar__dropdown__trigger');
+        let ibarAboutOpen = searchModuleRoot.querySelector('.Ibar__dropdown__trigger--open');
+        let IbarMain = searchModuleRoot.querySelector('.Ibar__main');
+
+        $(IbarSubmit).attr('data-event', 'navigation-bar-submit');
+
+    </script>
+
+</body>
+</html>
