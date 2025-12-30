@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="theme-color" content="#95c391"/>
+
+        <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+    <script type="text/javascript" async>
+        (function () {
+            var host = 'generationvoyage.fr';
+            var element = document.createElement('script');
+            var firstScript = document.getElementsByTagName('script')[0];
+            var url = 'https://cmp.inmobi.com'
+                .concat('/choice/', 'CY9fQZg9c-rvQ', '/', host, '/choice.js?tag_version=V3');
+            var uspTries = 0;
+            var uspTriesLimit = 3;
+            element.async = true;
+            element.type = 'text/javascript';
+            element.src = url;
+
+            firstScript.parentNode.insertBefore(element, firstScript);
+
+            function makeStub() {
+                var TCF_LOCATOR_NAME = '__tcfapiLocator';
+                var queue = [];
+                var win = window;
+                var cmpFrame;
+
+                function addFrame() {
+                    var doc = win.document;
+                    var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                    if (!otherCMP) {
+                        if (doc.body) {
+                            var iframe = doc.createElement('iframe');
+
+                            iframe.style.cssText = 'display:none';
+                            iframe.name = TCF_LOCATOR_NAME;
+                            doc.body.appendChild(iframe);
+                        } else {
+                            setTimeout(addFrame, 5);
+                        }
+                    }
+                    return !otherCMP;
+                }
+
+                function tcfAPIHandler() {
+                    var gdprApplies;
+                    var args = arguments;
+
+                    if (!args.length) {
+                        return queue;
+                    } else if (args[0] === 'setGdprApplies') {
+                        if (
+                            args.length > 3 &&
+                            args[2] === 2 &&
+                            typeof args[3] === 'boolean'
+                        ) {
+                            gdprApplies = args[3];
+                            if (typeof args[2] === 'function') {
+                                args[2]('set', true);
+                            }
+                        }
+                    } else if (args[0] === 'ping') {
+                        var retr = {
+                            gdprApplies: gdprApplies,
+                            cmpLoaded: false,
+                            cmpStatus: 'stub'
+                        };
+
+                        if (typeof args[2] === 'function') {
+                            args[2](retr);
+                        }
+                    } else {
+                        if (args[0] === 'init' && typeof args[3] === 'object') {
+                            args[3] = Object.assign(args[3], { tag_version: 'V3' });
+                        }
+                        queue.push(args);
+                    }
+                }
+
+                function postMessageEventHandler(event) {
+                    var msgIsString = typeof event.data === 'string';
+                    var json = {};
+
+                    try {
+                        if (msgIsString) {
+                            json = JSON.parse(event.data);
+                        } else {
+                            json = event.data;
+                        }
+                    } catch (ignore) {}
+
+                    var payload = json.__tcfapiCall;
+
+                    if (payload) {
+                        window.__tcfapi(
+                            payload.command,
+                            payload.version,
+                            function (retValue, success) {
+                                var returnMsg = {
+                                    __tcfapiReturn: {
+                                        returnValue: retValue,
+                                        success: success,
+                                        callId: payload.callId
+                                    }
+                                };
+                                if (msgIsString) {
+                                    returnMsg = JSON.stringify(returnMsg);
+                                }
+                                if (event && event.source && event.source.postMessage) {
+                                    event.source.postMessage(returnMsg, '*');
+                                }
+                            },
+                            payload.parameter
+                        );
+                    }
+                }
+
+                while (win) {
+                    try {
+                        if (win.frames[TCF_LOCATOR_NAME]) {
+                            cmpFrame = win;
+                            break;
+                        }
+                    } catch (ignore) {}
+
+                    if (win === window.top) {
+                        break;
+                    }
+                    win = win.parent;
+                }
+                if (!cmpFrame) {
+                    addFrame();
+                    win.__tcfapi = tcfAPIHandler;
+                    win.addEventListener('message', postMessageEventHandler, false);
+                }
+            };
+
+            makeStub();
+
+            function makeGppStub() {
+                const CMP_ID = 10;
+                const SUPPORTED_APIS = [
+                    '2:tcfeuv2',
+                    '6:uspv1',
+                    '7:usnatv1',
+                    '8:usca',
+                    '9:usvav1',
+                    '10:uscov1',
+                    '11:usutv1',
+                    '12:usctv1'
+                ];
+
+                window.__gpp_addFrame = function (n) {
+                    if (!window.frames[n]) {
+                        if (document.body) {
+                            var i = document.createElement("iframe");
+                            i.style.cssText = "display:none";
+                            i.name = n;
+                            document.body.appendChild(i);
+                        } else {
+                            window.setTimeout(window.__gpp_addFrame, 10, n);
+                        }
+                    }
+                };
+                window.__gpp_stub = function () {
+                    var b = arguments;
+                    __gpp.queue = __gpp.queue || [];
+                    __gpp.events = __gpp.events || [];
+
+                    if (!b.length || (b.length == 1 && b[0] == "queue")) {
+                        return __gpp.queue;
+                    }
+
+                    if (b.length == 1 && b[0] == "events") {
+                        return __gpp.events;
+                    }
+
+                    var cmd = b[0];
+                    var clb = b.length > 1 ? b[1] : null;
+                    var par = b.length > 2 ? b[2] : null;
+                    if (cmd === "ping") {
+                        clb(
+                            {
+                                gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+                                cmpStatus: "stub", // possible values: stub, loading, loaded, error
+                                cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+                                signalStatus: "not ready", // possible values: not ready, ready
+                                supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+                                cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+                                sectionList: [],
+                                applicableSections: [-1],
+                                gppString: "",
+                                parsedSections: {},
+                            },
+                            true
+                        );
+                    } else if (cmd === "addEventListener") {
+                        if (!("lastId" in __gpp)) {
+                            __gpp.lastId = 0;
+                        }
+                        __gpp.lastId++;
+                        var lnr = __gpp.lastId;
+                        __gpp.events.push({
+                            id: lnr,
+                            callback: clb,
+                            parameter: par,
+                        });
+                        clb(
+                            {
+                                eventName: "listenerRegistered",
+                                listenerId: lnr, // Registered ID of the listener
+                                data: true, // positive signal
+                                pingData: {
+                                    gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+                                    cmpStatus: "stub", // possible values: stub, loading, loaded, error
+                                    cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+                                    signalStatus: "not ready", // possible values: not ready, ready
+                                    supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+                                    cmpId: CMP_ID, // list of supported APIs
+                                    sectionList: [],
+                                    applicableSections: [-1],
+                                    gppString: "",
+                                    parsedSections: {},
+                                },
+                            },
+                            true
+                        );
+                    } else if (cmd === "removeEventListener") {
+                        var success = false;
+                        for (var i = 0; i < __gpp.events.length; i++) {
+                            if (__gpp.events[i].id == par) {
+                                __gpp.events.splice(i, 1);
+                                success = true;
+                                break;
+                            }
+                        }
+                        clb(
+                            {
+                                eventName: "listenerRemoved",
+                                listenerId: par, // Registered ID of the listener
+                                data: success, // status info
+                                pingData: {
+                                    gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+                                    cmpStatus: "stub", // possible values: stub, loading, loaded, error
+                                    cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+                                    signalStatus: "not ready", // possible values: not ready, ready
+                                    supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+                                    cmpId: CMP_ID, // CMP ID
+                                    sectionList: [],
+                                    applicableSections: [-1],
+                                    gppString: "",
+                                    parsedSections: {},
+                                },
+                            },
+                            true
+                        );
+                    } else if (cmd === "hasSection") {
+                        clb(false, true);
+                    } else if (cmd === "getSection" || cmd === "getField") {
+                        clb(null, true);
+                    }
+                    //queue all other commands
+                    else {
+                        __gpp.queue.push([].slice.apply(b));
+                    }
+                };
+                window.__gpp_msghandler = function (event) {
+                    var msgIsString = typeof event.data === "string";
+                    try {
+                        var json = msgIsString ? JSON.parse(event.data) : event.data;
+                    } catch (e) {
+                        var json = null;
+                    }
+                    if (typeof json === "object" && json !== null && "__gppCall" in json) {
+                        var i = json.__gppCall;
+                        window.__gpp(
+                            i.command,
+                            function (retValue, success) {
+                                var returnMsg = {
+                                    __gppReturn: {
+                                        returnValue: retValue,
+                                        success: success,
+                                        callId: i.callId,
+                                    },
+                                };
+                                event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+                            },
+                            "parameter" in i ? i.parameter : null,
+                            "version" in i ? i.version : "1.1"
+                        );
+                    }
+                };
+                if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+                    window.__gpp = window.__gpp_stub;
+                    window.addEventListener("message", window.__gpp_msghandler, false);
+                    window.__gpp_addFrame("__gppLocator");
+                }
+            };
+
+            makeGppStub();
+
+            var uspStubFunction = function () {
+                var arg = arguments;
+                if (typeof window.__uspapi !== uspStubFunction) {
+                    setTimeout(function () {
+                        if (typeof window.__uspapi !== 'undefined') {
+                            window.__uspapi.apply(window.__uspapi, arg);
+                        }
+                    }, 500);
+                }
+            };
+
+            var checkIfUspIsReady = function () {
+                uspTries++;
+                if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                    console.warn('USP is not accessible');
+                } else {
+                    clearInterval(uspInterval);
+                }
+            };
+
+            if (typeof window.__uspapi === 'undefined') {
+                window.__uspapi = uspStubFunction;
+                var uspInterval = setInterval(checkIfUspIsReady, 6000);
+            }
+        })();
+    </script>
+    <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+    <script>
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({
+            'category_post': '',
+            'advertisement': {
+                'env': 'production',
+                'brand': {
+                    'name': 'Generation Voyage',
+                    'abbr': 'genv',
+                    'domain': 'generationvoyage.fr',
+                    'subdomain': 'www',
+                    'isPrisma': false
+                },
+                'page': {
+                    'path': window.location.pathname,
+                    'pageType': 'Article',
+                    'pageCategory': 'villes-amp-villages',
+                    'title': '8 villes fantômes à découvrir en Europe',
+                    'keywords': ["", "", ""],
+                }
+            },
+        });
+        window.dataLayer.push({
+            'device': 'desktop',
+            'id_post': '93274',
+            'Title': '8 villes fantômes à découvrir en Europe',
+            'Ville_GV': '',
+            'Region_GV': '',
+            'Pays_GV': '',
+            'Location_GV': ", , ",
+            'URL': 'https://generationvoyage.fr/villes-fantomes-europe/',
+            'popup':1,
+            'bann':0,
+            'cat': 'Villes &amp; Villages',
+            'cat_inspi': 'Actualités',
+            'sponsos': '',
+            'tag': 'Photos',
+            'auteur': 'Mr Bo',
+            'affi_label': '',
+            'affi_url': 'https://generationvoyage.fr/activites/europe-c305545/',
+            'custom_location': '',
+            'date_publication': '30-01-2020',
+            'date_modification': '07-11-2025',
+            'id_pays_villes': '66133',
+        });
+        window.coreAds = window.coreAds || {}
+        window.coreAds.queue = window.coreAds.queue || []
+
+        window._CTZ = {
+            enabled: true,
+            "verticals": {
+                "hotel": {
+                    "active": true,
+                    "search": {
+                        "city": "",
+                        "province": "",
+                        "country": "",
+                        "checkInDate": "",
+                        "checkOutDate": "",
+                        "rooms": [{}]
+                    }
+                }
+            }
+        }
+    </script>
+
+            <script>
+            window.dataLayer.push({
+                'isLogued': false,
+            });
+        </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T8CFMX6');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <link id="favicon" rel="shortcut icon" href="https://generationvoyage.fr/icon-gv-32.png" sizes="16x16 32x32 48x48"
+          type="image/png"/>
+    <link rel="icon" href="https://generationvoyage.fr/icon-gv-256.png" sizes="256x256" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" href="https://generationvoyage.fr/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" href="https://generationvoyage.fr/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="https://generationvoyage.fr/apple-touch-icon-120x120.png"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2"/>
+    <title>8 villes fantômes à découvrir en Europe</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Generation Voyage Flux principal"
+          href="https://generationvoyage.fr/feed/"/>
+    <meta name="p:domain_verify" content="9a3908f32a11473095db9da57551303a"/>
+    <meta name="gv-version" content="v2.28.4"/>
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	    <script>
+    (function(window) {
+        const cookieName = 'gv_user_hash';
+        const expirationDays = 365; // Set the cookie expiration to one year
+
+        function setCookie(value) {
+            const expires = new Date(Date.now() + expirationDays * 864e5).toUTCString();
+            document.cookie = `${cookieName}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
+        }
+
+        function getCookie() {
+            return document.cookie
+              .split('; ')
+              .find(row => row.startsWith(cookieName + '='))
+              ?.split('=')[1];
+        }
+
+        function getOrCreateUserHash() {
+            let userHash = getCookie();
+            if (!userHash) {
+              userHash = crypto.randomUUID();
+              setCookie(userHash);
+            }
+            return userHash;
+        }
+
+        // Expose and init getUserHash function
+        window.getUserHash = getOrCreateUserHash;
+        window.getUserHash();
+    })(window);
+    </script>
+    
+	<!-- This site is optimized with the Yoast SEO Premium plugin v26.6 (Yoast SEO v26.6) - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Vous voulez frissonner au cours d&#039;une expérience hors du commun? Si c&#039;est le cas, voici une sélection de villes fantômes à découvrir en Europe !" />
+	<link rel="canonical" href="https://generationvoyage.fr/villes-fantomes-europe/" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="8 villes fantômes à découvrir en Europe" />
+	<meta property="og:description" content="Vous voulez frissonner au cours d&#039;une expérience hors du commun? Si c&#039;est le cas, voici une sélection de villes fantômes à découvrir en Europe ! Que vous" />
+	<meta property="og:url" content="https://generationvoyage.fr/villes-fantomes-europe/" />
+	<meta property="og:site_name" content="GenerationVoyage" />
+	<meta property="article:publisher" content="https://www.facebook.com/toolito.voyage" />
+	<meta property="article:published_time" content="2020-01-30T15:48:42+00:00" />
+	<meta property="article:modified_time" content="2025-11-07T10:28:52+00:00" />
+	<meta property="og:image" content="https://cdn.generationvoyage.fr/2020/01/villes-fantomes.jpg" />
+	<meta property="og:image:width" content="2000" />
+	<meta property="og:image:height" content="1124" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Thibault Evesque" />
+	<meta name="twitter:label1" content="Écrit par" />
+	<meta name="twitter:data1" content="Thibault Evesque" />
+	<meta name="twitter:label2" content="Durée de lecture estimée" />
+	<meta name="twitter:data2" content="9 minutes" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id='akismet-widget-style-inline-css' type='text/css'>
+
+			.a-stats {
+				--akismet-color-mid-green: #357b49;
+				--akismet-color-white: #fff;
+				--akismet-color-light-grey: #f6f7f7;
+
+				max-width: 350px;
+				width: auto;
+			}
+
+			.a-stats * {
+				all: unset;
+				box-sizing: border-box;
+			}
+
+			.a-stats strong {
+				font-weight: 600;
+			}
+
+			.a-stats a.a-stats__link,
+			.a-stats a.a-stats__link:visited,
+			.a-stats a.a-stats__link:active {
+				background: var(--akismet-color-mid-green);
+				border: none;
+				box-shadow: none;
+				border-radius: 8px;
+				color: var(--akismet-color-white);
+				cursor: pointer;
+				display: block;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+				font-weight: 500;
+				padding: 12px;
+				text-align: center;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			/* Extra specificity to deal with TwentyTwentyOne focus style */
+			.widget .a-stats a.a-stats__link:focus {
+				background: var(--akismet-color-mid-green);
+				color: var(--akismet-color-white);
+				text-decoration: none;
+			}
+
+			.a-stats a.a-stats__link:hover {
+				filter: brightness(110%);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+			}
+
+			.a-stats .count {
+				color: var(--akismet-color-white);
+				display: block;
+				font-size: 1.5em;
+				line-height: 1.4;
+				padding: 0 13px;
+				white-space: nowrap;
+			}
+		
+</style>
+<meta name="sentry-trace" content="dc484c5d9d57472bb7ffafe40d4c4f9f-f7ca26de2948421d-0" />
+<meta name="traceparent" content="" />
+<meta name="baggage" content="sentry-trace_id=dc484c5d9d57472bb7ffafe40d4c4f9f,sentry-sample_rate=0.01,sentry-transaction=%2F%7Bname%7D,sentry-public_key=2974c6a458ab4130a6ee9faae7277111,sentry-org_id=186679,sentry-release=v2.28.4,sentry-environment=production,sentry-sampled=false,sentry-sample_rand=0.173669" />
+<link rel='shortlink' href='https://generationvoyage.fr/?p=93274' />
+
+        <script>
+        var flex_TypeDevice = 'desktop';
+    </script>
+
+
+    <link rel='preload' fetchpriority='high' as='image' href='https://cdn.generationvoyage.fr/2020/01/villes-fantomes-630x354.jpg.webp' type='image/webp'><link rel='preload' fetchpriority='high' as='image' href='https://cdn.generationvoyage.fr/2025/09/popup_outil_vol_gv.jpg'>    <link rel="dns-prefetch" href="//cdn.generationvoyage.fr/">
+    <link rel="preconnect" href="https://cmp.inmobi.com">
+    <link rel="preconnect" href="https://cdn.generationvoyage.fr"/>
+
+
+    <link rel="stylesheet" id="critical-toolito-css" href="https://generationvoyage.fr/wp-content/themes/toolito/dist/critical.094bbea29d6af8e43a6114c0b3d4a679.css" type="text/css" media="screen"/>
+    <link rel="preload" href="https://generationvoyage.fr/css/fonts/Poppins-Regular.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="https://generationvoyage.fr/css/fonts/AlbertSans/AlbertSans-Medium.ttf" as="font" type="font/ttf"
+          crossorigin="anonymous">
+            <link rel="stylesheet" id="main-toolito-css" href="https://generationvoyage.fr/wp-content/themes/toolito/dist/style.4b8b46c79e43368d7b4c0fa853b17a02.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" id="app-toolito-css" href="https://generationvoyage.fr/wp-content/themes/toolito/dist/app.5d65d356d4ecd51af0829a0e3d9aeecf.css" type="text/css" media="screen"/>
+    
+<meta name="generator" content="WP Rocket 3.20.2" data-wpr-features="wpr_desktop" /></head>
+
+
+<body class="wp-singular post-template-default single single-post postid-93274 single-format-standard wp-theme-toolito headervoyage td-blog-travel single_template_7 wpb-js-composer js-comp-ver-4.11.2 vc_responsive td-animation-stack-type0 td-full-layout td-js-loaded desktop" x-data="app" x-init>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8CFMX6"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div data-rocket-location-hash="4624a48a8344e3ccc7541371d72671a1" id="googleTapContainer" style="display: none">
+    <div data-rocket-location-hash="1b59afb1570dcc2df09c1573d3e4fe0e" class="form-group form-group-checkbox">
+        <input name="newsletterOK" type="checkbox" value="oui" id="newsletterOK">
+        <label for="newsletterOK">Reçois aussi les coups de cœur de la communauté</label>
+    </div>
+</div>
+
+
+<div class="nav-header-container ontop">
+    <nav class="nav-header ontop" x-data="Nav">
+        <div class="content-form">
+            <div class="logo-content td-logo-sticky">
+                <a href="https://generationvoyage.fr">
+                    <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/logo_green.svg"
+                         loading="eager" data-no-lazy="1" width="170" height="45"
+                         data-retina="https://generationvoyage.fr/wp-content/themes/toolito/img/logo_green.svg"
+                         alt="Logo Generation Voyage">
+                </a>
+
+            </div>
+                            <form class="" action="/" method="get" x-on:keyup.escape.window="closeSearch" x-on:submit="searchPost">
+                    <div class="input-group">
+                        <input name='s' type="text"
+                               placeholder="Corse, Occitanie, Suède...">
+                        <button type="submit" title="Rechercher des articles">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.3668 26.3668C26.7165 26.0171 26.7165 25.4502 26.3668 25.1005L21.3244 20.058C20.9696 19.7033 20.9407 19.1443 21.1886 18.7082C21.7228 17.7683 22.0251 16.6796 22.0251 15.5126C22.0251 11.9126 19.1126 9 15.5126 9C11.9126 9 9 11.9126 9 15.5126C9 19.1126 11.9126 22.0251 15.5126 22.0251C16.6706 22.0251 17.7608 21.7201 18.7118 21.1814C19.1456 20.9357 19.7005 20.9668 20.0531 21.3194L25.1005 26.3668C25.4502 26.7165 26.0171 26.7165 26.3668 26.3668ZM10.809 15.5126C10.809 12.9256 12.9256 10.809 15.5126 10.809C18.0995 10.809 20.2161 12.9256 20.2161 15.5126C20.2161 18.0995 18.0995 20.2161 15.5126 20.2161C12.9256 20.2161 10.809 18.0995 10.809 15.5126Z"
+                                      fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                    </div>
+        <ul class="item-menu">
+            <li>
+                <a href="/tourisme/" title="Guides Voyage">Destinations</a>
+            </li>
+            <li>
+                <a href="/activites/" title="Activités">Activités</a>
+            </li>
+            <li>
+                <a href="/outils-voyageur/" title="Outils">Outils</a>
+            </li>
+            <li>
+                <a href="https://vols.generationvoyage.fr/" target="_blank" title="Explore" id="nav_explore">
+                    Vols
+                </a>
+            </li>
+                            <li class="account-icon">
+                    <button x-on:click.prevent="isLoginShow = true; open = false" title="Se connecter">
+                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.9968 6.87641C7.89792 6.87641 9.435 5.33933 9.435 3.4382C9.435 1.53708 7.89792 0 5.9968 0C4.09567 0 2.55859 1.53708 2.55859 3.4382C2.55859 5.33933 4.09567 6.87641 5.9968 6.87641ZM5.9968 1.34831C7.14286 1.34831 8.08668 2.29214 8.08668 3.4382C8.08668 4.58427 7.14286 5.52809 5.9968 5.52809C4.85073 5.52809 3.90691 4.58427 3.90691 3.4382C3.90691 2.29214 4.85073 1.34831 5.9968 1.34831Z"
+                                  fill="white"/>
+                            <path d="M6 7.48291C2.92408 7.48291 0.374222 9.82098 0.0376706 12.8099C-0.00399035 13.1799 0.30183 13.4829 0.674157 13.4829C1.04648 13.4829 1.34317 13.1793 1.39689 12.8109C1.72427 10.5655 3.66633 8.83122 6 8.83122C8.33367 8.83122 10.2757 10.5655 10.6031 12.8109C10.6568 13.1793 10.9535 13.4829 11.3258 13.4829C11.6982 13.4829 12.004 13.1799 11.9623 12.8099C11.6258 9.82098 9.07592 7.48291 6 7.48291Z"
+                                  fill="white"/>
+                        </svg>
+                    </button>
+                </li>
+                                </ul>
+        <div x-cloak x-show="open" class="nav-mobile-open">
+            <div class="top-mobile">
+                <div class="logo-content">
+                    <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/logo-black.svg"
+                         loading="lazy" data-no-lazy="1" width="170" height="44"
+                         data-retina="https://generationvoyage.fr/wp-content/themes/toolito/img/logo-black.svg"
+                         alt="Logo Generation Voyage">
+                </div>
+                <div class="nav-icon-menu nav-icon-menu-close" x-on:click.prevent="open = false">
+                    <svg width="36px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="menu-mobile-content">
+                <ul>
+                    <li>
+                        <a href="/tourisme/" title="Toutes les destinations">Toutes les destinations</a>
+                    </li>
+                    <li>
+                        <a href="/experiences/" title="Activités">Activités</a>
+                    <li>
+                        <a href="/outils-voyageur/" title="Outils du voyageur">Outils du voyageur</a>
+                    </li>
+                    <li>
+                        <a href="https://vols.generationvoyage.fr/" target="_blank" title="Explore">Vols</a>
+                        <span>Nouveau</span>
+                    </li>
+                    <li>
+                        <a href="/qui-sommes-nous/" title="Qui sommes-nous ?">Qui sommes-nous ?</a>
+                    </li>
+                    <li>
+                        <a href="/newsletter/" title="Newsletter">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="/contact/" title="Contact">Contact</a>
+                    </li>
+                </ul>
+                                                <div class="signin">
+                                            <a x-on:click.prevent="isLoginShow = true; open = false" href="/profil/" title="Se connecter">
+                            <svg width="21" height="21" viewBox="0 0 12 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.9968 6.87641C7.89792 6.87641 9.435 5.33933 9.435 3.4382C9.435 1.53708 7.89792 0 5.9968 0C4.09567 0 2.55859 1.53708 2.55859 3.4382C2.55859 5.33933 4.09567 6.87641 5.9968 6.87641ZM5.9968 1.34831C7.14286 1.34831 8.08668 2.29214 8.08668 3.4382C8.08668 4.58427 7.14286 5.52809 5.9968 5.52809C4.85073 5.52809 3.90691 4.58427 3.90691 3.4382C3.90691 2.29214 4.85073 1.34831 5.9968 1.34831Z"
+                                      fill="black"/>
+                                <path d="M6 7.48291C2.92408 7.48291 0.374222 9.82098 0.0376706 12.8099C-0.00399035 13.1799 0.30183 13.4829 0.674157 13.4829C1.04648 13.4829 1.34317 13.1793 1.39689 12.8109C1.72427 10.5655 3.66633 8.83122 6 8.83122C8.33367 8.83122 10.2757 10.5655 10.6031 12.8109C10.6568 13.1793 10.9535 13.4829 11.3258 13.4829C11.6982 13.4829 12.004 13.1799 11.9623 12.8099C11.6258 9.82098 9.07592 7.48291 6 7.48291Z"
+                                      fill="black"/>
+                            </svg>
+                            Se connecter</a>
+                    
+                </div>
+                <div class="social">
+                    <p>
+                        Suivez-nous sur les réseaux
+                    </p>
+                    <a href="https://www.instagram.com/generation_voyage/" target="_blank"><img width="15" height="15"
+                                                                                                loading="lazy"
+                                                                                                src="https://generationvoyage.fr/wp-content/themes/toolito/img/instagram.svg"
+                                                                                                alt="Logo Instagram"></a>
+                    <a href="https://www.linkedin.com/company/generationvoyage/" target="_blank"><img width="15"
+                                                                                                      height="15"
+                                                                                                      loading="lazy"
+                                                                                                      src="https://generationvoyage.fr/wp-content/themes/toolito/img/linkedin.svg"
+                                                                                                      alt="Logo Linkedin"></a>
+                    <a href="https://www.facebook.com/generationvoyage/" target="_blank"><img width="9" height="17"
+                                                                                              loading="lazy"
+                                                                                              src="https://generationvoyage.fr/wp-content/themes/toolito/img/facebook.svg"
+                                                                                              alt="Logo Facebook"></a>
+                    <a href="https://www.pinterest.fr/generation_voyage/" target="_blank"><img width="13" height="17"
+                                                                                               loading="lazy"
+                                                                                               src="https://generationvoyage.fr/wp-content/themes/toolito/img/pinterest.svg"
+                                                                                               alt="Logo Pinterest"></a>
+                    <a href="https://www.youtube.com/@generationvoyage" target="_blank"><img width="19" height="17"
+                                                                                             loading="lazy"
+                                                                                             src="https://generationvoyage.fr/wp-content/themes/toolito/img/youtube-footer.svg"
+                                                                                             alt="Logo Youtube"></a>
+
+                </div>
+            </div>
+        </div>
+        <div x-cloak x-show="search" :class="{'full':show}"
+             class="search-mobile-open ">
+            <div class="top-mobile">
+                <div class="title">
+                    Votre prochaine destination
+                </div>
+                <div class="nav-icon-menu" x-on:click.prevent="closeSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" style="stroke: black"
+                              d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </div>
+            </div>
+            <form id="form-header" class="" action="/" method="get">
+                <div class="input-group">
+                    <input name='s' type="text" placeholder="Corse, Occitanie, Suède...">
+                    <button type="submit" title="Rechercher des articles">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.3668 26.3668C26.7165 26.0171 26.7165 25.4502 26.3668 25.1005L21.3244 20.058C20.9696 19.7033 20.9407 19.1443 21.1886 18.7082C21.7228 17.7683 22.0251 16.6796 22.0251 15.5126C22.0251 11.9126 19.1126 9 15.5126 9C11.9126 9 9 11.9126 9 15.5126C9 19.1126 11.9126 22.0251 15.5126 22.0251C16.6706 22.0251 17.7608 21.7201 18.7118 21.1814C19.1456 20.9357 19.7005 20.9668 20.0531 21.3194L25.1005 26.3668C25.4502 26.7165 26.0171 26.7165 26.3668 26.3668ZM10.809 15.5126C10.809 12.9256 12.9256 10.809 15.5126 10.809C18.0995 10.809 20.2161 12.9256 20.2161 15.5126C20.2161 18.0995 18.0995 20.2161 15.5126 20.2161C12.9256 20.2161 10.809 18.0995 10.809 15.5126Z"
+                                  fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="icon-content">
+                        <div id="search-header-button" class="nav-icon-menu "
+                 x-on:click.prevent="search = true">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#C6502E"/>
+                    <path d="M26.3668 26.3668C26.7165 26.0171 26.7165 25.4502 26.3668 25.1005L21.3244 20.058C20.9696 19.7033 20.9407 19.1443 21.1886 18.7082C21.7228 17.7683 22.0251 16.6796 22.0251 15.5126C22.0251 11.9126 19.1126 9 15.5126 9C11.9126 9 9 11.9126 9 15.5126C9 19.1126 11.9126 22.0251 15.5126 22.0251C16.6706 22.0251 17.7608 21.7201 18.7118 21.1814C19.1456 20.9357 19.7005 20.9668 20.0531 21.3194L25.1005 26.3668C25.4502 26.7165 26.0171 26.7165 26.3668 26.3668ZM10.809 15.5126C10.809 12.9256 12.9256 10.809 15.5126 10.809C18.0995 10.809 20.2161 12.9256 20.2161 15.5126C20.2161 18.0995 18.0995 20.2161 15.5126 20.2161C12.9256 20.2161 10.809 18.0995 10.809 15.5126Z"
+                          fill="white"/>
+                </svg>
+            </div>
+                        <div class="nav-icon-menu" x-on:click.prevent="open = true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+
+            </div>
+        </div>
+    </nav>
+</div>
+
+        <article data-rocket-location-hash="268f7b2938dac922ef93f25df28e0736" class="entry-article" itemscope itemtype="http://schema.org/Article">
+            
+    <section data-rocket-location-hash="7c6fa70b9d0ee0e8e66363085fdfbca5" class="menu-tourisme">
+        <div data-rocket-location-hash="1ce437d8c4541b6952c0111c79651d98" class="container-guide">
+            <div class="listing-page">
+                                    <a href="https://generationvoyage.fr/tourisme/europe/">Europe</a>
+                                                    <a href="https://generationvoyage.fr/activites/europe-c305545/">Activités</a>
+                            </div>
+        </div>
+    </section>
+                                    <div class="ads-core-placer" id="Banniere-Haute_601a7e933e292"
+                             data-ads-core='{"device": "tablet, desktop", "type":"Banniere-Haute"}'></div>
+                        
+            <div role="main"
+                 id="main-content">
+                <div data-rocket-location-hash="3c96e7c720ef87937f7807903725f688" class="containertableflex">
+                    <div class="tableflex1">
+                        <div class="postcontent">
+                            <div class="entry">
+                                <header class="td-post-title">
+                                    <div class="breadcrumbs-container">
+                                            <a href="https://generationvoyage.fr/tourisme/">Monde</a><svg viewBox="0 0 24 24" width="12px" height="12px" aria-hidden="true"><path d="m7.4 5.65 6.4 6.4-6.4 6.3 1.4 1.4 7.8-7.7-7.8-7.8z"></path></svg><a class="no-underline" href="https://generationvoyage.fr/tourisme/europe/"><span>Europe</span></a>                                    </div>
+                                                                                                            <div class="trop_design">
+                                        <div class="titlearticle"><h1 class="entry-title">8 villes fantômes à découvrir en Europe</h1>
+                                            <div class="formcontainer_news">
+                                                <div class="formhomecontainer ">
+                                                    <img width="630" height="354" src="https://cdn.generationvoyage.fr/2020/01/villes-fantomes-630x354.jpg" class="attachment-large size-large wp-post-image" alt="Chypre Nord, plage de Famagusta Palm" loading="eager" decoding="async" fetchpriority="high" srcset="https://cdn.generationvoyage.fr/2020/01/villes-fantomes-630x354.jpg 630w, https://cdn.generationvoyage.fr/2020/01/villes-fantomes-300x169.jpg 300w, https://cdn.generationvoyage.fr/2020/01/villes-fantomes-768x432.jpg 768w, https://cdn.generationvoyage.fr/2020/01/villes-fantomes-755x424.jpg 755w, https://cdn.generationvoyage.fr/2020/01/villes-fantomes.jpg 2000w" sizes="(max-width: 630px) 100vw, 630px" />                                                </div>
+                                                                                                    <div class="formhomepartner">
+                                                                                                                    <a target="_blank"
+                                                               rel=""
+                                                               href="https://generationvoyage.fr/activites/europe-c305545/"
+                                                               title="Réservez vos visites & activités: "
+                                                            >
+                                                                <span class="affili_text">Réservez vos visites & activités: </span>
+                                                                <span class="aff_bouton" target="_blank"
+                                                                      title="Réservez vos visites & activités: ">Voir les offres</span>
+                                                            </a>
+                                                                                                            </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="td-module-meta-info">
+                                        <div class="writer">
+                                                                                        <div>
+                                                <img class='photo' loading='lazy' src='/wp-content/uploads/avatars/4226f905.jpg'  alt='avatar' width='70' height='70' />                                            </div>
+                                                                                        <div class="w-full">
+                                                <div class="flex-center">
+                                                    <div itemprop="author" itemscope itemtype="https://schema.org/Person" class="td-post-author-name">Par <a itemprop="url"
+                                                                                                                                                             href="https://generationvoyage.fr/author/mr-bo/"><strong itemprop="name">Thibault Evesque</strong></a>
+                                                    </div>
+                                                    <div class="listing-social">
+                                                                                                            </div>
+                                                </div>
+
+                                                <span class="td-post-date">
+                                            <time class="entry-date updated td-module-date"
+                                                  datetime="2025-11-07T11:28:52+01:00">Le 30 janvier, 2020 (mis à jour le 07 novembre 2025)                                            </time>
+                                                <span>Temps de lecture: 5 minutes</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="container-fav-share"
+                                             x-data='Favoris(93274,false, {"Title":"8 villes fant\u00f4mes \u00e0 d\u00e9couvrir en Europe","Ville_GV":"","Region_GV":"","Pays_GV":"","tag":"Photos"})'
+                                             x-init="check" @favoris.window="set($event.detail)">
+                                            <div class="comments-container">
+                                                                                                    <a href="#respond">Écrire un commentaire</a>
+                                                                                                <span> - </span>
+                                                <a href="https://form.typeform.com/to/PZeHQbLo?typeform-medium=embed-snippet#source=https://generationvoyage.fr/villes-fantomes-europe/" id="typeform_bug_report" class="typeform-share button" data-tf-hidden="url=https://generationvoyage.fr/villes-fantomes-europe/" data-mode="drawer_right" target="_blank" rel="nofollow noopener noreferrer">Signaler une erreur</a>
+                                            </div>
+                                            <div class="content-btn">
+                                                <div class="share">
+                                                    <div class="share-btn" x-data="{dropdownMenuShare:false}">
+                                                        <button @click="dropdownMenuShare = ! dropdownMenuShare">
+                                                            <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/share.svg"
+                                                                 width="18px" height="18px" loading="lazy"
+                                                                 alt="share icon">
+                                                        </button>
+                                                        <div x-show="dropdownMenuShare"
+                                                             @click.away="dropdownMenuShare = false" x-cloak
+                                                             class="dropdown-menu">
+                                                            <span>Partager sur :</span>
+                                                            <div>
+                                                                <a target="_blank"
+                                                                   href="https://www.facebook.com/share.php?u=https://generationvoyage.fr/villes-fantomes-europe/?utm_source=facebook%26utm_medium=share"
+                                                                   title="Facebook" rel="nofollow">
+                                                                    <svg height="16px"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512">
+                                                                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                                                                    </svg>
+                                                                </a>
+                                                                <a target="_blank"
+                                                                   href="https://pinterest.com/pin/create/link/?url=https://generationvoyage.fr/villes-fantomes-europe/?utm_source=pinterest%26utm_medium=share&description=8%20villes%20fant%C3%B4mes%20%C3%A0%20d%C3%A9couvrir%20en%20Europe&media=https://cdn.generationvoyage.fr/2020/01/villes-fantomes-755x424.jpg"
+                                                                   title="Pinterest" rel="nofollow">
+                                                                    <svg height="16px"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 496 512">
+                                                                        <path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/>
+                                                                    </svg>
+                                                                </a>
+                                                                <a target="_blank"
+                                                                   href="https://www.linkedin.com/sharing/share-offsite/?url=https://generationvoyage.fr/villes-fantomes-europe/"
+                                                                   title="Linkedin" rel="nofollow">
+                                                                    <svg height="16px"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 448 512">
+                                                                        <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                                                                    </svg>
+                                                                </a>
+                                                                <a href="#" x-on:click="copyLink">
+                                                                    <svg class="copy-link"
+                                                                         xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                         viewBox="0 0 24 24" stroke-width="1.5"
+                                                                         stroke="currentColor" width="20px"
+                                                                         height="20px">
+                                                                        <path stroke-linecap="round"
+                                                                              stroke-linejoin="round"
+                                                                              d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div x-data="{dropdownMenu: false}" class="dropdown-container">
+                                                                                                            <button title="Ajouter au favoris" x-show="!isMyFavorite.step"
+                                                                x-on:click="isRegisterShow = true;registerFrom = 'bookmark';addToCookie(93274)"
+                                                                class="addBookmark">
+                                                            <span class="addBookmark-ArtId93274">
+                                                                <svg width="20" height="18" viewBox="0 0 20 18"
+                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M18.3304 1.68187C17.2073 0.560623 15.7433 0 14.2592 0C12.7952 0 11.3312 0.560623 10.2081 1.68187L10.0075 1.90211L9.78691 1.68187C8.66383 0.560623 7.1998 0 5.73577 0C4.27175 0 2.80772 0.560623 1.68463 1.68187C-0.561544 3.92436 -0.561544 7.56841 1.68463 9.8109L2.1459 10.2714L9.76686 17.8999C9.82702 17.96 9.9273 18 10.0075 18C10.1078 18 10.188 17.96 10.2482 17.8999L17.8691 10.2714L18.3304 9.8109C20.5565 7.56841 20.5565 3.92436 18.3304 1.68187ZM17.1873 8.66963L16.726 9.13014L10.0075 15.8576L3.26899 9.13014L2.80772 8.66963C1.20331 7.04783 1.20331 4.42492 2.80772 2.82314C3.58987 2.04227 4.63274 1.60178 5.73577 1.60178H5.75583C6.85886 1.60178 7.88168 2.04227 8.66383 2.82314L8.88443 3.04338L10.0276 4.18465L11.1707 3.04338L11.3713 2.84316C12.1334 2.04227 13.1562 1.60178 14.2592 1.60178C15.3622 1.60178 16.4051 2.02225 17.1672 2.80311C18.7917 4.42492 18.7917 7.04783 17.1873 8.66963Z"
+                                                                          fill="white"/>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                                                                        <button title="Retirer des favoris" x-cloak
+                                                            x-show="isMyFavorite.step"
+                                                            @click="removeToFavorite()" class="removeBookmark">
+                                                        <span class="removeBookmark-ArtId93274">
+                                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                   <path d="M18.33,1.682C17.207,0.561 15.743,0 14.259,0C12.795,0 11.331,0.561 10.208,1.682L10.008,1.902L9.787,1.682C8.664,0.561 7.2,0 5.736,0C4.272,0 2.808,0.561 1.685,1.682C-0.562,3.924 -0.562,7.568 1.685,9.811L2.146,10.271L9.767,17.9C9.827,17.96 9.927,18 10.008,18C10.108,18 10.188,17.96 10.248,17.9L17.869,10.271L18.33,9.811C20.557,7.568 20.557,3.924 18.33,1.682Z"
+                                                                         style="fill:white;fill-rule:nonzero;"/>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div itemprop="articleBody" class="p402_premium">
+                                    <p class="intro">Vous voulez frissonner au cours d&rsquo;une expérience hors du commun? Si c&rsquo;est le cas, voici une sélection de villes fantômes à découvrir en Europe !</p><nav id="sommaire-article" class="sommaire_desktop"><span class="sommaire">Sommaire</span><ul><li><a href="#1-pripyat-ukraine" class="title_lvl3">1. Pripyat, Ukraine</a></li><li><a href="#2-oradour-sur-glane-france" class="title_lvl3">2. Oradour-sur-Glane, France</a></li><li><a href="#3-pyramiden-norvege" class="title_lvl3">3. Pyramiden, Norvège</a></li><li><a href="#4-craco-italie" class="title_lvl3">4. Craco, Italie</a></li><li><a href="#5-belchite-espagne" class="title_lvl3">5. Belchite, Espagne</a></li><li><a href="#6-mystra-grece" class="title_lvl3">6. Mystra, Grèce</a></li><li><a href="#7-doel-belgique" class="title_lvl3">7. Doel, Belgique</a></li><li><a href="#8-varosha-chypre" class="title_lvl3">8. Varosha, Chypre</a></li></ul></nav>
+<p>Que vous soyez téméraire, féru d&rsquo;exploration urbaine ou juste curieux, visiter une ville fantôme est un moment toujours inoubliable. L&rsquo;être humain peut être contraint à quitter son territoire pour un grand nombre de raisons : catastrophe écologique, marasme économique, guerre ou accident industriel. Dans ces cas-là, ce qu&rsquo;il a entrepris de construire revêt bien vite une apparence fantomatique baignant les choses dans une aura surnaturelle. C&rsquo;est ce qui explique la fascination de touristes d&rsquo;un nouveau genre, venus découvrir des endroits insolites et parfois fort angoissants. Des opérateurs commencent même à exploiter ce filon financier pour le moins étonnant, à mille lieux des classiques destinations touristiques. </p>
+<p>Saviez-vous que, non loin de chez vous, se trouvaient certaines des villes abandonnées les plus célèbres au monde ? Nous avons décidé de vous parler de ces villes fantômes à découvrir en Europe pour vous en apprendre plus.</p>
+<p>Voici quelques-unes des villes fantômes les plus étonnantes du continent européen, choisies soigneusement par Generation Voyage. C&rsquo;est parti !</p><div id="div-ad-pave-haut2-desktop" class="ads-core-placer" data-ads-core='{"device": "tablet, desktop", "type":"Pave-Haut2-Desktop"}'></div>
+<h2 id="1-pripyat-ukraine">1. Pripyat, <a href="https://generationvoyage.fr/tourisme/ukraine/">Ukraine</a></h2>
+<div id="attachment_93277" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/pripyat-tchernobyl.jpg" alt="Ville abandonnée de Pripya, Tchernobyl, Ukraine" width="1000" height="667" class="size-full wp-image-93277" srcset="https://cdn.generationvoyage.fr/2020/01/pripyat-tchernobyl.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/pripyat-tchernobyl-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/pripyat-tchernobyl-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/pripyat-tchernobyl-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/pripyat-tchernobyl-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / Sergio Rojo</p></div>
+<p>Pripyat est une ville ukrainienne de 50 000 habitants qui avait pour particularité d&rsquo;accueillir dans sa périphérie la centrale nucléaire de Tchernobyl. Construite en 1970, elle fut désertée totalement seize ans plus tard lorsque la centrale connut un incident nucléaire majeur. Aujourd&rsquo;hui, Pripyat est une authentique ville fantôme, tout à fait effrayante. Des tour-opérateurs d&rsquo;un nouveau genre exploitent ce filon macabre pour emmener des touristes visiter cette cité abandonnée à la nature. </p>
+<p>Surplombée d&rsquo;une grande roue et comportant épaves de véhicules, bâtiments vides et places désertes, Pripyat est également un site fort intéressant pour se rendre compte des capacités de résilience de la nature. Celle-ci a repris ses droits, en recouvrant progressivement de végétaux les constructions humaines. Si vous voulez vous rendre compte de l&rsquo;état de cette ville fantôme à découvrir en Europe, une seule solution : vous y rendre.</p>
+<h2 id="2-oradour-sur-glane-france">2. Oradour-sur-Glane, <a href="https://generationvoyage.fr/tourisme/france/">France</a></h2>
+<div id="attachment_93279" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/Oradour-sur-Glane.jpg" alt="Maison en ruine et carcasse de voiture à Oradour-sur-Glane" width="1000" height="667" class="size-full wp-image-93279" srcset="https://cdn.generationvoyage.fr/2020/01/Oradour-sur-Glane.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/Oradour-sur-Glane-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/Oradour-sur-Glane-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/Oradour-sur-Glane-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/Oradour-sur-Glane-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / Pierre-Olivier</p></div>
+<p>C&rsquo;est dans le département de la Haute-Vienne qu&rsquo;on retrouve la ville d&rsquo;Oradour-sur-Glane. Elle fait, pour d&rsquo;horribles raisons historiques, partie des villes fantômes à découvrir en Europe. Lors de la Seconde Guerre mondiale, l&rsquo;occupant nazi a décidé de mener une opération de représailles au coeur du village. Après avoir rassemblé les habitants du village, les nazis décidèrent de les exécuter sommairement avant de détruire le village. Bilan : 642 victimes et un village quasiment rasé. Après la guerre, il a été décidé de ne pas le reconstruire pour en faire un sanctuaire en mémoire des victimes malheureuses&#8230; </p>
+<p>Aujourd&rsquo;hui, il est possible de se rendre sur ce lieu de mémoire où un musée a été érigé. Les jeunes Français visitent souvent le village dans le cadre de sorties scolaires. Vous pourrez en faire autant si vous le souhaitez, seul ou lors d&rsquo;une visite guidée.</p>
+<h2 id="3-pyramiden-norvege">3. Pyramiden, <a href="https://generationvoyage.fr/tourisme/norvege/">Norvège</a></h2>
+<div id="attachment_93281" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie.jpg" alt="Pyramiden" width="1000" height="750" class="size-full wp-image-93281" srcset="https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie-253x190.jpg 253w, https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie-630x473.jpg 630w, https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie-200x150.jpg 200w, https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie-768x576.jpg 768w, https://cdn.generationvoyage.fr/2020/01/Pyramiden-russie-755x566.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / Chara Lupus</p></div>
+<p>Pyramiden ? Non, ce n&rsquo;est pas en Égypte que ça se passe : on vous parle d&rsquo;une ville de l&rsquo;île de Spitzberg, dans le Svalbard, l&rsquo;un des endroits les plus froids au monde ! Plus personne n&rsquo;y habite depuis les années 1990. Après avoir été vendue à l&rsquo;URSS puis à une compagnie minière, cette ville, où on réalisait l&rsquo;extraction du charbon, fut abandonnée après la raréfaction de ce dernier. Et aujourd&rsquo;hui&#8230; Plus rien ne vit à Pyramiden. On peut y apercevoir des bâtiments pris dans les glaces, quelques ours polaires, et c&rsquo;est tout. </p>
+<p>Si vous portez un intérêt aux villes fantômes à découvrir en Europe et que vous vous y rendez, vous serez un privilégié. Compte tenu de la difficulté d&rsquo;accès au lieu, peu de touristes ont eu la chance d&rsquo;y mettre un pied !</p>
+<h2 id="4-craco-italie">4. <a href="https://generationvoyage.fr/village-abandonne-craco-italie/">Craco</a>, <a href="https://generationvoyage.fr/tourisme/italie/">Italie</a></h2>
+<div id="attachment_93283" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/craco-italie.jpg" alt="Maison abandonnée dans le village de Craco, Italie" width="1000" height="667" class="size-full wp-image-93283" srcset="https://cdn.generationvoyage.fr/2020/01/craco-italie.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/craco-italie-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/craco-italie-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/craco-italie-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/craco-italie-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / RobertoRicco</p></div>
+<p>Le village de Craco n&rsquo;a vraiment rien à voir avec les villes fantômes à découvrir en Europe citées précédemment : il a été fondé il y a plus de 1300 ans ! Situé au sud de l&rsquo;Italie, construit sur une colline, c&rsquo;est à Mère Nature qu&rsquo;il doit son abandon. En effet, de nombreux glissements de terrain rendaient la présence humaine impossible. Mais le village, bien que désert, ne l&rsquo;est pas tout le temps : utilisé par les cinéastes du monde entier pour son côté pittoresque, il est aussi prisé par la communauté scientifique. </p>
+<p>Les chercheurs viennent en effet y étudier les effets délétères des glissements de terrain sur les constructions, faisant de Craco un lieu d&rsquo;intérêt scientifique de premier plan permettant aux ingénieurs d&rsquo;affiner la conception des bâtiments antisismiques.</p><div id="div-ad-pave-haut2-desktop-1" class="ads-core-placer" data-ads-core='{"device": "tablet, desktop", "type":"Pave-Haut2-Desktop"}'></div>
+<h2 id="5-belchite-espagne">5. Belchite, <a href="https://generationvoyage.fr/tourisme/espagne/">Espagne</a></h2>
+<div id="attachment_93285" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/Belchite-espagne.jpg" alt="Village abandonné de Belchite, Espagne" width="1000" height="667" class="size-full wp-image-93285" srcset="https://cdn.generationvoyage.fr/2020/01/Belchite-espagne.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/Belchite-espagne-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/Belchite-espagne-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/Belchite-espagne-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/Belchite-espagne-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / Antonio Ciero Reina</p></div>
+<p>L&rsquo;histoire de Belchite ressemble à celle d&rsquo;Oradour-sur-Glane. Belchite a été le thêatre d&rsquo;affrontements multiples au cours des derniers siècles : lors de la guerre d&rsquo;indépendance en 1809, et la guerre civile entre 1936 et 1939. Les bombardements et les massacres ont fini par avoir raison du hameau de Belchite, que Franco décida de ne pas reconstruire pour en faire un lieu de mémoire. Finalement, la population a décidé de construire un deuxième village dans les alentours afin de respecter la mémoire des nombreux disparus. </p>
+<p>Aujourd&rsquo;hui&#8230; on peut explorer les ruines qui semblent encore fumantes tant le lieu transpire l&rsquo;horreur de la guerre. Belchite fait assurément partie des villes fantômes à découvrir en Europe qui marquent à jamais le visiteur d&rsquo;un jour : sensations garanties !</p>
+<h2 id="6-mystra-grece">6. Mystra, <a href="https://generationvoyage.fr/tourisme/grece/">Grèce</a></h2>
+<div id="attachment_93287" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/mystra-grece.jpg" alt="Village et château abandonné de Mystra, Grèce" width="1000" height="667" class="size-full wp-image-93287" srcset="https://cdn.generationvoyage.fr/2020/01/mystra-grece.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/mystra-grece-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/mystra-grece-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/mystra-grece-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/mystra-grece-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / siete_vidas</p></div>
+<p>Mystra est une ville que les Byzantins bâtirent dans les collines du Péloponnèse. Si la cité antique fait aujourd&rsquo;hui partie des villes fantômes à découvrir en Europe, ce ne fut pas toujours le cas. Auparavant, elle était même une des plus riches des environs. Mystra était l&rsquo;une des villes les plus puissantes de la région, et le fer de lance de la culture Byzantine ! Mais elle a été abandonnée au cours du XIXe siècle : l&rsquo;Histoire et les influences diverses ont eu raison de l&rsquo;opulence de la ville. On peut encore distinguer, dans les ruines des bâtisses, fresques et vestiges artistiques exceptionnels.</p>
+<p>Cette ancienne forteresse constitue un site historique et archéologique fort intéressant, et un incontournable à visiter dans la région. Plutôt accessible, vous pouvez d&rsquo;ailleurs profiter de navettes et de guides qui vous mèneront jusqu&rsquo;au site pour vous en apprendre davantage. Alors, vous partez quand ?</p>
+<h2 id="7-doel-belgique">7. <a href="https://generationvoyage.fr/doel-ville-belgique-street-art/">Doel</a>, <a href="https://generationvoyage.fr/tourisme/belgique/">Belgique</a></h2>
+<div id="attachment_93289" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/doel-belgique.jpg" alt="Ville fantôme de Doel, Belgique" width="1000" height="667" class="size-full wp-image-93289" srcset="https://cdn.generationvoyage.fr/2020/01/doel-belgique.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/doel-belgique-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/doel-belgique-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/doel-belgique-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/doel-belgique-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / Peter de Kievith</p></div>
+<p>Plus proche de nous, Doel est une ville abandonnée pour une raison assez cocasse. Ce petit village flamand situé du côté d&rsquo;Anvers a été grignotée par la ville, et notamment la zone portuaire d&rsquo;Anvers. En quelques décennies, l&rsquo;activité maritime et commerciale a fini par rendre la vie à Doel si désagréable que les riverains se sont décidés à&#8230; abandonner leur commune. Oui, purement et simplement ! Aujourd&rsquo;hui, il reste une vingtaine d&rsquo;habitants. Et ces derniers, les seuls à avoir souhaité conserver leurs biens immobiliers, vivent au beau milieu d&rsquo;un village complètement mort.</p>
+<p>On vous invite à vous y rendre : les murs fissurés, la peinture écaillée, les fenêtres barricadées&#8230; tout y est. Des squatteurs avaient fini par s&rsquo;approprier les lieux en masse mais le bourgmestre (maire) de la ville a fini par accroître la présence policière. Aujourd&rsquo;hui, le village sert parfois de décor de film&#8230; et de site touristique incontournable !</p>
+<h2 id="8-varosha-chypre">8. Varosha, <a href="https://generationvoyage.fr/tourisme/chypre/">Chypre</a></h2>
+<div id="attachment_93290" class="wp-caption alignnone " style="width: 1010px"><img decoding="async" loading="lazy" src="https://cdn.generationvoyage.fr/2020/01/Varosha.jpg" alt="Varosha Famagusta, Chypre" width="1000" height="667" class="size-full wp-image-93290" srcset="https://cdn.generationvoyage.fr/2020/01/Varosha.jpg 1000w, https://cdn.generationvoyage.fr/2020/01/Varosha-285x190.jpg 285w, https://cdn.generationvoyage.fr/2020/01/Varosha-630x420.jpg 630w, https://cdn.generationvoyage.fr/2020/01/Varosha-768x512.jpg 768w, https://cdn.generationvoyage.fr/2020/01/Varosha-755x504.jpg 755w" sizes="auto, (max-width: 1000px) 100vw, 1000px"/><p class="wp-caption-text">Crédit photo : Shutterstock / Anton Kudelin</p></div>
+<p>Varosha est un quartier gigantesque de la ville de Famagouste, sur l&rsquo;île de Chypre. Lors de sa création en 1972, ce secteur était destiné à accueillir une station balnéaire visant à attirer les touristes occidentaux. Problème : en 1974, soit&#8230; deux ans plus tard, une intervention militaire turque poussa les habitants à déserter la zone. Aujourd&rsquo;hui, Varosha est l&rsquo;une des villes fantômes à découvrir en Europe les plus emblématiques. Les hauts immeubles conçus pour abriter les vacanciers sont peuplés de ronces et servent de nids aux oiseaux. </p>
+<p>Chats, tortues, plantes autochtones s&rsquo;en donnent à coeur joie et ont repris leurs droits sur ce secteur bâti par l&rsquo;Homme. Preuve, s&rsquo;il en fallait une, que nous ne sommes que bien peu de choses face à la puissance de la nature.</p>
+<p>Allez donc vous en rendre compte lors de votre voyage à Chypre !</p>                                </div>
+                                <div class="clear"></div>
+                                                            </div>
+                            <footer>
+                                <link itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage"
+                                      href="https://generationvoyage.fr/villes-fantomes-europe/" id="https://generationvoyage.fr/villes-fantomes-europe/"/>
+                                <span style="display: none;" itemprop="publisher" itemscope
+                                      itemtype="https://schema.org/Organization">
+                                    <meta itemprop="name" content="GenerationVoyage">
+                                    <span style="display: none;" itemprop="logo" itemscope
+                                          itemtype="https://schema.org/ImageObject">
+                                        <meta itemprop="url"
+                                              content="https://generationvoyage.fr/wp-content/themes/toolito/img/logo/logo-generation-voyage.png">
+                                        <meta itemprop="width" content="1584">
+                                        <meta itemprop="height" content="410">
+                                    </span>
+                                </span>
+                                <meta itemprop="headline" content="8 villes fantômes à découvrir en Europe">
+                                <meta itemprop="description"
+                                      content="Vous voulez frissonner au cours d'une expérience hors du commun? Si c'est le cas, voici une sélection de villes fantômes à découvrir en Europe !">
+                                <span style="display: none;" itemprop="image" itemscope
+                                      itemtype="https://schema.org/ImageObject">
+                                                                            <meta itemprop="url" content="https://cdn.generationvoyage.fr/2020/01/villes-fantomes-755x424.jpg">
+                                                                                                                                                    <meta itemprop="width" content="755">
+                                                                                                                <meta itemprop="height" content="424">
+                                                                    </span>
+                                <meta itemprop="datePublished" content="2020-01-30T17:48:42+01:00">
+                                <meta itemprop="dateModified"
+                                      content="2025-11-07T11:28:52+01:00">
+                                <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/generationvoyage.fr\/tourisme\/","name":"Monde"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/generationvoyage.fr\/tourisme\/europe\/","name":"Europe"}}]}</script>                            </footer>
+                        </div>
+                        <span class="main_block_bottom_title">Plus d'inspiration</span>
+                                                <div class="clear"></div>
+                        <div class="main_block_bottom">
+                            <div class='yarpp yarpp-related yarpp-related-shortcode yarpp-template-yarpp-template-custom'>
+
+
+
+	        <div class="main-bottom">
+            <a href='https://generationvoyage.fr/plus-beaux-endroits-europe/' title='Les 100 plus beaux endroits à visiter en Europe' class="liensarticle article liensarticle_image">
+                <img width="285" height="190" src="https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-285x190.jpeg" class="attachment-medium size-medium wp-post-image" alt="Pont du Rialto à Venise" decoding="async" loading="lazy" srcset="https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-285x190.jpeg 285w, https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-630x420.jpeg 630w, https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-768x512.jpeg 768w, https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-1536x1024.jpeg 1536w, https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-755x503.jpeg 755w, https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise-1000x667.jpeg 1000w, https://cdn.generationvoyage.fr/2025/03/Pont-du-Rialto-a-Venise.jpeg 1999w" sizes="auto, (max-width: 285px) 100vw, 285px" />                <span class="titleinner">Les 100 plus beaux endroits à visiter en Europe</span>
+            </a>
+        </div>
+	        <div class="main-bottom">
+            <a href='https://generationvoyage.fr/skier-cet-hiver-dans-les-50-meilleures-stations-deurope/' title='Où skier cet hiver ? Les 50 meilleures stations d&rsquo;Europe' class="liensarticle article liensarticle_image">
+                <img width="286" height="190" src="https://cdn.generationvoyage.fr/2013/11/skiereneurope-286x190.jpg" class="attachment-medium size-medium wp-post-image" alt="skier en europe" decoding="async" loading="lazy" srcset="https://cdn.generationvoyage.fr/2013/11/skiereneurope-286x190.jpg 286w, https://cdn.generationvoyage.fr/2013/11/skiereneurope-630x419.jpg 630w, https://cdn.generationvoyage.fr/2013/11/skiereneurope-768x511.jpg 768w, https://cdn.generationvoyage.fr/2013/11/skiereneurope-755x502.jpg 755w, https://cdn.generationvoyage.fr/2013/11/skiereneurope-1000x665.jpg 1000w, https://cdn.generationvoyage.fr/2013/11/skiereneurope.jpg 1200w" sizes="auto, (max-width: 286px) 100vw, 286px" />                <span class="titleinner">Où skier cet hiver ? Les 50 meilleures stations d&rsquo;Europe</span>
+            </a>
+        </div>
+	        <div class="main-bottom">
+            <a href='https://generationvoyage.fr/cabanes-verres-aurores-boreales-europe/' title='Les 12 cabanes de verre pour une nuit sous les aurores boréales en Europe' class="liensarticle article liensarticle_image">
+                <img width="253" height="190" src="https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-253x190.jpg" class="attachment-medium size-medium wp-post-image" alt="Chalet en verre Blár" decoding="async" loading="lazy" srcset="https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-253x190.jpg 253w, https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-630x473.jpg 630w, https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-200x150.jpg 200w, https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-768x576.jpg 768w, https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-755x566.jpg 755w, https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1-1000x750.jpg 1000w, https://cdn.generationvoyage.fr/2024/03/Chalet-en-verre-Blar-1.jpg 1200w" sizes="auto, (max-width: 253px) 100vw, 253px" />                <span class="titleinner">Les 12 cabanes de verre pour une nuit sous les aurores boréales en Europe</span>
+            </a>
+        </div>
+	        <div class="main-bottom">
+            <a href='https://generationvoyage.fr/excursion-nocturne-aurores-boreales/' title='Les 10 meilleures excursions nocturnes pour voir les aurores boréales en Europe' class="liensarticle article liensarticle_image">
+                <img width="285" height="190" src="https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege-285x190.jpg" class="attachment-medium size-medium wp-post-image" alt="Aurores boréales, Norvège" decoding="async" loading="lazy" srcset="https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege-285x190.jpg 285w, https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege-630x419.jpg 630w, https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege-768x511.jpg 768w, https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege-755x503.jpg 755w, https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege-1000x666.jpg 1000w, https://cdn.generationvoyage.fr/2024/06/aurores-boreales-norvege.jpg 1200w" sizes="auto, (max-width: 285px) 100vw, 285px" />                <span class="titleinner">Les 10 meilleures excursions nocturnes pour voir les aurores boréales en Europe</span>
+            </a>
+        </div>
+</div>
+                            <div class="clear"></div>
+                        </div>
+                        
+
+                        <div class="comment-count">0 Commentaire(s)</div>
+
+                                 <div class="clear"></div>
+         	<div id="respond" class="comment-respond">
+		<span id="reply-title" class="h4 comment-reply-title">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="/villes-fantomes-europe/#respond" style="display:none;">Annuler le commentaire</a></small></span><form action="https://generationvoyage.fr/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="input-form" id="respond-comment"><textarea name="comment" id="comment" cols="58" rows="10" tabindex="0" aria-required="true" placeholder="Votre commentaire..."></textarea></p><p class="input-form2 form-nom"><input placeholder="Nom" id="author"  name="author" type="text" value="" size="30" /></p>
+<p class="input-form2 form-mail"><input placeholder="Adresse mail" id="email" name="email" type="text" value="" size="30" /></p>
+<p class="input-form2 form-url"><input placeholder="Site web" id="url" name="url" type="text" value="" size="30" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Envoyer le commentaire" /> <input type='hidden' name='comment_post_ID' value='93274' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="5b410a33f7" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="41"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	
+                    </div><!--END .tableflex1 -->
+                    <div class="tableflex2">
+
+    
+    
+                    </div><!--END .containertableflex -->
+                <div class="clear"></div>
+            </div><!--END #main-content -->
+
+        </article>
+        
+        
+
+        
+<script>
+    const h1Height = document.querySelector('.entry-title')
+    const moreRead = document.querySelector('.more-read')
+    const height = h1Height.offsetHeight + 90;
+    if(moreRead){
+        moreRead.style.marginTop = `${height}px`;
+    }
+</script>
+
+<div data-rocket-location-hash="8d0415bea4afb2b79dbe42c992ccb081" class="footer_new">
+    <div class="td-footer-bottom-full container-home">
+        <div class="">
+            <div class="td-pb-row">
+                <div class="">
+                    <aside class="footer-logo-wrap">
+                        <img loading="lazy" src="/wp-content/themes/toolito/img/logo/gv_213_color.svg" width="180" height="46" title="Generation Voyage Logo white" alt="Logo Generation Voyage" />
+                        <p>Depuis 2013, Generation Voyage vous fait découvrir des expériences mémorables et vous guide pour les vivre pleinement.</p>
+                    </aside>
+                </div>
+                <div class="">
+                    <aside class="footer-text-wrap">
+                        <ul>
+                            <li><a href="/qui-sommes-nous/" title="Qui sommes nous ?" class="lien_menu_footer">Qui sommes nous ?</a></li>
+                            <li><a href="/recrutement/" target="_blank" title="Carrière" class="lien_menu_footer">Recrutement</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="">
+                    <aside class="footer-text-wrap">
+                        <ul>
+                            <li><a href="https://partenaire.generationvoyage.fr/" title="Publicité" class="lien_menu_footer">Partenariats/Publicité</a></li>
+                            <li><a href="/contact/" title="Contact" class="lien_menu_footer">Contact</a></li>
+                            <li>
+                                <a href="https://form.typeform.com/to/PZeHQbLo?typeform-medium=embed-snippet#source=https://generationvoyage.fr/villes-fantomes-europe/" class="lien_menu_footer typeform-share button" data-mode="drawer_right" target="_blank" rel="nofollow noopener noreferrer">Signaler une erreur</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="">
+                    <aside class="footer-social-wrap td-social-style-2">
+                        <div class="title-footer">
+                            <span>Suivez-nous sur les réseaux</span>
+                        </div>
+                        <span class="td-social-icon-wrap">
+                           <a href="https://www.instagram.com/generation_voyage/" title="Instagram" target="_blank">
+                               <img width="15" height="15" loading="lazy" src="https://generationvoyage.fr/wp-content/themes/toolito/img/instagram.svg" alt="Logo Instagram">
+                           </a>
+                        </span>
+                        <span class="td-social-icon-wrap">
+                            <a target="_blank" href="https://www.linkedin.com/company/generationvoyage/" title="Linkedin" >
+                                <img width="15" height="15" loading="lazy" src="https://generationvoyage.fr/wp-content/themes/toolito/img/linkedin.svg" alt="Logo Linkedin">
+                            </a>
+                        </span>
+                        <span class="td-social-icon-wrap">
+                            <a target="_blank" href="https://www.facebook.com/generationvoyage/" title="Facebook">
+                                <img width="9" height="17" loading="lazy" src="https://generationvoyage.fr/wp-content/themes/toolito/img/facebook.svg" alt="Logo Facebook">
+                            </a>
+                        </span>
+                        <span class="td-social-icon-wrap">
+                            <a target="_blank" href="https://www.pinterest.fr/generation_voyage/" title="Pinterest" >
+                                <img width="13" height="17" loading="lazy" src="https://generationvoyage.fr/wp-content/themes/toolito/img/pinterest.svg" alt="Logo Pinterest">
+                            </a>
+                        </span>
+                        <span class="td-social-icon-wrap">
+                            <a target="_blank" href="https://www.youtube.com/@generationvoyage" title="Youtube">
+                                <img width="19" height="15" loading="lazy" src="https://generationvoyage.fr/wp-content/themes/toolito/img/youtube-footer.svg" alt="Logo Youtube">
+                            </a>
+                        </span>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+                
+
+
+        <div id="">
+            <div id="footer">
+                <div id="footer_text">
+                    <div class="footer_bottom_center">
+                        © 2013-2025 <strong class="load-more">Generation Voyage</strong> Tous droits réservés - <a href="/conditions-generales-utilisation/" class="underline">CGU</a> - <a href="/charte-de-confidentialite/" class="underline">Mentions légales</a> - Fait avec <span class="emoticon_rouge">❤</span> à Montpellier par <a class="underline" href="https://gctech.company" target="_blank">GC TECH</a>
+                         - v2.28.4                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </footer>
+                <script>
+            window.dygConf = {"apiBaseUrl":"https:\/\/api.generationvoyage.fr","apiKey":"dcf486e4-f6fa-4c59-9cb0-9a6658790597","apiLang":"fr","apiLimit":20,"redirectBaseUrl":"https:\/\/redirect.generationvoyage.fr"};
+        </script>
+        <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/toolito\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://generationvoyage.fr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-footer-js"></script>
+<script type="text/javascript" src="https://generationvoyage.fr/wp-content/themes/toolito/js/slider/slick.min.js" id="slick-slider-js"></script>
+<script type="text/javascript" src="https://generationvoyage.fr/wp-content/themes/toolito/dist/dygdygtagslider.js" id="dyg-widget-grid-slider-js"></script>
+<script defer type="text/javascript" src="https://generationvoyage.fr/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1766581734" id="akismet-frontend-js"></script>
+            <script async src='https://generationvoyage.fr/wp-content/themes/toolito/dist/script-desktop.5e61519c5a017d7c5f06de7858ad2431.js'></script>
+        </div>
+        <div data-rocket-location-hash="351cf76a29ca3c76b8f1fc6bd029f1a4" id="popup_campaign">
+            <div class="overlay_popup"></div>
+            <div class="popup_interne">
+                <a data-format="popup" data-target="campaign" data-partner="popup_outil_vol_gv_02_09" data-campaign="popup_outil_vol_gv" href="https://vols.generationvoyage.fr/?utm_source=article&utm_medium=popup&utm_campaign=gclab&utm_id=vols" target="_blank" title="popup_outil_vol_gv_02_09">
+                    <img width="100%" height="100%" src="https://cdn.generationvoyage.fr/2025/09/popup_outil_vol_gv.jpg" alt="popup_outil_vol_gv_02_09" loading="eager">
+                </a>
+                <div class="popup-close-btn"></div>
+            </div>
+        </div>
+        <script defer>
+
+                    var p = new Popup({
+                        popup: '#popup_campaign',
+                        content: '.popup_interne',
+                        overlay: '.overlay_popup'
+                    });
+                    // To close the popup on clicking the button inside popup
+                    jQuery('.popup-close-btn').click(function() {
+                        p.close();
+                    });
+                    jQuery('.overlay_popup').click(function() {
+                        p.close();
+                    });
+                    if(typeof getCookie("popup_popup_outil_vol_gv_02_09")=="undefined"||getCookie("popup_popup_outil_vol_gv_02_09")==null) {
+                        setTimeout(function () {
+                            p.open();
+                           setCookie("popup_popup_outil_vol_gv_02_09", 1, 14);
+                           dataLayer.push({
+                            'campaignName':'popup_outil_vol_gv',
+                            'campaignFormat':'popup',
+                            'campaignLimit':'',
+                            'campaignClient':'popup_outil_vol_gv_02_09',
+                            'redirectUrl':'https://vols.generationvoyage.fr/?utm_source=article&utm_medium=popup&utm_campaign=gclab&utm_id=vols',
+                            'event': 'CampaignView'
+                        });
+                        }, 20000);
+                    }
+
+    
+                function setCookie(key, value, expiry) {
+                    var expires = new Date();
+                    expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+                    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString()+ "; path=/";
+                }
+    
+                function getCookie(key) {
+                    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+                    return keyValue ? keyValue[2] : null;
+                }
+    
+                function Popup(Obj) {
+                    this.popup = jQuery(Obj.popup);
+                    this.content = jQuery(Obj.content);
+                    this.overlay = jQuery(Obj.overlay);
+    
+                    var pop = this;
+    
+                    // To add content to your popup and open it
+                    this.open = (function(content) {
+                        /*pop.content.html(content);*/
+                        pop.popup.addClass('open').fadeIn(1000);
+                        pop.overlay.addClass('open');
+                    });
+    
+                    // To hide your popup and overlay
+                    this.close = (function() {
+                        pop.popup.removeClass('open');
+                        pop.overlay.removeClass('open');
+                    });
+    
+                    // To hide your popup by clicking on your page’s content outside the popup itself and its children
+                    this.overlay.click(function(e) {
+                        if (!pop.popup.is(e.target) && pop.popup.has(e.target).length === 0) {
+                            pop.close();
+                        }
+                    });
+                }
+
+        </script>
+    
+<script>
+    let ApiNonce = "7d9723b4d0";
+</script>
+
+
+<div x-data="Notifications" class="toastContainer" @setnotification.window="add($event.detail)">
+    <template x-for="notice of notices" :key="notice.id">
+        <div class="ToatsNotifications" :class="notice.type" x-show="notice.show" x-on:click="remove(notice.id)" x-transition>
+            <div class="d-flex align-items-center gap-10">
+                <span class="picto">
+                    <svg x-cloak x-show="notice.type === 'info'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+                    </svg>
+                    <svg x-cloak x-show="notice.type === 'error'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <span x-text="notice.text"></span>
+            </div>
+            <span class="closeNotificaton close" x-on:click="remove(notice.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </span>
+        </div>
+    </template>
+</div>
+<div data-rocket-location-hash="9424be9616bf1745fc79871a2a5d23fa" x-show="isLoginShow" x-cloak class="popupAccount loginPopup" x-data="loginPopup">
+    <div class="content" @click.outside="isLoginShow = false">
+        <span class="closePopup close" x-on:click="isLoginShow = false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </span>
+        <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/logo/logotype.png.webp" loading="lazy" class="mx-auto" width="38" height="38" alt="Generation Voyage Logo">
+        <form action="" @submit.prevent="submitLogin()">
+            <span class="title">
+                Se connecter
+            </span>
+            
+            <div class="form-group">
+                <label for="">
+                    Email ou nom d’utilisateur                </label>
+                <input :class="{'error-border':error}" type="text" required x-model="email" placeholder="Email ou nom d’utilisateur">
+            </div>
+            <div class="form-group">
+                <label for="">
+                    Mot de passe                </label>
+                <input :class="{'error-border':error}" type="password" x-model="password" required placeholder="Mot de passe">
+                <a class="forgotPassword" href="#" x-on:click.prevent="isResetPasswordShow = true; isLoginShow = false">Mot de passe oublié ?</a>
+            </div>
+            <div class="form-group" x-show="error">
+                <p class="error-field" x-text="error"></p>
+            </div>
+            <div class="form-group">
+                <button type="submit" title="Connexion" class="signin btn-primary">
+                    <svg x-cloak x-show="loading" class="animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>Connexion
+                </button>
+            </div>
+            <p>
+                Pas encore de compte ? <a class="signup-redirect" href="#" x-on:click.prevent="isLoginShow = false; isRegisterShow = true;registerFrom = 'menu'">Créer un compte ici</a>
+            </p>
+        </form>
+    </div>
+</div>
+<div x-show="isSetNewPasswordShow" x-cloak  class="popupAccount setNewPasswordPopup" x-data="setNewPassword">
+    <div class="content" @click.outside="isSetNewPasswordShow = false">
+        <span class="closePopup" x-on:click="isSetNewPasswordShow = false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </span>
+        <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/logo/logotype.png.webp" loading="lazy"  class="mx-auto" width="38" height="38" alt="Generation Voyage Logo">
+        <form action="" @submit.prevent="submitNewPassword()">
+            <span class="title">
+                Réinitialiser votre mot de passe
+            </span>
+            <div class="form-group">
+                <label for="">
+                    Nouveau mot de passe                </label>
+                <input :class="{'error-border':error}" type="password" required x-model="password" placeholder="Mot de passe">
+            </div>
+            <div class="form-group">
+                <label for="">
+                    Confirmation du nouveau mot de passe                </label>
+                <input :class="{'error-border':error}" type="password" x-model="confirmPassword" required placeholder="Mot de passe">
+            </div>
+            <div class="form-group" x-show="error">
+                <p class="error-field" x-text="error"></p>
+            </div>
+            <div class="form-group">
+                <input type="submit" title="Enregistrer" class="btn-primary" value="Enregistrer">
+            </div>
+            <p>
+                <a href="#" x-on:click.prevent="isSetNewPasswordShow = false; isRegisterShow = true;registerFrom = 'menu'">Créer un compte</a> | <a href="#" x-on:click.prevent="isSetNewPasswordShow = false; isLoginShow = true">Se connecter</a>
+            </p>
+        </form>
+    </div>
+</div>
+<div x-show="isResetPasswordShow" x-cloak  class="popupAccount resetPasswordPopup" x-data="resetPassword">
+    <div class="content" @click.outside="isResetPasswordShow = false">
+        <span class="closePopup" x-on:click="isResetPasswordShow = false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </span>
+        <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/logo/logotype.png.webp" loading="lazy"  class="mx-auto" width="38" height="38" alt="Generation Voyage Logo">
+        <form action="" @submit.prevent="submitReset()">
+            <span class="title">
+                Réinitialiser votre mot de passe
+            </span>
+            <div class="form-group">
+                <label for="">
+                    E-mail                </label>
+                <input :class="{'error-border':error,'success-border':valid,'validated':valid}" type="text" required x-model="email" placeholder="E-mail">
+                <small :class="{'error-field':error,'success-field':valid}" x-show="message" x-text="message"></small>
+            </div>
+            <div class="form-group">
+                <input type="submit"  title="Réinitialiser" class="btn-primary" value="Réinitialiser">
+            </div>
+            <p>
+                <a href="#" x-on:click.prevent="isResetPasswordShow = false; isRegisterShow = true;registerFrom = 'menu'">Créer un compte</a> | <a href="#" x-on:click.prevent="isResetPasswordShow = false; isLoginShow = true">Se connecter</a>
+            </p>
+        </form>
+    </div>
+</div>
+<div x-show="isRegisterShow" x-cloak  class="popupAccount registerPopup" x-data="registerPopup">
+    <div class="content" @click.outside="isRegisterShow = false, closePopup()">
+        <span class="closePopup close" x-on:click="isRegisterShow = false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </span>
+        <img src="https://generationvoyage.fr/wp-content/themes/toolito/img/logo/logotype.png.webp" loading="lazy"  class="mx-auto" width="38" height="38" alt="Generation Voyage Logo">
+        <form @submit.prevent="submitRegister()">
+            <template x-if="step1 === true">
+                <div  class="step1Register">
+                    <template x-if="pro">
+                        <span class="title">Créez un compte pro pour accéder aux données GenerationVoyage</span>
+                    </template>
+                    <template x-if="registerFrom === 'menu' && !pro">
+                        <span class="title">Créez un compte pour retrouver vos listes d'articles favoris</span>
+                    </template>
+                    <template x-if="registerFrom === 'bookmark'">
+                        <span class="title">
+                            Pour sauvegarder un article dans votre liste, créez un compte.
+                        </span>
+                    </template>
+                    <template x-if="registerFrom === 'votes'">
+                        <span class="title">
+                            Pour voter, créez un compte.
+                        </span>
+                    </template>
+                    <template x-if="!pro">
+                    <div class="form-group form-group-checkbox">
+                        <input type="checkbox" class="optin-newsletter" x-model="newsletter" id="newletterRegister">
+                        <label for="newletterRegister">
+                            Je veux recevoir par emails les meilleures expériences à vivre.
+                            Pas de spams promis.
+                        </label>
+                    </div>
+                    </template>
+                    <div class="form-group">
+                        <label for="">
+                            E-mail                        </label>
+                        <input :class="{'error-border':errorEmail, 'validated':emailValid}" type="email" x-model="email" placeholder="E-mail">
+                        <small class="error-field" x-text="errorEmail"></small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" title="Recherche" class="btn-primary signup-step-1" x-on:click.prevent="checkEmailExist()">
+                            <svg x-cloak x-show="loading" class="animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>Continuer
+                        </button>
+                    </div>
+                    <div>
+                        <p>
+                            Déjà un compte ? <a href="#" class="login-redirect" x-on:click.prevent="isLoginShow = true; isRegisterShow = false">Se connecter</a>
+                        </p>
+                    </div>
+                </div>
+            </template>
+            <template x-if="step2 === true">
+                <div class="step2Register">
+                    <span class="title">
+                        Choisissez un nom d’utilisateur et un mot de passe
+                    </span>
+                    <div class="form-group">
+                        <label for="">
+                            Nom d'utilisateur                        </label>
+                        <input :class="{'error-border':errorUsername, 'validated':usernameValid}" x-on:input.debounce="checkUserExist" type="text" x-model="username" required placeholder="Nom d'utilisateur">
+                        <small class="error-field" x-text="errorUsername"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">
+                            Mot de passe                        </label>
+                        <input :class="{'error-border':errorPassword, 'validated':passwordValid}" type="password" minlength="8" x-model="password" required placeholder="Mot de passe">
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            En cliquant sur Créer un compte, vous acceptez les <a target="_blank" href="https://generationvoyage.fr/conditions-generales-utilisation/">Conditions générales d'utilisation</a> et vous reconnaisez  avoir pris connaissance de la
+                            <a target="_blank" href="https://generationvoyage.fr/charte-de-confidentialite/">politique de confidentialité</a> de Generation Voyage.
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" title="Connexion" class="btn-primary signup" value="Connexion">
+                            <svg x-cloak x-show="loading" class="animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>Créer un compte
+                        </button>
+                    </div>
+                    <a href="#" class="back" x-on:click.prevent="step1=true; step2=false">Retour</a>
+                </div>
+            </template>
+        </form>
+    </div>
+</div>
+
+
+
+
+    <script>
+        const autoLoadDuration = 3; //In Seconds
+        const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+        const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+        eventList.forEach(function(event) {
+            window.addEventListener(event, triggerScripts, { passive: true })
+        });
+
+        function triggerScripts() {
+            runScripts();
+            clearTimeout(autoLoadTimeout);
+            eventList.forEach(function(event) {
+                window.removeEventListener(event, triggerScripts, { passive: true });
+            });
+        }
+
+        function runScripts() {
+            document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
+                scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+            });
+        }
+    </script>
+
+<script  src="https://generationvoyage.fr/wp-content/themes/toolito/dist/app.306fd1057b10f28b1c766e62e0ff7d6c.js"></script>
+<script>
+    console.log(`
+
+                  .....
+             .:-----------:
+           .------:::::------
+          :----:         :---:
+         .----             .
+         :---:        .......
+         :----      -----------
+          ----:     .::::-----:
+           ----:         -----
+           .----:       -----
+             ----:     -----
+              ----:   ----:
+               :----:----.
+                .-------
+                 .-----
+                   .:.
+
+
+`)
+</script>
+<script>console.log("On recrute en dev, growth & produit : https://bit.ly/gctech-recrute")</script>
+
+
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/generationvoyage.fr\/wp-admin\/admin-ajax.php","nonce":"1c24c7fb63","url":"https:\/\/generationvoyage.fr\/villes-fantomes-europe","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='https://generationvoyage.fr/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
