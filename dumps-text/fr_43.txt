@@ -1,0 +1,372 @@
+   #alternate Trustpair » Flux Trustpair » Flux des commentaires oEmbed
+   (JSON) oEmbed (XML) JSON
+
+   IFRAME: https://www.googletagmanager.com/ns.html?id=GTM-TWQWMMP
+
+   Aller au contenu
+
+   (BUTTON)
+     * Produit
+       (BUTTON) Fermer Produit Ouvrir Produit
+       Plateforme anti-fraude
+       Trustpair sécurise chaque étape du processus Procure-to-Pay contre
+       la fraude.
+       Découvrir
+       Cas d'usages
+       Onboarding fournisseurs
+       Contrôlez automatiquement vos fournisseurs à l'international.
+       Audit de base tiers
+       Auditez votre base tiers en continu pour détecter les risques.
+       Campagnes de paiements
+       Contrôlez automatiquement vos fichiers de paiements.
+       Essayer Trustpair
+       20+ intégrations natives
+          +
+          + SAP Ariba
+          +
+          +
+          + Ivalua
+          +
+       Voir les connecteurs
+     * Solutions
+       (BUTTON) Fermer Solutions Ouvrir Solutions
+       Protection contre la fraude
+       Éliminez la fraude au virement avec Trustpair, solution leader de
+       prévention de la fraude qui automatise le contrôle des coordonnées
+       bancaires de vos tiers.
+       En savoir plus
+       Besoins
+          + Contrôles de RIB
+          + Nettoyage base de données tiers
+          + Validation IBAN
+          + Digitalisation des processus
+       Rôles
+          + Directeurs financiers
+          + Trésoriers
+          + Comptables
+          + Achats
+          + DSI
+          + CSP
+     * Tarifs
+     * A propos (BUTTON) Fermer A propos Ouvrir A propos
+       A propos de Trustpair
+       Rencontrez l’équipe derrière Trustpair, l’histoire de l’entreprise
+       et nos principales valeurs.
+       Découvrir Trustpair
+       Entreprise
+          + Notre mission
+          + Newsroom
+          + Talents
+       Trustpair recrute 🚀
+       Visiter le site carrières
+     * Communauté
+       (BUTTON) Fermer Communauté Ouvrir Communauté
+       Rejoindre la communauté
+       Rejoignez la plus grande communauté des leaders de la finance qui
+       luttent contre la fraude au virement.
+       S'inscrire à la newsletter
+       Communauté
+          + Programme partenaire
+          + Evénements
+          + Clients
+       Cas clients
+          +
+          + Nexans
+          + Decathlon
+          + Leaseplan
+          + SG
+          +
+       Consulter les cas clients
+     * Ressources (BUTTON) Fermer Ressources Ouvrir Ressources
+       Le blog de Trustpair
+       Découvrez les dernières actualités Finance liées à la sécurité des
+       paiements, à la fraude, à l’IA et aux risques émergents.
+       Lire
+       Ressources
+          + Livres blancs
+          + Webinars
+          + Cas clients
+
+   Demander une démo
+   Se connecter
+     * Fr
+
+     * Publié le août 2 2024
+     * •
+     * Fraude au virement
+
+Société fantôme : comment ne pas se faire avoir ?
+
+   Dans cet article
+   Table des matières
+   Vous aimez ? Partagez-le
+
+   Les sociétés fantômes, par leurs escroqueries, représentent un fléau
+   pour l’économie et les victimes directement concernées. Tout en
+   maintenant une façade légale tout à fait convaincante, elles
+   souscrivent à de nombreux prêts, concentrent les aides d’État à la
+   création d’entreprise et à l’embauche et usurpent l’identité de
+   fournisseurs auprès d’entreprises clientes. Ceci, avant de disparaître.
+
+   Expertes dans la fraude, rompues aux techniques de détection, ces
+   fausses sociétés très organisées réalisent des montages solides pour
+   tromper les entreprises et administrations. Quelles méthodes
+   d’escroquerie emploient ces organisations de façade et comment s’en
+   prémunir ? Nos explications.
+
+   Bloquez la fraude grâce à Trustpair, la plateforme qui automatise le
+   contrôle de vos données tiers et de vos campagnes de paiement.
+   Contactez un expert pour en savoir plus !
+
+   Nouveau call-to-action Nouveau call-to-action
+
+Société fantôme : qu’est-ce que c’est ?
+
+   Une société fantôme – aussi appelée société dormante – désigne une
+   entreprise sans activité réelle, créée à des fins délictueuses et / ou
+   criminelles. Les fausses sociétés opèrent dans de nombreux secteurs,
+   comme le bâtiment, l’immobilier ou la restauration.
+
+   Celle-ci a recours à l’escroquerie à l’encontre de gouvernements,
+   établissements financiers, assurances et autres entreprises.
+   L’usurpation d’identité, la production de factures fictives et la
+   multiplication d’apports financiers (prêts, aides d’État) constituent
+   autant de moyens d’action.
+
+   Dans un contexte de dématérialisation et de simplification
+   administrative, la création d’entreprise est à la fois plus facile et
+   plus rapide. Pour le seul premier trimestre de 2018, 184 744 nouvelles
+   entreprises ont vu le jour ; un chiffre en progression de 17,8% au
+   premier trimestre 2019, avec 217 651 entreprises créées. Ainsi, nombre
+   de fausses sociétés agissent en réseau, de façon à tromper les
+   autorités et cacher l’identité des fraudeurs.
+
+Quels sont les risques d’une société fantôme ?
+
+   Sur l’économie, l’impact est évidemment néfaste ; rien que sur l’année
+   2016 et seulement pour les cas de fraude à l’AGS, 459 affaires ont été
+   traitées pour un préjudice se chiffrant à presque 15 millions d’euros.
+
+   Pour l’organisme victime, les conséquences sont elles aussi
+   désastreuses. Les pertes financières peuvent être lourdes, ainsi de ce
+   grossiste rouennais escroqué de 6 millions d’euros après une commande
+   de gels hydroalcooliques et masques auprès d’une société fantôme. Les
+   processus de sécurité de l’entreprise pouvant alors être considérés
+   comme faillibles, l’image et la réputation de l’organisation lésée s’en
+   retrouvent alors dégradés.
+
+   Plus rare, le risque de voir la responsabilité civile de l’entreprise
+   engagée demeure tout à fait réel, par exemple si l’argent est dissimulé
+   à des fins illicites, comme le financement du terrorisme ou de toutes
+   autres activités criminelles. Les établissements bancaires, entre
+   autres, étant tenus de vérifier l’identité des clients, ils peuvent
+   alors se retrouver confrontés à la loi.
+
+Comment procède une société fantôme pour escroquer une entreprise ?
+
+   Les méthodes d’escroquerie employées par une fausse société pullulent
+   et évoluent. Les profils, souvent multirécidivistes, profitent d’une
+   grande expérience en la matière et savent donc comment procéder pour
+   atteindre leurs fins.
+
+   Elles ont ainsi recours à de nombreuses techniques :
+     *       Fraude au changement de RIB
+     *       Fraude à la TVA
+     *       Prêts bancaires et crédits-baux
+     *       Aides d’État à la création d’entreprise et à l’embauche
+     *       Emplois fictifs
+     *       Chèques sans provision
+     *       Fraude au faux conseiller bancaire
+
+   En plus de leur expérience dans l’usurpation d’identité, les sociétés
+   fantômes mobilisent régulièrement des experts pour renforcer leur
+   crédibilité et leur efficacité. En 2016, par exemple, une fausse
+   entreprise recourt à October (ex Lendix) pour souscrire à de nombreux
+   prêts en ligne participatifs. Celle-ci démantelée, elle révèle alors
+   l’implication d’un réseau de faux experts-comptables et avocats. Face �
+   ces compétences, il est bien difficile de se protéger.
+
+   Ces escroqueries débouchent même sur des situations ubuesques : tel est
+   le cas de ce bureau d’étude fictif qui, après avoir lésé ses salariés
+   en 2012, les a laissés dans un vide juridique les empêchant de quitter
+   leurs postes… sans toutefois percevoir de salaires.
+
+   Pour en savoir plus sur la fraude en entreprise et vous en prémunir
+   efficacement, téléchargez notre dernier baromètre de la fraude !
+
+   Etude Fraude 2023 - SAP Trustpair Etude Fraude 2023 - SAP Trustpair
+
+Comment repérer les sociétés fantômes et s’en protéger ?
+
+   Bien qu’organisées et efficaces, les fausses sociétés peuvent être
+   détectées grâce à un certain nombre de signaux faibles qu’il faut
+   examiner.
+     *       Vérification des informations légales de l’entreprise
+
+   C’est une première étape importante, même si ces sociétés dormantes se
+   révèlent souvent irréprochables sur ce point. Grâce à des outils comme
+   infogreffe.fr ou societe.com, il est possible de contrôler les statuts
+   RCS et INSEE, l’adresse postale, la forme juridique et les numéros
+   SIREN et SIRET (voir article sur la sécurisation des bases de données
+   via la siretisation) d’une entreprise française.
+     *       Vérification de l’identité des dirigeants
+
+   A partir des outils précédents, la dénomination des gérants et leur
+   historique entrepreneuriale sont détaillées. Ces informations demeurent
+   toutefois factuelles et potentiellement falsifiables, aussi est-il
+   préférable de contacter directement le fournisseur pour procéder à une
+   double vérification. On cherche alors à repérer les incohérences, par
+   exemple entre la communication et les documents déclarés.
+     *       Contrôle du nom de domaine et de l’adresse email
+
+   Ces éléments sont, par définition, uniques, mais une société fantôme
+   sait faire preuve de subtilité. Une lettre ou un tiret en plus ou en
+   moins dans les adresses web ou mail, un changement de domaine (de .fr �
+   .com et vice-versa, par exemple) et l’on peut vite être trompés.
+   L’historique des échanges par mail avec le fournisseur habituel ou une
+   recherche Google pour retrouver le site officiel de celui-ci aident
+   dans la détection de ces éléments.
+
+   Ces mesures barrières vous protègent dans une certaine mesure, mais
+   sont faillibles, d’autant plus au vu de la grande expérience des
+   sociétés fantômes. Elles sont, de plus, chronophages.
+
+Trustpair, la solution pour déjouer les tentatives de fraude des sociétés
+fantômes
+
+   Ces signaux faibles permettent certes de repérer une société fantôme,
+   mais ces contrôles restent essentiellement manuels et donc faillibles.
+
+   Pour pallier à ces enjeux, Trustpair accompagne les Directions
+   financières dans le contrôle des coordonnées bancaires des
+   fournisseurs, afin de permettre au donneur d’ordre de toujours être
+   certain de l’identité d’un fournisseur. La solution vérifie
+   automatiquement le couple Entreprise <> Compte bancaire afin que les
+   sommes dues soient versées au bon fournisseur sur le bon compte
+   bancaire.
+
+
+Pour conclure…
+
+     * Une société fantôme, aussi appelée société dormante, désigne une
+       entreprise sans activité réelle, créée à des fins délictueuses et
+       criminelles.
+     * Que se soit en usurpant l’identité d’une entreprise existante, ou
+       bien en inventant une société de toute pièce, l’objectif des
+       sociétés fantômes est de soutirer des fonds aux entreprises via
+       diverses techniques d’escroqueries, comme la fraude au changement
+       de RIB, à la TVA, ce qui implique de lourdes pertes financières.
+     * Si leur organisation est redoutable, plusieurs signaux faibles
+       peuvent être perçus par les entreprises afin de se protéger de ces
+       menaces.
+     * Afin de renforcer la sécurité des entreprises et de renforcer les
+       processus de vérification interne, Trustpair accompagne les ETI et
+       Grandes Entreprises dans le contrôle des coordonnées bancaires
+       fournisseurs. Les équipes financières sont alors en mesure de
+       vérifier l’identité de leur tiers, et ainsi de toujours payer le
+       bon fournisseur sur le bon compte bancaire.
+
+
+   Autres articles
+   Actualités Trustpair
+   3 min
+
+   Benoît Patra nommé Chief Technology Officer de Trustpair
+   Conformité finance
+   7 min
+
+   Loi Sapin 2 : de quoi s’agit-il et qui est concerné ?
+   Digitalisation finance
+   6 min
+
+   Facturation électronique et PDP (plateformes de dématérialisation
+   partenaires), le guide
+
+   Inscrivez-vous à la newsletter !
+
+   Take Action Against Vendor Fraud
+     *
+     *
+     *
+
+     * contact@trustpair.com
+     * +33 1 84 88 87 23
+
+   Trustpair
+   174 Quai de Jemmapes
+   75010 Paris
+   France
+   Produit
+     * Découvrir la platforme
+     * Plateforme
+     * Onboarding fournisseurs
+     * Audit base tiers
+     * Sécurité des paiements
+
+     * Connect
+     * Trustpair API
+     * SAP S4/HANA
+     * SAP ECC6
+     * SAP Ariba
+     * Kyriba
+     * Jaggaer
+     * Coupa
+     * Ivalua
+
+     * Sources
+     * Sepamail
+     * Iban Check
+
+   Solutions
+     * Besoins
+     * Protection contre la fraude
+     * Contrôles RIB
+     * Nettoyer base de données tiers
+     * Digitalisation des processus
+     * Validation IBAN
+
+     * Rôles
+     * Directeurs financiers
+     * Trésoriers
+     * Comptables d'entreprise
+     * Directeurs achats
+     * DSI
+     * CSP
+
+     * Types de fraudes
+     * Fraude au président
+     * Fraude au virement bancaire
+     * Fraude interne
+     * Phishing
+     * Fraude au faux fournisseur
+
+   Explorer
+     * Entreprise
+     * A propos
+     * Presse
+     * Recrutement
+
+     * Communauté
+     * Partenaires
+     * Evénements
+     * Clients
+
+     * Ressources
+     * Blog
+     * Livres Blancs
+     * Webinars
+     * Cas clients
+
+     * © 2025 Trustpair. All rights reserved.
+     * Mentions Légales
+     * Charte de confidentialité
+     * Politique Cookies
+
+   Duplicates. Inconsistencies. Fraud. Clean your vendor data before it
+   costs you
+   Get the Guide
+   (BUTTON)
+
+   Regulation Rising - Payment Trends Defining 2026
+   Get the Report
+   (BUTTON)

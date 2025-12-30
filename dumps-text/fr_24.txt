@@ -1,0 +1,840 @@
+   #Littera Incognita » Flux Littera Incognita » Flux des commentaires
+   Littera Incognita » Le fantôme à la fin du Moyen Âge : un personnage
+   chargé de rassembler les vivants et les morts Flux des commentaires
+   oEmbed (JSON) oEmbed (XML) JSON
+
+   Skip to the content
+
+   Littera Incognita
+
+   Revue des doctorants du laboratoire LLA-Créatis (UT2J)
+   (BUTTON)
+   Toggle mobile menu (BUTTON)
+   Toggle search field
+   Rechercher : ____________________ Rechercher
+     * Projet
+     * La revue : tous les numéros
+     * Comités
+     * Appels à contribution
+     * Consignes aux auteur.rice.s
+     * Appuis universitaires
+     * Contact
+
+     * Projet
+     * La revue : tous les numéros
+     * Comités
+     * Appels à contribution
+     * Consignes aux auteur.rice.s
+     * Appuis universitaires
+     * Contact
+
+Le fantôme à la fin du Moyen Âge : un personnage chargé de rassembler les
+vivants et les morts
+
+   17 septembre 2017 / littera-incognita
+
+   Isabelle MARCHESSOU
+
+   Doctorante en littérature anglaise rattachée au laboratoire LISAA ,
+   occupant un poste d’ATER à l’Université Paris-Est Marne-la-Vallée, ses
+   recherches s’intéressent aux différences de représentation, de fonction
+   et de symbolique du personnage du fantôme tel qu’il existe dans les
+   littérature anglaise médiévale et victorienne.
+
+   isabelle.marchessou@univ-paris-est.fr
+
+   Pour citer cet article : Marchessou, Isabelle, « Le fantôme à la fin du
+   Moyen Âge : un personnage chargé de rassembler les vivants et les morts
+   », Litter@ Incognita [En ligne], Toulouse : Université Toulouse Jean
+   Jaurès, n°8 « Entre-deux : Rupture, passage, altérité », automne 2017,
+   mis en ligne le 19/10/2017, disponible sur
+   <https://blogs.univ-tlse2.fr/littera-incognita-2/2017/09/17/le-fantome-
+   a-la-fin-du-moyen-age-un-personnage-charge-de-rassembler-les-vivants-et
+   -les-morts/>.
+     __________________________________________________________________
+
+Résumé
+
+   Cet article se propose de démontrer que la représentation et la
+   conception des fantômes et des revenants qui peuplent la littérature
+   anglaise entre les XII^e et XV^e siècles sont modifiées par la notion
+   de responsabilité. Les défunts qui reviennent du Purgatoire deviennent
+   progressivement idéalement responsables, ce qui leur confère l’autorité
+   nécessaire pour influencer les vivants.
+
+   Mots-clés : revenant – Moyen-âge – responsabilité – purgatoire –
+   autorité sur les vivants.
+
+Abstract
+
+   This article intends to demonstrate that the representation and the
+   understanding of ghosts and revenants in England between the 12^th and
+   the 15^th centuries are modified by the growing importance of the
+   notion of responsibility. The dead coming back from the developing
+   Purgatory become progressively more responsible, thus gaining the
+   authority to influence the living.
+
+   Keywords: revenants – middle ages – responsability – purgatory –
+   influence on the living.
+     __________________________________________________________________
+
+Sommaire
+
+   Introduction
+   1. De mauvais revenants partiellement responsables
+   2. Repentance et réparation
+   3. Plus qu’un passeur, un directeur de conscience
+   Conclusion
+   Notes
+   Bibliographie
+
+Introduction
+
+   En Angleterre au Moyen Âge, les fantômes, esprits désincarnés des
+   morts, coexistent avec les revenants, des défunts dotés d’un corps
+   tangible, et il n’est pas toujours aisé de les distinguer^1. Toutefois,
+   cette différence n’entrave en rien leur capacité à franchir la
+   frontière entre le monde des morts et celui des vivants, qu’ils
+   exercent dans un nombre croissant de récits à partir du XII^e siècle. À
+   cette période, la géographie des royaumes de l’au-delà chrétien dans
+   lesquels les âmes des défunts attendent le Jugement dernier, se
+   transforme progressivement pour inclure, à la frontière entre le
+   Paradis et l’Enfer, un « au-delà intermédiaire^2 », le Purgatoire,
+   auquel des personnages de l’entre-deux comme les revenants et les
+   fantômes ne peuvent qu’appartenir.
+
+   Le Purgatoire est la destination de ceux qui ne méritent pas l’Enfer
+   car leur âme n’est pas damnée, mais qui ne peuvent pas non plus entrer
+   au Paradis, car ils ont commis des péchés qui leur en barrent l’accès
+   immédiat. C’est donc un système dans lequel les âmes des défunts
+   subissent des peines expiatoires proportionnelles à leurs péchés, et
+   qui est officiellement inclus dans la doctrine de l’Église chrétienne
+   lors du second concile de Lyon en 1274. Le Purgatoire devient aussi le
+   lieu où s’accomplit cette pénitence, à partir des années 1170-1180
+   lorsque le nom latin purgatorium remplace les expressions « peines
+   purgatoires » ou « feu purgatoire^3 » .
+
+   Les peines subies dans ce lieu de pénitence sont aussi terribles que
+   celles de l’Enfer^4, mais elles ne sont pas éternelles et leur durée
+   peut être réduite grâce à une pratique ancienne qui trouve un nouveau
+   sens dans le système du Purgatoire, les suffrages. Les vivants
+   accomplissent des œuvres de piété dont le bénéfice spirituel est
+   transféré aux âmes des défunts afin d’abréger leur peine. Plusieurs
+   études sur la mort montrent que les suffrages prennent des formes
+   diverses, mais la pratique la plus populaire est d’offrir des messes en
+   l’honneur des morts, et c’était une provision inscrite dans de nombreux
+   testaments^5.
+
+   Amanda McKeever remarque qu’à partir du XIII^e siècle, les récits de
+   revenants participent à promouvoir l’efficacité des suffrages, et donc
+   le Purgatoire^6. Revenants et Purgatoire prospèrent donc de concert en
+   renforçant leur crédibilité mutuelle. En effet, ce dernier offre une
+   « première explication logique de l’existence des revenants^7 », en
+   créant un territoire intermédiaire dont on peut revenir, tandis que les
+   revenants sont une preuve concrète de l’existence de ce dernier. C’est
+   dans cette optique qu’à partir du XII^e siècle les histoires de
+   revenants du Purgatoire se multiplient jusqu’à être rassemblées dans
+   des recueils d’exempla, à l’usage des prêtres et des prêcheurs pour
+   ponctuer leurs sermons d’exemples et leur donner plus de poids.
+
+   Ronald C. Finucane établit trois catégories de revenants et fantômes
+   médiévaux : ceux qui insistent sur l’importance des enseignements de
+   l’Église ; ceux qui cherchent à réparer des injustices sociales ou
+   personnelles ou qui enjoignent aux vivants à être moralement bons, et
+   dont Finucane nous dit qu’ils ne sont pas aussi liés à l’Église que les
+   premiers ; et enfin des revenants qui ne semblent avoir aucun but
+   spécifique^8. Mais il nous semble que cette catégorisation ne rend pas
+   compte d’une conception sous-jacente du revenant qui lui permet d’être
+   utilisé tant dans une perspective religieuse que légale ou éthique, et
+   ce non seulement dans des textes aux genres différents, mais aussi
+   issus de différents siècles comme ceux de notre corpus.
+
+   La troisième catégorie de Finucane, correspond bien au revenant
+   dangereux et à l’apparence horrible de l’anecdote du chapitre XXVII de
+   la distinction II du De Nugis Curialium écrit par le clerc de la cour
+   d’Henri II, Walter Map (c. 1140-c. 1209) ou à ceux des chapitres XXII,
+   XXIII et XXIV du livre V de l’Historia Rerum Anglicarum écrits par
+   l’historien et chanoine de Bridlington William de Newburgh (1136-1198).
+   C’est aussi le cas du mauvais revenant mentionné dans une anecdote du
+   chapitre consacré à l’année 1295 de la Chronique de Lanercost, un
+   manuscrit en latin relatant l’histoire du nord de l’Angleterre et de
+   l’Ecosse entre le XIIIe et la première moitié du XIVe siècle dont
+   l’édition est attribuée à un moine augustin du prieuré de Lanercost.
+   Les deux anecdotes de William de Newburgh indiquent clairement que ces
+   revenants ont mené une mauvaise vie avant de détailler leur aspect et
+   leur méfait. Dès lors on peut se demander si les vivants ne voient pas
+   un lien entre l’état de l’âme du défunt et son apparence et son
+   attitude. Si tel est le cas, ces revenants, bien qu’ils n’aient pas de
+   but propre, illustrent peut-être eux aussi la vérité naissante du
+   Purgatoire et sont peut-être plutôt les précurseurs d’une des deux
+   autres catégories.
+
+   Finucane nous dit que les revenants de la seconde catégorie sont moins
+   liés aux objectifs de l’Église, pourtant, certains de ceux présents
+   dans les anecdotes collectées par un moine cistercien de l’abbaye de
+   Byland dans le Yorkshire, à la fin du XIVe siècle, promeuvent à la fois
+   les bienfaits des suffrages pour les morts et les vivants, et donc les
+   enseignements de l’Église, et l’importance de réparer ses crimes, et
+   donc d’être moralement bon. Ces revenants appartiennent donc à la fois
+   à la première et à la seconde catégorie de Finucane. Enfin, les
+   fantômes du poème allitératif « The Awntyrs Off Arthur », et du roman
+   moyen anglais Sir Amadace, tous deux composés à la fin du XIVe siècle
+   promeuvent directement ou non les bienfaits des suffrages et des œuvres
+   pieuses, et ce bien que leur forme et leur contenu les éloignent
+   grandement des recueils d’exempla.
+
+   On peut donc se demander ce qui confère au revenant ou au fantôme sa
+   capacité à porter un message à la fois religieux, légal voire éthique,
+   et ce quels que soient sa nature, son apparence, son attitude, ou même
+   la forme du récit qu’il hante. Quelle est la conception sous-jacente
+   des mauvais et des bons revenants, et des fantômes médiévaux qui leur
+   confère l’autorité nécessaire pour influencer les vivants ? Jacques Le
+   Goff explique, dans le chapitre 7 de son livre, que toute l’idéologie
+   et la logique du Purgatoire se calquent sur un idéal de justice qui met
+   l’accent sur la notion de « responsabilité personnelle^9 » . Le
+   Dictionnaire culturel en langue française définit le mot
+   « responsable » comme celui ou celle « qui doit accepter et subir les
+   conséquences de ces actes et en répondre^10  ». Si cette notion
+   influence la conception du Purgatoire, il nous semble qu’elle doit
+   aussi avoir joué un rôle dans la conception des revenants puisque ces
+   deux phénomènes sont liés. Cette analyse va donc s’attacher à démontrer
+   qu’en Angleterre entre les XII^e et XIV^e siècles, le revenant, comme
+   le fantôme, est idéalement responsable, ce qui lui donne l’autorité
+   nécessaire pour influencer les vivants. Nous commencerons par établir
+   que les mauvais revenants de notre corpus, dont les récits sont
+   antérieurs aux autres, sont déjà perçus comme subissant les
+   conséquences de leurs péchés, ce qui indique une intégration
+   progressive de la notion de responsabilité dans leur conception. Nous
+   montrerons ensuite que les autres, que nous appellerons les bons
+   revenants ou fantômes, sont devenus entièrement responsables car ils
+   répondent à tous les critères énoncés dans la définition précédente.
+   Nous conclurons cette analyse en décrivant le rôle de directeur de
+   conscience que le revenant et le fantôme endossent auprès des vivants
+   afin de leur enseigner l’art de bien vivre ensemble.
+
+1. De mauvais revenants partiellement responsables
+
+   Il semble, de prime abord, que les mauvais revenants, ne sont en rien
+   des personnages responsables : rien n’indique qu’ils acceptent leurs
+   erreurs, ou qu’ils soient prêts à répondre de leurs actes. Ils sont
+   uniquement un danger mortel pour la communauté des vivants comme celui
+   de Buckingham décrit au chapitre XXII de la chronique de William de
+   Newburgh qui « terrorise [sa femme] mais en plus l’écrasa presque sous
+   son poids intolérable^11 », ou bien le revenant gallois du De Nugis
+   Curialium de Walter Map qui « appell[e] un par un et nommément les
+   villageois qui sans rien faire se retrouvent affaiblis et meurent sous
+   trois jours^12 ». Dans ces anecdotes un lien est établi entre les
+   péchés du défunt et l’apparence et le comportement effrayant du
+   revenant, comme si ces caractéristiques étaient un aveu involontaire de
+   la mauvaise vie qu’ils ont menée. Cette corrélation entre l’apparence
+   et la nature de l’être est soutenue et renforcée par la conception
+   médiévale que l’âme et le corps fonctionnent en harmonie, ce qui
+   implique notamment que l’aspect extérieur du corps reflète l’état
+   intérieur de l’âme^13.
+
+   Cette correspondance explique que les mauvais revenants de notre corpus
+   aient une apparence bien plus terrifiante que les bons revenants.
+   Puisque, contrairement à ces derniers, ils ne se repentent pas de leurs
+   péchés, leur âme est plus corrompue par ceux-ci, ce qui se reflète dans
+   leur apparence. La différence est flagrante lorsque l’on compare la
+   description du bon revenant du chapitre XXX de la Distinction II du De
+   Nugis Curialium avec celle donnée dans la chronique latine de Lanercost
+   pour l’année 1295. La première raconte le retour du père excommunié
+   d’un chevalier de Northumberland qui recherche le pardon, tandis que la
+   seconde présente un prêtre excommunié impénitent. La description
+   physique du père du chevalier se limite à mentionner qu’il apparait «
+   entouré d’une pièce d’étoffe en haillons^14 ». Cette description ne
+   concerne que la tenue du revenant et l’expression « en haillons »,
+   traduite du latin « pannosoque », souligne l’état de délabrement du
+   tissu, mais elle ne révèle rien sur l’éventuel état de décomposition du
+   corps. La description physique à proprement parler du revenant n’a rien
+   d’effrayant ou de répugnant. Pourtant, le fils, « croyant que celui-ci
+   est le diable^15 », le repousse jusqu’à la porte de sa demeure. Cette
+   association avec le diable témoigne de la terreur du chevalier face �
+   cette apparition, mais rien ne relie directement ce sentiment �
+   l’apparence du défunt. La crainte du chevalier pourrait être due à la
+   croyance, soutenue par l’Église, que les revenants, sont en fait des
+   démons prenant possession des corps des morts pour tromper les
+   vivants^16. Ainsi, en voyant le corps de son père s’animer, le
+   chevalier pense d’abord avoir à faire au Diable. Toutefois, cette peur
+   n’est exprimée que dans les quatre premières lignes de l’anecdote, et
+   le chevalier l’oublie bien vite pour mieux écouter son père.
+   L’apparence du prêtre excommunié est bien plus terrible. Tout d’abord,
+   il est décrit comme le « fils des ténèbres^17 », ce qui l’associe lui
+   aussi au Diable dont les ténèbres sont le domaine. Mais le revenant
+   n’est pas seulement terrifiant. Son corps est décrit comme «
+   repoussant » et « grossier^18 », deux termes qui soulignent bien le
+   dégoût que ressentent les habitants du village. L’apparence du prêtre
+   évoque donc l’horreur, une peur mêlée de répulsion, et ces sentiments
+   ne se dissipent pas au cours du récit puisque l’anecdote décrit ensuite
+   comment le prêtre « épouvant[e] » et « bris[e] [les] articulations [des
+   villageois]^19 », et renforce donc l’effroi qu’il provoque. L’auteur de
+   la chronique de Lanercost insiste plus longuement et offre plus de
+   détails sur l’aspect et l’attitude du prêtre malveillant que Walter Map
+   n’en donne sur le père du chevalier de Northumberland, ce qui indique
+   bien que ces éléments sont essentiels non seulement dans la
+   représentation, mais aussi dans la construction de ce qu’est un mauvais
+   revenant.
+
+   L’auteur de la chronique donne de plus amples informations sur ce
+   dernier point lorsqu’il débute son anecdote en expliquant que ce qu’il
+   s’apprête à raconter est un « exemple de damnation^20 ». En d’autres
+   termes, le mauvais revenant de cette anecdote est un exemple de ce qui
+   arrive lorsque l’âme a commis des péchés impardonnables : l’aspect
+   physique est drastiquement altéré, toute volonté propre est perdue et
+   le défunt est un danger pour les vivants. Ainsi, ce qui ressort de
+   cette anecdote collectée en 1295, une période ou le Purgatoire est
+   mieux défini qu’à la fin du XII^e siècle, c’est que la notion de
+   proportionnalité des peines propre au système du Purgatoire, est mise
+   de côté au profit d’une relation de causalité établie entre l’apparence
+   et l’attitude du mauvais revenant et sa mauvaise vie. Cette relation
+   est plus proche de la notion de responsabilité telle que nous l’avons
+   présentée dans l’introduction dans la mesure où le revenant est amené �
+   subir les conséquences de ses péchés en revêtant une apparence horrible
+   qui rend manifeste l’état de son âme. Ce qui n’est pas clairement
+   exprimé en revanche, c’est dans quelle mesure les habitants de
+   Clydesdale connaissaient les travers du prête excommunié, et il est
+   donc difficile d’affirmer avec certitude dans ce cas que l’apparence du
+   défunt est une forme d’aveu involontaire des péchés commis qui
+   viendrait entacher sa réputation, ajoutant par la même une autre
+   conséquence de ses actes que le défunt devrait subir. Ce phénomène
+   d’aveu est toutefois bien plus clair dans les anecdotes collectées par
+   William of Newburgh dans les chapitres XXIII et XXIV de la Distinction
+   II de son Historia Rerum Anglicarum. La structure de ces anecdotes est
+   assez similaire à celle de la chronique de Lanercost. On retrouve bien
+   dans le corps de l’anecdote le sentiment d’horreur rattaché au
+   revenant : dans le chapitre XXIII, les habitants de la ville de Berwick
+   sont assaillis par un « monstre funeste », un « cadavre pestilentiel »
+   qui « empoisonn[e] et corromp[t] les alentours^21 ». L’adjectif
+   « pestiferi » indique le dégout provoqué par l’odeur nauséabonde du
+   revenant, tandis que le verbe « inficio » et le supin « infectus »
+   soulignent le danger à la fois sanitaire et mortel qu’il représente.
+   William of Newburgh mentionne au début de l’anecdote que les habitants
+   ont découvert plus tard que le revenant était en fait un homme
+   « extrêmement malveillant^22 »  comme l’indique l’emploi de
+   « pessimus », superlatif de « malus ». Le processus de réflexion qui
+   les amène à cette conclusion est clairement exposé au travers de la
+   conjonction « ut » qui prend le sens de « suite à » lorsqu’elle est
+   suivie d’un verbe à l’indicatif. Or elle est ici suivie du verbe
+   « claruit » qui veut dire « devenir clair » à l’indicatif parfait, et
+   on comprend donc bien que c’est suite aux évènements que raconte
+   l’anecdote, que la malveillance de l’homme est « devenue évidente ». Le
+   même parallèle est établi entre l’apparence et la malveillance du
+   revenant du chapelain de Melrose au chapitre XXIV, et sa mauvaise vie.
+   William of Newburgh explique qu’« après [sa] mort les évènements ont
+   rendu évidents ses péchés^23 ».
+
+   Ces récits témoignent de la causalité qui existe pour les vivants entre
+   l’apparence et l’attitude du mauvais revenant et ses péchés. Dans cette
+   conception du revenant, ce dernier est contraint d’assumer publiquement
+   ses fautes et d’en subir les conséquences sur son nom et sa réputation.
+   Cette manière de comprendre le retour du défunt atteste de
+   l’intégration progressive de la responsabilité de chacun dans le salut
+   de son âme et ce alors même que le Purgatoire n’a pas tout à fait
+   atteint sa forme finale.
+
+2. Repentance et réparation
+
+   Deux choses différencient les mauvais revenants que nous venons
+   d’étudier de ceux qui les suivent dans la chronologie de notre corpus.
+   La première, c’est que les bons revenants reconnaissent volontairement
+   leur part de responsabilité dans leur sort. La seconde, c’est qu’ils ne
+   se contentent pas de « subir » les conséquences de leurs erreurs, ils
+   les « assument », et sont prêt à « répondre de » leurs actes. En somme,
+   ils sont parfaitement responsables.
+
+   La très large majorité des revenants de notre corpus reconnaissent
+   avoir commis des fautes de leur vivant. Dans « The Awntyrs Off
+   Arthur », le fantôme de la mère de Guenièvre reconnait qu’elle a pris
+   de nombreux amants^24, tandis que le revenant de l’histoire II des
+   contes de Byland, explique qu’il a fait « comme ceci et comme cela » et
+   qu’il a été « excommunié pour ce crime^25 »  des expressions qui, si
+   elles manquent de détails, insistent bien par leur répétition sur
+   l’importance d’admettre ses erreurs. Le revenant de l’histoire VI de
+   Byland lui aussi, n’hésite pas à admettre avoir volé des cuillères en
+   argent. Enfin, la revenante de l’histoire XII, la sœur d’un homme
+   appelé Adam de Lond, explique à William Trower qu’elle subit un
+   châtiment car elle a donné à son frère des chartes qui revenaient de
+   droit à son mari et ses enfants. Le verbe confiteor utilisé par le
+   moine dans sa forme imparfaite « confitebatur^26 » pour décrire les
+   aveux de ces revenants est très révélateur. Le premier sens de ce
+   verbe, est celui de « se confesser ». Il s’agit bien là de la
+   confession religieuse dont l’importance grandit avec le développement
+   du Purgatoire jusqu’à devenir obligatoire pour tous les chrétiens une
+   fois par an^27. Le second sens de ce verbe est celui d’« avouer sa
+   faute » qui n’est pas sans rappeler les aveux des criminels face à la
+   justice légale, et le dernier sens, est celui de « faire connaître » ou
+   « révéler ». Si le premier et le second sens reflètent les
+   considérations didactiques mentionnées en introduction qui visaient �
+   utiliser le revenant comme un instrument d’instruction sur le salut de
+   l’âme et une certaine dimension juridique, le troisième sens montre que
+   le défunt est aussi individuellement responsable. En effet, en faisant
+   connaitre ses fautes, c’est-à-dire en les révélant publiquement, son
+   nom et sa réputation peuvent se trouver entachés, comme c’est le cas
+   pour son ancêtre malveillant, et il subit donc comme ce dernier les
+   conséquences de ses actes. Mais les bons revenants de notre corpus ne
+   s’arrêtent pas là. Lorsque Guenièvre s’interroge sur la raison pour
+   laquelle des « bêtes maléfiques » tourmentent sa mère, cette dernière
+   répond qu’elles « [sont] l’amour charnel^28 » dans lequel elle s’est
+   enivrée de son vivant. En indiquant ainsi le lien entre leurs péchés et
+   les châtiments qu’ils subissent, et en ne contestant pas leur
+   châtiment, ces revenants acceptent leur responsabilité.
+
+   Cette reconnaissance des péchés peut aussi s’exprimer dans le désir de
+   certains revenants de réparer les dommages qu’ils ont causés. La sœur
+   d’Adam de Lond, en plus d’admettre sa faute, souhaite que son frère
+   « restitu[e] à son époux et ses enfants ces mêmes chartes et [qu’il
+   leur] rend[e] les terres^29 » dont ils ont été privés. Le voleur des
+   cuillères en argent veut que « le vivant […] a[ille] à l’endroit
+   indiqué » récupérer les cuillères puis qu’il « rapporte au
+   Prieur^30 » toute l’affaire. Le verbe employé par le revenant
+   « reporto » à la forme génitive, signifie à la fois « ramener » et
+   « rapporter », on peut donc en conclure qu’il veut non seulement que le
+   vivant raconte toute l’histoire au Prieur, mais qu’il ramène aussi
+   l’objet du délit. Le revenant de l’histoire I des contes de Byland
+   rentre aussi dans ce schéma : il donne au vivant « la cause^31 » de sa
+   détresse et propose son aide à l’homme auquel il apparait. Le verbe
+   latin employé « adiuuare^32 »  a non seulement le sens d’« aider » mais
+   aussi de « seconder quelqu’un » donc de lui être utile. En souhaitant
+   réparer ou compenser les répercussions que leurs péchés ont pu avoir
+   sur la communauté des vivants, ces bons revenants montrent qu’ils sont
+   conscients des conséquences de leurs péchés et donc de leur
+   responsabilité.
+
+   Enfin, le Dictionnaire culturel en langue française donne comme
+   définition de « répondre de ses actes » « être garant par un engagement
+   volontaire […] devant la loi, la société, la morale^33 ». Par
+   extension, donc être responsable signifie aussi« tenir ses engagements
+   », comme le fait le revenant du roman Sir Amadace. Dans cette œuvre, le
+   défunt, qui revient sous la forme d’un chevalier blanc, offre
+   d’apporter à Amadace, un chevalier désargenté, un soutien financier qui
+   lui permettra d’entrer dans un tournoi et d’éventuellement retrouver sa
+   fortune et son honneur perdus en échange de la moitié de tout ce qu’il
+   gagnera. Le terme moyen-anglais « forwart^34 », employé pour désigner
+   la nature de l’aide que le revenant offre au chevalier, désigne à la
+   fois un « contrat » qui lie les deux parties devant la loi, et une
+   « alliance » qui les associe devant Dieu. Ce terme dénote bien le
+   caractère officiel et solennel de ce qui lie les deux parties. Dans son
+   article « Béances de la terre et du temps : la dette et le pacte dans
+   le motif du ‘Mort reconnaissant’ au Moyen Age », Danielle Bohler
+   mentionne que le mort reconnaissant qui revient est une « figure qui
+   incarne la Loi^^35 » et qui a donc un certain pouvoir sur le vivant.
+   Elle ne mentionne pas d’où le revenant tire son autorité, mais il nous
+   semble évident que le chevalier blanc de Sir Amadace tire la sienne du
+   fait qu’il a respecté sa part du « contrat » : il a donné à Amadace les
+   moyens d’entrer dans le tournoi et de le gagner. Le revenant a tenu son
+   engagement. Jean-Claude Schmitt rapporte un autre exemple plus précoce
+   de ce motif. Dans l’œuvre du XIII^e siècle Otia imperialia du clerc
+   Gervais de Tilbury (1155-1234), il est fait mention d’un mort qui
+   revient tuer sa veuve car elle n’a pas respecté sa promesse de ne pas
+   se remarier^36.
+
+   Ainsi, alors que les mauvais revenants ne sont que partiellement
+   responsables dans la mesure où ils ne font que subir les conséquences
+   de leurs actes, les bons revenants eux, le sont parfaitement puisqu’ils
+   acceptent, subissent et répondent des répercussions de leurs fautes.
+
+3. Plus qu’un passeur, un directeur de conscience
+
+   Une fois devenu parfaitement responsables, les revenants des XIV^e et
+   XV^e siècles de notre corpus ont toute autorité pour influencer le
+   monde des vivants et leur inculquer la meilleure manière de vivre
+   ensemble. Lorsque le chevalier blanc de Sir Amadace réclame la moitié
+   du corps de l’épouse du héros comme convenu dans leur contrat, il ne
+   fait qu’éprouver la capacité de ce dernier à respecter sa part de leur
+   engagement. L’attitude parfaitement responsable du revenant lui donne
+   donc l’autorité nécessaire pour exiger du vivant le même comportement.
+   Élargi à tous les personnages de notre corpus, il semble que le retour
+   du défunt responsable, crée pour le vivant qui le rencontre une
+   occasion d’être responsable à son tour en menant à bien la mission qui
+   lui est confiée. Le revenant n’est donc pas seulement une illustration
+   du système du Purgatoire, ou un exemple d’orthodoxie, il est aussi un
+   véritable directeur de conscience.
+
+   De fait, malgré la terreur qu’ils ressentent, les vivants se montrent �
+   la hauteur de ce qui est attendu d’eux. Dans l’histoire I du moine de
+   Byland, l’homme qui rencontre le revenant est « glacé d’épouvante^37 »,
+   et Guenièvre « prend peur et gémit^38 » face au fantôme de sa mère.
+   Toutefois, la peur s’estompe, et, pour écourter le séjour au Purgatoire
+   de ces revenants et leur venir en aide, les vivants les écoutent et les
+   aident en faisant donner des messes, en distribuant des aumônes ou en
+   accomplissant leurs volontés, comme William Trower qui transmet le
+   message de la sœur d’Adam de Lond dans l’histoire XII des contes du
+   moine de Byland, ou l’histoire I dans laquelle l’homme accepte que le
+   revenant porte son sac. Ils font preuve eux aussi d’une bonne volonté
+   exemplaire.
+
+   Le revenant exprime aussi son influence sur le mode de vie des vivants
+   lorsque son retour devient une occasion de renforcer les liens sociaux
+   entre vivants. En effet, dans l’histoire XI des contes du moine de
+   Byland, Richard Rowntree rencontre son enfant mort-né. Richard et son
+   fils ne se sont jamais vus, mais le revenant est capable de reconnaitre
+   son père. La force du lien marital est affirmée dans l’anecdote du
+   chapitre XXII relayé par William de Newburgh, puisque le revenant
+   revient d’abord hanter son épouse. Mais les relations qu’il sollicite
+   peuvent être bien plus larges que l’unité familiale ou l’union
+   maritale. C’est le cas dans l’histoire II des contes de Byland où le
+   revenant explique au tailleur Snowball qu’il peut lui apparaître parce
+   que ce dernier n’a pas « entendu la messe ni l’évangile de Saint-Jean,
+   sans doute ‘Au Commencement …’, ni participé à la communion du corps et
+   du sang du Christ^39 ». Ce qui se dessine ici en creux, c’est
+   l’existence de la communauté paroissiale du village, à laquelle
+   Snowball n’a pas réaffirmé son appartenance. Au cœur de chacune de ces
+   histoires il y a des liens sociaux qui, s’ils sont suffisamment forts
+   pour continuer par-delà la mort, ne peuvent que réunir les vivants. En
+   plus d’apparaître à des vivants auxquels ils sont liés, les revenants
+   ravivent aussi ces liens par le contenu des messages et des missions
+   qu’ils confient. Lorsque Guenièvre voit revenir sa mère d’entre les
+   morts, c’est encore le lien de filiation qui entre en jeu, mais
+   l’importance de la famille est renforcée par le message qu’elle porte.
+   Alors qu’elle se lamente, la mère de Guenièvre regrette d’être
+   « plongée, loin de toute famille, dans des tourments glacés^40 », ce
+   qui implique que ses souffrances seraient moins pénibles si elle avait
+   une famille pour la pleurer. La mission que la sœur d’Adam de Lond
+   confie à William dans l’histoire XII des contes de Byland met aussi en
+   avant les liens familiaux puisqu’elle désire réparer le tort qu’elle a
+   causé à son mari et ses fils. Il en va de même pour le voleur de
+   cuillères en argent qui souhaite les voir rendues à son maître. Même
+   les mauvais revenants offrent une occasion de rassembler les vivants.
+   L’anecdote du chapitre XXII de l’Historia Rerum Anglicarum illustre la
+   façon dont il peut rapprocher toute la communauté d’un village. En
+   effet, il commence par s’en prendre à son épouse, qui se prémunit
+   contre ses attaques en faisant appel à la « communauté^41 » pour
+   l’aider à se défendre. Non content de solliciter le lien marital, le
+   revenant, par son retour, a poussé sa veuve à faire appel au cercle
+   plus large de ses connaissances, mais l’anecdote ne s’arrête pas là.
+   Après son épouse, le défunt assaille son frère, puis le voisinage de
+   son ancienne demeure, et ce sont finalement tous les habitants des
+   environs qui s’allient pour se débarrasser de lui. En élargissant son
+   cercle de victimes, le mauvais revenant, à l’instar du bon, renforce
+   donc la cohésion entre les membres de la communauté. En tant que
+   personnages responsables, ces défunts qui reviennent désirent, par-del�
+   la mort, réparer des liens sociaux disjoints, qu’il s’agisse de ceux
+   entre maître et serviteur, de ceux de la famille, ou de la communauté
+   toute entière. Cette attitude idéale leur confère l’autorité pour
+   guider les vivants en leur servant d’exemples.
+
+Conclusion
+
+   L’évolution du personnage du revenant établie dans cette analyse
+   témoigne du rôle essentiel que joue la notion de responsabilité dans
+   son exemplarité, c’est-à-dire dans sa capacité à être un modèle pour
+   les vivants, qu’il soit religieux, judiciaire ou tout simplement
+   éthique. Mais cette notion n’est pas seulement mise en avant au cœur
+   des récits de revenants. En effet, face à la responsabilité
+   individuelle dont le revenant se fait l’exemple, il y a une
+   responsabilité collective qui lie les vivants autour de ces mêmes
+   récits. Jean-Claude Schmitt explique que :
+
+     Une apparition ne met […] jamais en scène deux personnes seulement,
+     un mort et un vivant, mais toute une chaîne de témoins,
+     d’intermédiaires, d’informateurs, de scribes, de prédicateurs et
+     d’auditeurs […]^42.
+
+   L’expression « chaîne de témoins » indique clairement que tous les
+   acteurs qui participent à la diffusion de ces histoires sont liés. Le
+   fait divers du revenant Gui de Corvo est un autre exemple du lien entre
+   les témoins d’une apparition. En 1323, ce bourgeois d’Alès revient
+   hanter son domicile huit jours après son décès. Le prieur dominicain
+   Jean Gobi (13..?-1350) va à la rencontre du revenant et lui fait subir
+   un interrogatoire qui sera pris en note par un notaire de la ville.
+   Dans son étude de ce dialogue entre le prieur et le fantôme, Marie-Anne
+   Polo de Beaulieu note que Jean Gobi prend soin de faire noter les noms
+   de ceux qui assistent à l’entretien : « Cette liste de personnages
+   importants, authentifiée par la mention de leur noms et/ou de leurs
+   fonctions, leste ce récit d’un poids social très fort^43 ». Si ces
+   personnes donnent « un poids social » au récit, c’est parce que leur
+   réputation garantissait à l’audience l’exactitude de ce qui était
+   raconté. Jean Gobi n’est donc pas la seule personne à se porter garant
+   de la véracité du récit : il partage cette responsabilité avec les
+   autres témoins présents. Nous pensons que le même raisonnement peut
+   facilement être appliqué aux récits de revenants et de fantômes de
+   notre corpus puisque plusieurs prennent la peine de détailler leurs
+   sources. Ainsi, Walter Map mentionne qu’une de ses anecdotes vient d’un
+   chevalier « fort et vaillant et ayant prouvé sa valeur^44 » qui l’a
+   racontée à l’évêque de Hereford. La description du chevalier et de sa
+   valeur, la fonction ecclésiastique de l’évêque, et le rang de Richard
+   de Puttes sont autant de garants de la précision du récit et de sa
+   validité. Simpson remarque que William de Newburgh, lui aussi, tient
+   ses anecdotes d’ « informateurs fiables^45 ». Ainsi, tous les maillons
+   de la « chaine » prennent en charge le récit et se retrouvent
+   rassemblés à l’occasion du retour du mort, de la propagation orale de
+   l’histoire, de sa mise en récit et, bien entendu, de sa lecture. En
+   définitive, les récits de revenants, tant par l’évolution de la
+   représentation et de l’attitude du défunt qui revient parmi les
+   vivants, que par leur mode de diffusion, attestent de l’importance
+   croissante que la notion de responsabilité revêt pour l’ensemble de la
+   société anglaise du Moyen Âge.
+     __________________________________________________________________
+
+Notes
+
+   1–  Sur les débats autour de la nature des défunts dans les récits
+   médiévaux voir notamment : CACIOLA Nancy, « Wraiths, Revenants, and
+   Ritual in Medieval Culture », Past &P resent, Août 1996, n°152, p.
+   3-45., et SIMPSON Jacqueline, « Debatable Apparitions in Medieval
+   England », Folklore, Vol. 114, n°3, Décembre 2003, p 389-402. Dans cet
+   article, nous emploierons le terme « revenant », lorsque la nature
+   tangible du défunt a été attestée ou nous semble évidente, et le terme
+   « fantôme » dans les cas plus incertains.
+
+   2 – LE GOFF Jacques, La naissance du purgatoire, Paris, Gallimard,
+   1981, p. 14.
+
+   3 – Dans le chapitre 5 de son livre, Jacques LE GOFF étudie les termes
+   employés pour parler du Purgatoire et leur influence sur le
+   développement de celui-ci. Voir LE GOFF Jacques, op. cit., p.209-240.
+
+   4 – Ralph HOULBROOK et Jacques LE GOFF remarquent et analysent cette
+   tendance à insister sur les caractéristiques infernales du Purgatoire �
+   l’opposé de l’image optimiste que dresse Dante dans La Divine Comédie :
+   HOULBROOK Ralph, Death, Religion and the Family in England 1480-1750,
+   Oxford, Clarendon Press, 1998, p. 35. et LE GOFF Jacques, op. cit., p.
+   387-448.
+
+   5 – Sur les pratiques des suffrages et notamment les provisions des
+   testaments voir : DANIELL Christopher, Death and burial in medieval
+   England, 1066-1550, London ; New York, Routledge, 1997, p. 1-64.,
+   HOULBROOK Ralph, Death, Religion and the Family in England 1480-1750,
+   Oxford, Clarendon Press, 1998, p. 110-146 et p. 331-371.
+
+   6 – Voir MCKEEVER Amanda J., The Ghost in Early Modern Protestant
+   Culture: Shifting Perceptions of the Afterlife, 1450-1700, Thèse,
+   Histoire, Brighton, University of Sussex, Mai 2011, p. 39-76.
+
+   7 – LECOUTEUX Claude, Fantômes et revenants au Moyen Âge, Paris, Imago,
+   « L’Arbre à mémoire », 1996, p. 10.
+
+   8 – FINUCANE Ronald C., Ghosts: Appearances of the Dead and Cultural
+   Transformation, New York, Prometheus Books, 1996, p. 62.
+
+   9 – Ibid., p. 290.
+
+   10 – REY, Alain, dir., « Responsable », Dictionnaire culturel en langue
+   française, vol. 4, Paris, Le Robert, 2005, p. 248.
+
+   11 – « non solum terruit verum etiam pene obruit importabili sui
+   pondere » dans DE NEWBURGH William, Historia Rerum Anglicarum, Hans
+   Claude Hamilton, éd., Londres, Sumptibus Societatis, vol 2., 1856, p.
+   182.
+
+   12 – « non cessat euocare singillatim et nominatim conuicaneos suos,
+   qui statim vocati infirmantur et infra triduum moriuntur » dans MAP
+   Walter, « De Nugis Curialium », dans Anecdota Oxoniensia, M. R. James,
+   éd., Oxford, Clarendon Press, « Medieval and Modern Series », vol. 14,
+   1914, p. 100.
+
+   13 – Sur l’harmonie entre le corps et l’âme voir la récente étude de
+   BASCHET, Jérôme, Corps et âmes : une histoire de la personne au Moyen
+   Âge, Paris, Flammarion, 2016, 408 p.
+
+   14 – « vili pannosoque cilicio inuolutus », MAP Walter, op. cit., p.
+   101.
+
+   15 – « Ille demonium ratus », Ibid.,p. 101.
+
+   16 – Voir à ce sujet : CACIOLA Nancy, op. cit., p. 3-45.
+
+   17 – « filius tenebrarum », Ibid., p. 164.
+
+   18 – « tetro » et « groffo », dans Chronicon de Lanercost, William
+   Macdowall of Garthland, éd., Edinburgh, Edinburgh Printing Company,
+   1893, p. 164.
+
+   19 – « deterret » et « artus eorum confrigeret », Ibid., p. 164.
+
+   20 – « damnatorum fpeciem », Ibid., p. 163.speciem
+
+   21 – «exitialis monstri » et « pestiferi cadaveris cicumactu infectus
+   corruptusque », DE NEWBURGH William, op. cit.. p. 184. circumactu
+
+   22 – « pessimus », Ibid., p. 184.
+
+   23 – « post mortem vero ex eventu reatus ejus claruit », Ibid., p. 186.
+
+   24 – « The Awntyrs off Arthur », dans Sir Gawain: Eleven Romances and
+   Tales, Thomas Hahn, éd., Kalamazoo, Michigan, Medieval Institute
+   Publications, 1995, v. 213.
+
+   25 – « Sic et sic feci et excommunicatus sum pro tali facto », dans
+   JAMES M. R., « Twelve Medieval Ghost-Stories », The English Historical
+   Review, vol. 37, n°. 147, Juil.1922, p. 415.
+
+   26 – Ibid., p. 415 et 422.
+
+   27 – Voir LE GOFF Jacques, op. cit., p. 292.
+
+   28 – « baleful bestes » et « That is luf paramour », The Awntyrs off
+   Arthur », op. cit., v. 211 et 213..
+
+   29 – « Supplicabat » et « redonare marito suo et filiis easdem cartas,
+   et restituere illis terram […]. » Ibid., p. 422.
+
+   30 – « viuenti quod adiret ad locum predictum » et « reportando Priori
+   », Ibid., p. 415.
+
+   31 – « causam et remedium », Ibid., p. 414.
+
+   32 – Ibid., p. 414.
+
+   33 – REY, Alain, dir., « Répondre de », Dictionnaire culturel en langue
+   française, vol. 4, Paris, Le Robert, 2005, p. 183.
+
+   34 – Sir Amadace, dans Amis and Amiloun, Robert of Cisyle, and Sir
+   Amadace, Edward E. Foster, éd., Kalamazoo, Michigan, Medieval Institute
+   Publications, 2007, v. 502.
+
+   35 – BOHLER Danielle, « Béances de la terre et du temps: la dette et le
+   pacte dans le motif du Mort reconnaissant au Moyen Age », L’homme, vol.
+   29, n°111-112, 1989, p. 171.
+
+   36 – Voir SCHMITT Jean-Claude, op. cit. p. 106.
+
+   37 – « perterritus », dans JAMES M. R., op. cit., p. 414.
+
+   38 – « Then gloppenet and grete Gaynour the gay », dans The Awntyrs off
+   Arthur », op. cit., v. 92.
+
+   39 – « non audiuisti missam neque exangelium Iohannis scilicet ‘In
+   principio’ neque vidisti consecracionem corporis et sanguinis
+   domini […] », dans JAMES M. R., op. cit., p. 416.
+
+   40 – « Now am I caught oute of kide to cares so colde »  « The Awntyrs
+   off Arthur », op. cit., v. 151.
+
+   41 – « consortio », dans DE NEWBURGH William, op. cit., p. 182..
+
+   42 – SCHMITT Jean-Claude, op. cit., p. 213-14
+
+   43 – POLO DE BEAULIEU Marie-Anne, « Paroles de fantôme : Le cas du
+   revenant d’Alès (1323) », Ethnologie française, Octobre-Décembre 2003,
+   vol. 33, n°4, p.567.
+
+   44 – « fortis uiribus et audacie probate », dans MAP Walter, op. cit.,
+   p. 99.
+
+   45 – SIMPSON Jacqueline, op. cit., p. 391.
+     __________________________________________________________________
+
+Bibliographie
+
+   Sources primaires :
+
+   « The Awntyrs off Arthur », dans Sir Gawain: Eleven Romances and Tales,
+   Thomas Hahn, éd., Kalamazoo, Michigan, Medieval Institute Publications,
+   1995, 439 p.
+
+   Sir Amadace, dans Amis and Amiloun, Robert of Cisyle, and Sir Amadace,
+   Edward E. Foster, éd., Kalamazoo, Michigan, Medieval Institute
+   Publications, 2007, 130 p.
+
+   Chronicon de Lanercost, William Macdowall of Garthland, éd., Edinburgh,
+   Edinburgh Printing Company, 1893, 628 p.
+
+   JAMES M. R., « Twelve Medieval Ghost-Stories », The English Historical
+   Review, vol. 37, n°. 147, Juil. 1922, p. 413-422.
+
+   MAP Walter, « De Nugis Curialium », dans Anecdota Oxoniensia, M. R.
+   James, éd., Oxford, Clarendon Press, « Medieval and Modern
+   Series »,vol. 14, 1914, 342 p.
+
+   DE NEWBURGH William, Historia Rerum Anglicarum, Hans Claude Hamilton,
+   éd., Londres, Sumptibus Societatis, vol. 2, 1856, 243 p.
+
+   Sources secondaires :
+
+   BASCHET, Jérôme, Corps et âmes : une histoire de la personne au Moyen
+   Âge, Paris, Flammarion, 2016, 408 p.
+
+   BOHLER Danielle, « Béances de la terre et du temps: la dette et le
+   pacte dans le motif du Mort reconnaissant au Moyen Age », L’homme, vol.
+   29, n°111-112, 1989, p. 161-178.
+
+   CACIOLA Nancy, « Wraiths, Revenants, and Ritual in Medieval Culture »,
+   Past & Present, Août 1996, n°152, p. 3-45.
+
+   DAVIES, Owen, The Haunted: A Social History of Ghosts, Basingtoke; New
+   York, Palgrave Macmillan, 2007, 299 p.
+
+   DANIELL Christopher, Death and burial in medieval England, 1066-1550,
+   London ; New York, Routledge, 1997, 242 p.
+
+   FINUCANE Ronald C., Ghosts: Appearances of the Dead and Cultural
+   Transformation, New York, Prometheus Books, 1996, 232 p.
+
+   GAFFIOT, Félix, Le grand Gaffiot : dictionnaire latin-français, Pierre
+   Flobert, dir., Paris, Éditions Hachette, cop. 2000, 1766 p.
+
+   GEARY Patrick J., Living with the Dead in the Middle Ages, Ithaca, NY ;
+   Londres, Cornell University Press, 1994, 273 p.
+
+   GORDON Bruce, MARSHALL Peter, éds., The Place of the Dead: Death and
+   Remembrance in Late Medieval and Early Modern Europe, Cambridge,
+   Cambridge University Press, 2000, 324 p.
+
+   HOULBROOK Ralph, Death, Religion and the Family in England 1480-1750,
+   Oxford, Clarendon Press, 1998, 435 p.
+
+   LECOUTEUX Claude, Fantômes et revenants au Moyen Âge, Paris, Imago, «
+   L’Arbre à mémoire »,  1996, 253 p.
+
+   LE GOFF Jacques, La Naissance du purgatoire, Paris, Gallimard, 1981,
+   509 p.
+
+   MCKEEVER Amanda J., The Ghost in Early Modern Protestant Culture:
+   Shifting Perceptions of the Afterlife, 1450-1700, Histoire, Brighton,
+   University of Sussex, Mai 2011, 316p.
+
+   POLO DE BEAULIEU Marie-Anne, « Paroles de fantôme: Le cas du revenant
+   d’Alès (1323) », Ethnologie française, Vol. 33, n°4, Octobre-Décembre
+   2003, p. 565-574.
+
+   REY, Alain, dir., Dictionnaire culturel en langue française, vol. 4,
+   Paris, Le Robert, 2005, p. 2083.
+
+   SCHMITT Jean-Claude, Les Revenants : les vivants et les morts dans la
+   société médiévale, Paris, Gallimard, 1994, 306 p.
+
+   SIMPSON Jacqueline, « Debatable Apparitions in Medieval England »,
+   Folklore, Vol. 114, n°3, Décembre 2003, p 389-402.
+
+   articles
+
+   n°8
+
+Previous post
+
+   Unrest, de l’inquiétude à la grâce. Tension, rupture et réconciliation
+
+Next post
+
+   Generación X : une genèse de l’intermédialité
+   Rechercher : ____________________ Rechercher
+
+Publications
+
+     * Numéro 11 : L’œuvre comme enquête/l’enquête dans l’œuvre : création
+       et réception
+     * Numéro 10 : Représentations du désir féminin : entre texte et image
+       ‒ été 2019
+     * Numéro 9 : Lieux et non-lieux : liens au corps – printemps 2018
+     * Numéro 8 : Entre-deux : Rupture, passage, altérité – automne 2017
+     * Numéro 7 : Territoire et intermédialité – automne 2016
+     * Numéro 6 : Jeux et enjeux du corps : entre poïétique et
+       perception – été 2016
+     * Numéro 5 : Image mise en trope(s) – 2013
+     * Numéro 4 : L’hybride à l’épreuve des regards croisés – 2012
+     * Numéro 3 : Les Interactions II – 2010
+     * Numéro 2 : Les Interactions I – 2007
+     * Numéro 1 : Commencements – 2005
+
+Informations
+
+   Agenda
+   Liens
+   Les Doctorants de LLA-CRÉATIS
+   Le blog des Doctorants
+
+   © 2025 Littera Incognita
+
+   Theme by Anders Noren — Up ↑
