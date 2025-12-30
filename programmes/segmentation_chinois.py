@@ -2,51 +2,50 @@ import thulac
 import sys
 import os
 
-# 1. Initialisation du segmenteur (uniquement segmentation, sans POS-tagging)
-print("Chargement du modèle THULAC, veuillez patienter...")
+STOPWORDS = {
+    "的", "了", "在", "是", "我", "有", "和", "就", "不", "人", "都", "一", "一个",
+    "上", "也", "很", "到", "说", "要", "去", "你", "会", "着", "没有", "看",
+    "这", "那", "个", "与", "等", "及", "而", "及", "它", "之", "于", "之"
+}
+
+print("Chargement du modèle THULAC...")
 thu = thulac.thulac(seg_only=True)
 
 def segment_file(input_path, output_path):
-    """
-    Lit le texte brut, effectue la segmentation et convertit au format vertical pour PALS.
-    """
     try:
-        # Utilisation de errors='ignore' pour éviter les plantages dus aux caractères mal encodés
         with open(input_path, 'r', encoding='utf-8', errors='ignore') as f, \
              open(output_path, 'w', encoding='utf-8') as out:
             for line in f:
                 line = line.strip()
                 if line:
-                    # Segmentation avec THULAC
                     segmented_line = thu.cut(line, text=True)
-                    # Découpage de la ligne en liste de mots
                     words = segmented_line.split()
-                    if words:
-                        # Un mot par ligne, suivi d'un saut de ligne après chaque phrase/paragraphe
-                        out.write("\n".join(words) + "\n\n")
-    except Exception as e:
-        print(f"Erreur lors du traitement du fichier {input_path}: {e}")
 
-# 2. Configuration des répertoires d'entrée et de sortie
+                    filtered_words = [w for w in words if w not in STOPWORDS and len(w) > 0]
+
+                    if filtered_words:
+                        out.write("\n".join(filtered_words) + "\n\n")
+    except Exception as e:
+        print(f"Erreur sur {input_path}: {e}")
+
 input_dir = "./dumps-text/"
 output_dir = "./dumps-segmented/"
 
-# Création du répertoire de sortie s'il n'existe pas
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
-    print(f"Répertoire créé : {output_dir}")
 
-# 3. Traitement par lot de tous les fichiers
-print("Début de la segmentation...")
+print("Début de la segmentation (avec filtrage des stopwords)...")
 files = [f for f in os.listdir(input_dir) if f.endswith(".txt")]
 
 for i, filename in enumerate(files, 1):
     input_path = os.path.join(input_dir, filename)
-    output_path = os.path.join(output_dir, filename)
 
-    # Affichage de la progression dans le terminal
-    print(f"[{i}/{len(files)}] Traitement de : {filename}")
+    file_id = filename.replace("chinois_", "").replace(".txt", "")
+    new_filename = f"chinois_segmented_{file_id}.txt"
+
+    output_path = os.path.join(output_dir, new_filename)
+
+    print(f"[{i}/{len(files)}] {filename} -> {new_filename}")
     segment_file(input_path, output_path)
 
-print("\nFélicitations ! La segmentation est terminée avec succès.")
-print(f"Les résultats sont enregistrés dans : {output_dir}")
+print("\nSegmentation terminée avec succès !")
