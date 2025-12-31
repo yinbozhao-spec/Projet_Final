@@ -1,0 +1,194 @@
+   (BUTTON)
+   RoGuI6N6
+   ¡»²
+   è¦U8BåU87ºsiçU94»åU83U8F
+
+¼*_MoN6SuTa-6-ONI² MONSTERS-
+
+   (BUTTON)
+   Qvarie
+   Qvarie
+   2022´22¥ 14:23
+
+   22¥ha¼*_no¥de,_23¥hadesu._
+   '22´22¥ha2ga4tu£de¦buSuPeSiYARuna("O6NiO6NiO6NiO6Nino¥)"tonatUtei5masu.
+   _
+
+   ("¼)"Ki.6o5ni<+¹>+ha¥¬dehaµdeºsuyou5niOGRE /
+   O6-6Gawosukotogai5nodesuga,_¢deha³ga°¨sitei5masu._
+
+   ha¼¨nisuru¢deMoN6SuTa-6¢£nomonoworigemasu._
+   YuNiKo-6Dode©saretei5ruKDefinitiontoi5u5±niyoru­miwonisitei5masu._
+
+   ("YuNiKo-6DoKoN6So-6SiA6MunoYuNiHaN6De-6TaBe-6Su)"
+   https://www.unicode.org/charts/unihan.html
+
+   ("GitHubSaI6TonoYuNiHaN6De-6TaBe-6Su)"
+   https://github.com/unicode-org/unihan-database
+
+   ("U6i6KuSiYONaRi-6±)"
+   https://en.wiktionary.org/wiki/Appendix:Chinese_radical/%E9%AC%BC
+
+DEMON/DEVIL - De-6MoN6/DeBiRu("¿/)"
+
+   ("¼)"«»/A6NiMe<"¼no>"no±nadodehaDe-6MoN6no._½de<+¼>+noha 
+   [Kui6SiN6.6Gui6]<'¼no¼>'._
+   (")"±"Drought Demon"[DoRaU6ToDe-6MoN6]hahiderino._
+   (")"MoU6RiYOU6._±no¾nomo._
+   (")"timimou5riyOu5._<+>+ni¼ta±noDe-6MoN6._
+   (")"SaN6SuKuRiTUTo®¾°[Ma-6Ra]ni¾._
+   (")"¼to©de,_¥¬deha³­miga¼tozi[Ki]._
+   ("£)"¦¨.6<"¥¬½§¸(¬)>"no"ma(")""no®nirigeraretano°._¬¥ha¥._
+
+ELF - E6RuHu(")"
+
+   ("½)"to©._
+   (")"±dehaE6RuHunotonatUtei5ru._
+   ("£)"¾SuPuRaI6Towosu._
+   ("¨)"¬¥hano°._
+   ("ª)"¬¥hano°daga,_±ya®nimu4¬³noDe-6MoN6wosu._
+
+GHOST - Go-6SuTo("»)"
+
+   ("¼)"¬¥no³de,_YuNiKo-6Dono±¨tonatUtei5ru._­½U6i6KiPeDei6A6deha¡worigete
+   i5ru._
+   ("¡)"«._na½._
+   ("¢)"½noniwo³suru._
+   ("¥.6)"¬¥haSaI6KuRoN6<+>+no._
+   ("©)"±no½._
+   ("¬)"DeYURaHaN6noyou5na¡si½a5rui5hano½._
+   ("«)" ©i5½._
+
+GOBLIN - GoBuRiN6("º)"
+
+   ("¦)"GoBuRiN6a5rui5haBoGi-6._
+   ("¨)"¬¥hano°daga,_GoBuRiN6nomoa5ru._
+
+GOD - GoTUDo(")"
+
+   (" )"±no._
+   ("±)"º¢ni£nowotUta._
+
+MONSTER - MoN6SuTa-6("¾)"
+
+   (".6)"MoU6RiYOU6._
+   ("¤)"±noªwoI6Me-6Zisaseru._
+
+NIGHTMARE -NaI6ToMeA6(")"
+
+   ª¢nodesuga,_MoN6SuTa-6tositeha¢wosi,_"YuNiKo-6N6"ni¼ta¿desu._
+
+   (".6)"ª¢no._
+
+SPIRIT - SuPiRiTUTo("»)"
+
+   (".6)"tamasii5._
+   ("¡)"na½._
+   (")"Hua6HaN6noyou5naª._
+
+ANIMAL - ©("¿)"
+
+   (")"BEAR=KuMa<+»>+._­mihasiyAguma._£nomoa5ru._
+
+BOSS - BoSu("¹)"
+
+   (")"Ri-6Da-6._MoN6SuTa-6¢£¨deha[MaKaI6]haªnoBoSuno._
+
+CREATURE etc. - KuRi-6TiYA-6sono("½)"
+
+   ("¿)"£no._¿[KiZiYAKu]toi5u5ªwoºsu._
+   (")"¬¥ha"¼"no._YuNiKo-6DonoYuNiHaN6£dehaª½wogetukerukotoga¯½tosareru¨to
+   £saretei5ru._
+   ("§)"±­nosinisterha"yokosima"a5rui5ha"¶"no._Ge-6Mu<"E6RuHua6RiA6>"niSiN
+   iSuTa-6toi5u5°noMoN6SuTa-6ga»´suru._
+
+¢no¼noni¾suruno»
+
+   ("Gui)"­½[GuI6]
+   ("g4u4ei'<)"°¾¯[Gue6I6]
+   ("Gwai²)"±[GuWaI6]
+   ("Kúi)"°¾[KuI6]
+   ("q+'+w+1+)"­±[GuI6]
+   ("Ki / Ki)"¥¬[Ki] - katutehaKuWi / Kwi[Kui6]datUta._
+   (")"½[Kui6/Gui6]
+   ("Quy2)"BeToNaMu[KuI6]
+   ("Gveij / Gveiz)"TiWaN6
+   ("Gui)"±
+   ("Gujo)"E6SuPeRaN6To
+   ("Guy)"U6ZuBeKu
+   ("Kouei)"HuRaN6Su
+   ("Kuei)"SuU6e6-6DeN6
+   ("Kuej)"Tie6Ko,_SuRoBaKiA6,_Po-6RaN6Do,_SeRuBiA6.6KuRoA6TiA6
+   ("Kuj)"HaN6GaRi-6
+   ("Gkouj)"GiRiSiYA
+   ("Guj)"±²,_RoSiA6
+   ("Guej)"BuRuGaRiA6
+   ("Guej%)"SeRuBiA6,_MaKeDoNiA6
+   ("G¯j)"MoN6GoRu
+   ("G3uj)"U6KuRaI6Na
+   ("³¸µ)"A6RuMeNiA6
+   ("£ / £ / ¢)"ZiYO-6ZiA6
+   ("G+W+W+J+)"HeBuRaI6
+   ("G+W+J+)"I6Dei6TUSiYU
+   ("g+w+)"E6ZiPuTo.6A6RaBiA6
+   ("i+w+y+)"A6RaBiA6
+   ("q+w+y+)"Su-6DaN6.6A6RaBiA6
+   ("q+w+yH)"A6ZeRuBaI6ZiYAN6
+   ("gfw+)"PeRuSiA6,_SoRaNi-6
+   ("gfw+yH)"¿PaN6ZiYABu
+   ("«w+)"PaSiYUTo-6
+   ("º¥¢)"MoN6GoRu
+   (")"HiN6Dei6-6,_NePa-6Ru
+   ("µ)"MaRa-6Tei6-6
+   ("¯¼)"BeN6GaRu
+   (")"PaN6ZiYABu
+   (")"GuZiYARa-6To
+   (")"O6RiYa-6
+   ("¯¿)"TaMiRu
+   ("¯¿)"TeRuGu
+   ("¯¿)"KaN6NaDa
+   ("µ)"MaRaYaRaMu
+   ("º)"SiN6HaRa
+   ("½±)"BiRuMa
+   (" ¸)"KuMe-6Ru
+   ("¸¢)"TaI6
+   ("¸)"RaO6
+   (BUTTON)
+   DaU6N6Ro-6Do
+   (BUTTON)
+   copy
+     * #¢
+     * #
+     * #¼
+     * #O6Ni
+     * #O6-6Ga
+     * #¼*_no¥
+     * #O6NiO6Nino¥
+     * #O6NiO6NiO6NiO6Nino¥
+
+   (BUTTON)
+   (BUTTON)
+   (BUTTON)
+   (BUTTON)
+   Qvarie
+   Qvarie
+   (BUTTON)
+   Huo6Ro-6
+   fSkon5nitiha._no¹U6i6Ki https://seesaawiki.jp/w/qvarie/
+   ¡ºdesu._ªhano¢£ni³gaa5rimasu._HaN6DoRuNe-6Muno­mihaKiYU-6.6BaRiE6de,_¢¨
+   ha¦,_ToKiPoNa¨hajan Kijupalidesu._
+     *
+     *
+
+     * notePuReMiA6Mu
+     * note pro
+     * yokua5ruª.6noteno¿i5¹
+     * PuRaI6BaSi-6
+     * KuRiE6I6Ta-6henoo5i5wase
+     * Hui6-6DoBaTUKu
+     * go©¨
+     * ¸PoI6N6To©¨¹
+     *  
+     * ¦ºniºduku¨°
+     * ¹¨
+     * ±no¬
