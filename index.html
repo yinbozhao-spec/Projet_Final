@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Fantôme - Analyse Multilingue</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -30,7 +28,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar is-light" role="navigation">
         <div class="container">
             <div class="navbar-brand">
@@ -57,7 +54,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="accueil" class="hero is-medium">
         <div class="hero-body has-text-centered">
             <h1 class="title is-1"><i class="fa-solid fa-ghost"></i> Projet "Fantôme"</h1>
@@ -66,7 +62,6 @@
         </div>
     </section>
 
-    <!-- Équipe -->
     <section id="equipe" class="section">
         <div class="container">
             <h2 class="title is-2 has-text-centered section-title">Notre Équipe</h2>
@@ -105,7 +100,6 @@
         </div>
     </section>
 
-    <!-- Tableaux -->
     <section id="tableaux" class="section has-background-light">
         <div class="container">
             <h2 class="title is-2 has-text-centered section-title">Tableaux</h2>
@@ -119,7 +113,6 @@
         </div>
     </section>
 
-    <!-- Nuages de mots -->
     <section id="nuages" class="section">
         <div class="container">
             <h2 class="title is-2 has-text-centered section-title">Nuages de mots</h2>
@@ -150,24 +143,32 @@
         </div>
     </section>
 
-    <!-- Analyse -->
     <section id="analyse" class="section has-background-light">
         <div class="container">
             <h2 class="title is-2 has-text-centered section-title">Analyse du mot "fantôme"</h2>
             <div class="columns">
 
-                <!-- Français -->
                 <div class="column">
                     <div class="box box-langue">
                         <h3 class="title is-4 has-text-info has-text-centered">🇫🇷 Français</h3>
                         <div class="analyse-content is-size-7">
-                            <p>Complété par Yousra</p>
-                            <p><em>(À compléter par Yousra)</em></p>
+                            <p>L'analyse de notre corpus français révèle une dynamique très différente de celle observée dans les langues asiatiques. Contrairement au sens premier de « spectre », le mot <strong>fantôme</strong> fonctionne ici majoritairement comme un <strong>qualificatif (adjectif)</strong> servant à désigner une absence ou une existence virtuelle.</p>
+
+                            <p>L’étude des cooccurrences (fichier <em>pals</em>) met en évidence quatre champs lexicaux distincts qui structurent le corpus :</p>
+                            <ul>
+                                <li><strong>Le champ médical (Le plus fort) :</strong> Les cooccurrences les plus élevées sont <strong>membre</strong>, <strong>douleur</strong>, <strong>amputation</strong>, et <strong>cerveau</strong>. Cela renvoie au syndrome du « membre fantôme » (douleur ressentie dans un membre amputé), ancrant le mot dans une réalité neurologique et physique plutôt que surnaturelle.</li>
+                                <li><strong>Le champ sociétal et politique :</strong> On retrouve des termes comme <strong>étudiants</strong>, <strong>emplois</strong>, et <strong>société</strong>. L'expression « étudiant fantôme » ou « emploi fantôme » désigne ici une fraude ou une inscription administrative sans présence réelle.</li>
+                                <li><strong>Le champ géographique et l'abandon :</strong> Les mots <strong>ville</strong>, <strong>village</strong>, <strong>Pirou</strong> (un cas spécifique du corpus) et <strong>ruines</strong> sont centraux. Ils décrivent des lieux désertés où la présence humaine a disparu, laissant une coquille vide.</li>
+                                <li><strong>Le champ géopolitique (Actualité) :</strong> Des termes comme <strong>flotte</strong>, <strong>russe</strong>, <strong>pétrolier</strong> et <strong>Ukraine</strong> apparaissent, faisant référence à la « flotte fantôme » utilisée pour contourner des sanctions internationales.</li>
+                            </ul>
+
+                            <p>L'analyse des <strong>bigrammes</strong> confirme cette tendance à la lexicalisation : le mot « fantôme » est presque toujours précédé d'un nom qu'il vient modifier (<em>Ville fantôme, Membre fantôme, Étudiant fantôme, Train fantôme</em>). Il ne désigne pas l'apparition elle-même, mais la <strong>trace</strong> laissée par quelque chose qui a disparu ou qui se dissimule.</p>
+
+                            <p>En conclusion, dans ce corpus, le « fantôme » français a quitté le domaine de la peur et du conte pour devenir une métaphore de <strong>l'absence, de la fraude ou de la dissimulation</strong> dans la société contemporaine.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chinois -->
                 <div class="column">
                     <div class="box box-langue">
                         <h3 class="title is-4 has-text-danger has-text-centered">🇨🇳 Chinois</h3>
@@ -187,13 +188,14 @@
                     </div>
                 </div>
 
-                <!-- Japonais -->
                 <div class="column">
                     <div class="box box-langue">
                         <h3 class="title is-4 has-text-warning has-text-centered">🇯🇵 Japonais</h3>
                         <div class="analyse-content is-size-7">
-                            <p>Complété par Basil</p>
-                            <p><em>(À compléter par Basile)</em></p>
+                            <p>Dans ce corpus de japonais le mot '鬼' apparaît 3 534 fois, sous une de ses quatre formes possible d'écriture dans cette langue. Les sources choisies sont en majorité des blogs et journaux en ligne japonais. Qui relatent de l'histoire de ces fantômes,de paranormal, de culture ou de religion shinto. Ainsi, le mot est très présent et souvent utilisé dans chaque source. Dans les premières occurences nous pouvons trouver : <strong>'角(corne),  刃(cercle, rond), 人(homme, humain), 種類(différentes sortes)'</strong>, qui correspondent à différents types de démons (une corne ou deux par exemple). Mais également les mots tels que : <strong>'おけ(l'éveil), 存在(existence), あり(présence, existence)'</strong>, pour parler plutôt de l'existence de ces démons, leur présence possible. Enfin, il y a aussi : <strong>'伝説(légende), 仏教(bouddhisme), 物語(conte)'</strong>, soit conte, légende, bouddhisme, très lié ici au spirituel et au folkore japonais en général. Par exemple, <strong>'桃太郎'</strong> (momotarou) est un conte très célèbre au Japon qui parle de démon et qui apparaît 72 fois en tout. </p>
+                            <p>Nous pouvons donc, remarquer que ce mot est utilisé en japonais plutôt pour designer la véritable entité que représente l'oni. Il est toujours question du fantôme en tant que tel pas d'adjectifs basés sur ce mot ou d'aspects au figuré en général. Il est question de définir l'ogre japonais, de le visiualiser, d'expliquer ses origines, ses intentions, ses rituels.</p>
+                            <p>Contrairement donc au français pour qui la figure du fantôme est plus souvent au figuré, comme pour parler de l'état de quelque chose plutôt que d'une entité. En chinois, cependant, c'est assez similaire bien que l'image du fantôme soit bien différente entre les deux pays car l'oni japonais est lié au shinto, soit une religion japonaise alors que ce sera lié au bouddhisme en Chine. Malgré, les différentes coutumes et représentations l'utilisation du mot est similaire.</p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -202,7 +204,6 @@
         </div>
     </section>
 
-    <!-- Conclusion -->
     <section id="conclusion" class="section">
         <div class="container">
             <h2 class="title is-2 has-text-centered section-title"><i class="fa-solid fa-scale-balanced"></i> Conclusion Comparative</h2>
@@ -210,20 +211,18 @@
                 <ul>
                     <li><strong>En Français :</strong> L'analyse montre que "fantôme" est très souvent utilisé dans des expressions figées (<em>Ville fantôme</em>) ou pour qualifier des objets inanimés (<em>Vaisseau</em>). Les spécificités (<em>Théâtre, Fantastique</em>) renforcent l'idée d'un mot ancré dans la fiction littéraire et le spectacle.</li>
                     <li><strong>En Chinois :</strong> L'analyse montre que le mot « 鬼 » (fantôme) est central dans les récits et la culture des fantômes. Ses cooccurrences (人, 故事, 文化, etc.) et sa forte spécificité en font un terme pivot pour l'étude des pratiques culturelles et narrations liées aux fantômes.</li>
-                    <li><strong>En Japonais :</strong> (Analyse à compléter par Basile)</li>
+                    <li><strong>En Japonais :</strong> L'analyse du mot "鬼" (<em>oni</em>), pouvant être traduit par ogre, démon ou fantôme, montre que ce terme est utilisé souvent pour parler de leur potentiel existence ou présence ainsi que du type de démon en question. Cela démontre la relation des japonais à ces entités, qui sont importantes dans la culture shinto.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <p><strong>Projet PPE1</strong> - 2025/2026<br>Yousra • Yinbo • Basile</p>
+            <p><strong>Projet PPE1</strong> - 2025/2026<br>Yousra - Yinbo - Basile</p>
         </div>
     </footer>
 
-    <!-- Bulma Navbar burger -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
