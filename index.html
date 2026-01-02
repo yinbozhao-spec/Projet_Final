@@ -1,14 +1,244 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<title>Programmation et Projet encadré</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Fantôme - Analyse Multilingue</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; }
+        .navbar { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .hero { background: linear-gradient(to right, #6dd5ed, #2193b0); color: white; }
+        .box-langue { display: flex; flex-direction: column; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
+        .image-nuage { border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-height: 220px; width: auto; display: block; margin: 0 auto; }
+        .stat-block { background-color: #f5f5f5; padding: 10px; border-radius: 5px; margin-bottom: 15px; }
+        .tag-pals { margin-bottom: 3px; }
+        .section-title { margin-bottom: 2rem; }
+        .analyse-content ul { padding-left: 1.2em; }
+        .analyse-content li { margin-bottom: 0.3em; }
+        .team-card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .nav-link:hover { text-decoration: underline; }
+        footer { background-color: #f5f5f5; padding: 20px 0; margin-top: 40px; }
+    </style>
 </head>
-
 <body>
-<p>Page initiale du PPE.</p>
 
-<p>Lien vers le tableau : <a href="./miniprojet/tableaux/fr.html">ICI</a>.</p>
+    <!-- Navigation -->
+    <nav class="navbar is-light" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#accueil">
+                    <strong>Projet Fantôme</strong>
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item nav-link" href="#accueil">Accueil</a>
+                    <a class="navbar-item nav-link" href="#equipe">Équipe</a>
+                    <a class="navbar-item nav-link" href="#tableaux">Tableaux</a>
+                    <a class="navbar-item nav-link" href="#nuages">Nuages de mots</a>
+                    <a class="navbar-item nav-link" href="#analyse">Analyse</a>
+                    <a class="navbar-item nav-link" href="#conclusion">Conclusion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero is-medium">
+        <div class="hero-body has-text-centered">
+            <h1 class="title is-1"><i class="fa-solid fa-ghost"></i> Projet "Fantôme"</h1>
+            <h2 class="subtitle is-4">Analyse linguistique comparée : Français • Chinois • Japonais</h2>
+            <p class="is-size-5 mt-4"><strong>Choix du mot et Hypothèses :</strong> Notre groupe a choisi le mot <em>fantôme</em> pour analyser ses usages en français, chinois et japonais. Nous supposons que ce mot sera fortement lié aux contextes culturels et narratifs dans chaque langue.</p>
+        </div>
+    </section>
+
+    <!-- Équipe -->
+    <section id="equipe" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">Notre Équipe</h2>
+            <div class="columns is-centered">
+                <div class="column is-one-third">
+                    <div class="card team-card has-background-light">
+                        <div class="card-content has-text-centered">
+                            <p class="title is-4">Yousra</p>
+                            <p class="subtitle is-6">Langue : <strong>Français</strong> 🇫🇷</p>
+                            <p class="subtitle is-6">Université Paris Nanterre</p>
+                            <span class="icon is-large has-text-info"><i class="fa-solid fa-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="card team-card has-background-light">
+                        <div class="card-content has-text-centered">
+                            <p class="title is-4">Yinbo</p>
+                            <p class="subtitle is-6">Langue : <strong>Chinois</strong> 🇨🇳</p>
+                            <p class="subtitle is-6">INALCO</p>
+                            <span class="icon is-large has-text-danger"><i class="fa-solid fa-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="card team-card has-background-light">
+                        <div class="card-content has-text-centered">
+                            <p class="title is-4">Basile</p>
+                            <p class="subtitle is-6">Langue : <strong>Japonais</strong> 🇯🇵</p>
+                            <p class="subtitle is-6">Université Sorbonne Nouvelle</p>
+                            <span class="icon is-large has-text-warning"><i class="fa-solid fa-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableaux -->
+    <section id="tableaux" class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">Tableaux</h2>
+            <div class="columns">
+                <div class="column">
+                    <a href="tableaux/tableau-fr.html" class="button is-info is-fullwidth mb-3"><i class="fa-solid fa-table mr-2"></i> Français</a>
+                    <a href="tableaux/chinois.html" class="button is-danger is-fullwidth mb-3"><i class="fa-solid fa-table mr-2"></i> Chinois</a>
+                    <a href="tableaux/resultat_japonais.html" class="button is-warning is-fullwidth"><i class="fa-solid fa-table mr-2"></i> Japonais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuages de mots -->
+    <section id="nuages" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">Nuages de mots</h2>
+            <div class="columns">
+
+                <div class="column">
+                    <h3 class="title is-4 has-text-info has-text-centered">🇫🇷 Français</h3>
+                    <figure class="image">
+                        <img class="image-nuage" src="wordcloud/wordcloud_fr_final.png" alt="Nuage FR">
+                    </figure>
+                </div>
+
+                <div class="column">
+                    <h3 class="title is-4 has-text-danger has-text-centered">🇨🇳 Chinois</h3>
+                    <figure class="image">
+                        <img class="image-nuage" src="wordcloud/nuage_chinois_forme_gui.png" alt="Nuage Chinois">
+                    </figure>
+                </div>
+
+                <div class="column">
+                    <h3 class="title is-4 has-text-warning has-text-centered">🇯🇵 Japonais</h3>
+                    <figure class="image">
+                        <img class="image-nuage" src="wordcloud/wordcloud_oni_japonais.png" alt="Nuage Japonais">
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Analyse -->
+    <section id="analyse" class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">Analyse du mot "fantôme"</h2>
+            <div class="columns">
+
+                <!-- Français -->
+                <div class="column">
+                    <div class="box box-langue">
+                        <h3 class="title is-4 has-text-info has-text-centered">🇫🇷 Français</h3>
+                        <div class="analyse-content is-size-7">
+                            <p>Complété par Yousra</p>
+                            <p><em>(À compléter par Yousra)</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chinois -->
+                <div class="column">
+                    <div class="box box-langue">
+                        <h3 class="title is-4 has-text-danger has-text-centered">🇨🇳 Chinois</h3>
+                        <div class="analyse-content is-size-7">
+                            <p>Dans notre corpus de 164 029 tokens, le mot « 鬼 » (fantôme) apparaît au total 1 363 fois, dont 257 occurrences dans le sous-corpus spécifique, avec une spécificité de 19,71. Cette valeur indique que « 鬼 » est très fréquent dans les contextes liés aux récits et à la culture des fantômes, tout en restant relativement courant dans le corpus général.</p>
+                            <p>La fréquence et la spécificité montrent que « 鬼 » est un terme central du domaine étudié et représentatif du vocabulaire narratif et culturel.</p>
+                            <p>L’analyse des cooccurrences principales éclaire son usage et son sens :</p>
+                            <ul>
+                                <li>Le mot <strong>人 (personne)</strong> (228 occurrences) apparaît souvent avec « 鬼 » pour former des expressions comme <strong>鬼人 (fantôme / personne fantomatique)</strong> ou <strong>鬼的形象 (image du fantôme)</strong>.</li>
+                                <li>Le terme <strong>故事 (histoire / récit)</strong> (97 occurrences) est lié aux récits et anecdotes.</li>
+                                <li>D’autres mots comme <strong>索命 (prendre l’âme)</strong>, <strong>压床 (oppression nocturne)</strong>, <strong>投胎 (réincarnation)</strong>, <strong>归土 (retour à la terre)</strong> renvoient aux pratiques et croyances autour des fantômes.</li>
+                                <li><strong>文化 (culture)</strong> (146 occurrences) souligne le lien entre « 鬼 » et la tradition culturelle.</li>
+                            </ul>
+                            <p>Dans le corpus, « 鬼 » apparaît dans des contextes narratifs, tels que les histoires ou légendes, mais aussi dans des contextes culturels liés aux rituels et aux croyances. Comparé à des mots fonctionnels comme <strong>的 (de, marqueur possessif)</strong>, <strong>是 (être)</strong>, <strong>了 (particule aspectuelle)</strong>, « 鬼 » constitue un marqueur sémantique clé.</p>
+                            <p>En conclusion, le mot « 鬼 » (fantôme) occupe une place centrale dans la narration et la culture des fantômes en chinois. Sa forte spécificité et ses cooccurrences caractéristiques en font un terme pivot pour l’étude des récits de fantômes et des pratiques culturelles qui leur sont associées.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Japonais -->
+                <div class="column">
+                    <div class="box box-langue">
+                        <h3 class="title is-4 has-text-warning has-text-centered">🇯🇵 Japonais</h3>
+                        <div class="analyse-content is-size-7">
+                            <p>Complété par Basil</p>
+                            <p><em>(À compléter par Basile)</em></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title"><i class="fa-solid fa-scale-balanced"></i> Conclusion Comparative</h2>
+            <div class="box">
+                <ul>
+                    <li><strong>En Français :</strong> L'analyse montre que "fantôme" est très souvent utilisé dans des expressions figées (<em>Ville fantôme</em>) ou pour qualifier des objets inanimés (<em>Vaisseau</em>). Les spécificités (<em>Théâtre, Fantastique</em>) renforcent l'idée d'un mot ancré dans la fiction littéraire et le spectacle.</li>
+                    <li><strong>En Chinois :</strong> L'analyse montre que le mot « 鬼 » (fantôme) est central dans les récits et la culture des fantômes. Ses cooccurrences (人, 故事, 文化, etc.) et sa forte spécificité en font un terme pivot pour l'étude des pratiques culturelles et narrations liées aux fantômes.</li>
+                    <li><strong>En Japonais :</strong> (Analyse à compléter par Basile)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Projet PPE1</strong> - 2025/2026<br>Yousra • Yinbo • Basile</p>
+        </div>
+    </footer>
+
+    <!-- Bulma Navbar burger -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
 </body>
-
 </html>
