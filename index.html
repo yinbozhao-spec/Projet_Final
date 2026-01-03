@@ -24,6 +24,8 @@
         .team-card:hover { transform: translateY(-5px); transition: 0.3s; }
         .nav-link:hover { text-decoration: underline; }
         footer { background-color: #f5f5f5; padding: 20px 0; margin-top: 40px; }
+        .image-nuage {cursor: zoom-in;transition: transform 0.2s; }
+        .image-nuage:hover {transform: scale(1.03); }
     </style>
 </head>
 <body>
@@ -57,7 +59,7 @@
     <section id="accueil" class="hero is-medium">
         <div class="hero-body has-text-centered">
             <h1 class="title is-1"><i class="fa-solid fa-ghost"></i> Projet "Fantôme"</h1>
-            <h2 class="subtitle is-4">Analyse linguistique comparée : Français • Chinois • Japonais</h2>
+            <h2 class="subtitle is-4">Analyse linguistique comparée : Français - Chinois - Japonais</h2>
             <p class="is-size-5 mt-4"><strong>Choix du mot et Hypothèses :</strong> Notre groupe a choisi le mot <em>fantôme</em> pour analyser ses usages en français, chinois et japonais. Nous supposons que ce mot sera fortement lié aux contextes culturels et narratifs dans chaque langue.</p>
         </div>
     </section>
@@ -107,7 +109,7 @@
                 <div class="column">
                     <a href="tableaux/tableau-fr.html" class="button is-info is-fullwidth mb-3"><i class="fa-solid fa-table mr-2"></i> Français</a>
                     <a href="tableaux/chinois.html" class="button is-danger is-fullwidth mb-3"><i class="fa-solid fa-table mr-2"></i> Chinois</a>
-                    <a href="tableaux/resultat_japonais.html" class="button is-warning is-fullwidth"><i class="fa-solid fa-table mr-2"></i> Japonais</a>
+                    <a href="tableaux/résultat_japonais.html" class="button is-warning is-fullwidth"><i class="fa-solid fa-table mr-2"></i> Japonais</a>
                 </div>
             </div>
         </div>
@@ -121,21 +123,27 @@
                 <div class="column">
                     <h3 class="title is-4 has-text-info has-text-centered">🇫🇷 Français</h3>
                     <figure class="image">
-                        <img class="image-nuage" src="wordcloud/wordcloud_fr_final.png" alt="Nuage FR">
+                        <a href="wordcloud/wordcloud_fr_final.png">
+                            <img class="image-nuage" src="wordcloud/wordcloud_fr_final.png" alt="Nuage FR">
+                        </a>
                     </figure>
                 </div>
 
                 <div class="column">
                     <h3 class="title is-4 has-text-danger has-text-centered">🇨🇳 Chinois</h3>
                     <figure class="image">
-                        <img class="image-nuage" src="wordcloud/nuage_chinois_forme_gui.png" alt="Nuage Chinois">
+                        <a href="wordcloud/nuage_chinois_forme_gui.png">
+                            <img class="image-nuage" src="wordcloud/nuage_chinois_forme_gui.png" alt="Nuage Chinois">
+                        </a>
                     </figure>
                 </div>
 
                 <div class="column">
                     <h3 class="title is-4 has-text-warning has-text-centered">🇯🇵 Japonais</h3>
                     <figure class="image">
-                        <img class="image-nuage" src="wordcloud/wordcloud_oni_japonais.png" alt="Nuage Japonais">
+                        <a href="wordcloud/wordcloud_oni_japonais.png">
+                            <img class="image-nuage" src="wordcloud/wordcloud_oni_japonais.png" alt="Nuage Japonais">
+                        </a>
                     </figure>
                 </div>
 
